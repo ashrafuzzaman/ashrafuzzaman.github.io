@@ -1,0 +1,32 @@
+<!-- Portfolio -->
+<div class="wrapper wrapper-style3">
+    <article id="portfolio">
+        <header>
+            <h2>Some of the recent client projects.</h2>
+            <span>I love to contribute to the community as well. So please do check out my github account.</span>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="12u">
+                </div>
+            </div>
+            <div class="row">
+                {% for project in page.projects %}
+                <div class="4u">
+                    <article class="box box-style2 portfolio">
+                        <a href="{{ project.url }}" class="image image-full"><img
+                                src="images/portfolios/{{ project.image }}" alt=""/></a>
+
+                        <h3><a href="{{ project.url }}">{{ project.name }}</a></h3>
+
+                        <p>{{ project.details }}</p>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <footer>
+            <a href="#contact" class="button">Get in touch with me</a>
+        </footer>
+    </article>
+</div>

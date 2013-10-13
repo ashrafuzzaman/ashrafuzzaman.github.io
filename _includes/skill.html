@@ -1,0 +1,33 @@
+<div class="wrapper wrapper-style2">
+    <article id="skill">
+        <header>
+            <h2>I mostly develop quality web based applications</h2>
+            <span>Over the years I have worked on mostly the following trends.</span>
+        </header>
+        <div class="container">
+            <div class="row">
+                {% for skill in page.skills %}
+                <div class="4u">
+                    <h3>{{ skill.title }}</h3>
+                    <a href="{{ skill.url }}" target="_blank">
+                        <div class="bar_container rounded_bar_container {{ skill.color }}_container">
+                            <div class="bar_mortice rounded {{ skill.color }}_mortice">
+                                <div class="progress rounded {{ skill.color }}" style="width: {{ skill.rate }};"></div>
+                            </div>
+                        </div>
+                        <br>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="12u">
+                    <a href="#portfolio" class="button">See some of my recent work</a>
+                    <a href="resume.pdf" class="button button-alt" target="_blank">Download Resume</a>
+                </div>
+            </div>
+        </footer>
+    </article>
+</div>

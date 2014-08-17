@@ -1,0 +1,21 @@
+{
+  "name": "Ashrafuzzaman",
+  "version": "0.0.0",
+  "authors": [
+    "A.K.M. Ashrafuzzaman <ashrafuzzaman.g2@gmail.com>"
+  ],
+  "description": "The web site for ashrafuzzaman",
+  "license": "MIT",
+  "homepage": "http://ashrafuzzaman.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.5",
+    "polymer-elements": "PolymerLabs/polymer-elements#~0.3.0"
+  }
+}

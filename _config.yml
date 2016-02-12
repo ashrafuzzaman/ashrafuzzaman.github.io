@@ -15,30 +15,28 @@ sass:
   style: compressed # expanded
 
 # SEO settings
-title: end2end
-description: "A free Jekyll theme for download"
-keywords: "Jekyll, theme, free, download, SEO, blog, web"
-url: http://nandomoreira.me
-baseurl: "/end2end"
-# baseurl: ""
+title: A.K.M. Ashrafuzzaman
+description: "My blog"
+keywords: "blog, web, jitu, personal site"
+url: http://ashrafuzzaman.github.io/blog
+baseurl: "/"
 
 # google_analytics: UA-52446115-1
-repo: http://github.com/nandomoreirame/end2end
+repo: https://github.com/ashrafuzzaman/blog
 disqus_shortname: "fernandomoreira"
 disqus_site_shortname: "fernandomoreira"
 
 # Author settings
 author:
-  name      : Fernando Moreira
-  job       : Frontend Engineer
+  name      : A.K.M. Ashrafuzzaman
+  job       : Engineering Manager @Newscred
   bio       : "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
-  thumb     : /images/author.jpg
-  email     : nandomoreira.me@gmail.com
-  url       : http://nandomoreira.me
-  github    : http://github.com/nandomoreirame
-  twitter   : http://twitter.com/nandomoreirame
-  facebook  : http://facebook.com/fernando.dev
-  linkedin  : http://linkedin.com/in/nandomoreirame
+  thumb     : images/author.jpg
+  email     : ashrafuzzaman.g2@gmail.com
+  url       : http://ashrafuzzaman.github.io
+  github    : https://github.com/ashrafuzzaman
+  twitter   : http://twitter.com/ashrafuzzaman
+  linkedin  : https://www.linkedin.com/in/a-k-m-ashrafuzzaman-8b97168
 
 # navbar pages
 navbar:

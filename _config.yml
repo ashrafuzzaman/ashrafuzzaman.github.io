@@ -8,7 +8,6 @@ paginate: 3
 paginate_path: "/blog/page/:num/"
 comments: true
 
-source: source
 destination: _site
 sass:
   sass_dir: _scss
@@ -30,7 +29,7 @@ disqus_site_shortname: "ashrafuzzaman"
 author:
   name      : A.K.M. Ashrafuzzaman
   job       : Engineering Manager @Newscred
-  bio       : "A am muslim and a software engineer. Love building cool software and to contribute in open source projects. Love challenges and love to play table tennis."
+  bio       : "I am a muslim and a software engineer. Love building cool software and to contribute in open source projects. Love challenges and love to play table tennis."
   thumb     : images/author.jpg
   email     : ashrafuzzaman.g2@gmail.com
   url       : http://ashrafuzzaman.github.io

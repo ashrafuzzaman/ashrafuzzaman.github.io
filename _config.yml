@@ -18,11 +18,11 @@ sass:
 title: A.K.M. Ashrafuzzaman
 description: "My blog"
 keywords: "blog, web, jitu, personal site"
-url: http://ashrafuzzaman.github.io/blog
+url: http://ashrafuzzaman.github.io
 baseurl: "/"
 
 # google_analytics: UA-52446115-1
-repo: https://github.com/ashrafuzzaman/blog
+repo: https://github.com/ashrafuzzaman
 disqus_shortname: "fernandomoreira"
 disqus_site_shortname: "fernandomoreira"
 

@@ -7,7 +7,6 @@ group :development do
   gem 'sass'
   gem 'jekyll', '~> 3.0.3'
   gem 'jekyll-paginate', group: [:jekyll_plugins]
-  gem 'pygments.rb', group: [:jekyll_plugins]
   gem 'jekyll-compose', group: [:jekyll_plugins]
   gem 'kramdown', group: [:jekyll_plugins]
 end

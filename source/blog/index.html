@@ -4,7 +4,18 @@ layout: default
 
 <section class="post-list">
   {% for post in paginator.posts %}
-    {% include article.html %}
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+      </h1>
+      <div class="post-meta">
+        <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+      </div>
+    </header>
+
+    <p><a href="{{ post.url }}" title="Permalink to: {{ post.title }}" class="read-more">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
+  </article>
   {% endfor %}
 
   {% include pagination.html %}

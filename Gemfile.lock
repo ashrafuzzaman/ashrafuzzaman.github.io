@@ -47,8 +47,8 @@ DEPENDENCIES
   jekyll-paginate
   kramdown
   pygments.rb
-  rake (~> 10.5)
-  sass (~> 3.4)
+  rake
+  sass
 
 BUNDLED WITH
    1.10.6

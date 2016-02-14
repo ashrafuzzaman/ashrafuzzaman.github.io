@@ -12,4 +12,4 @@ tags:
 
 ---
 
-I am moving to github pages for blogging. Here is the [link](http://jitu-blog.blogspot.com/) to my old blog. 
+I am moving to github pages for blogging. Here is the <a href="http://jitu-blog.blogspot.com/" target="_blank">link</a> to my old blog. 

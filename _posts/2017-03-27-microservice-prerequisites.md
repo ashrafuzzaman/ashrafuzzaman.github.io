@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Microservice Prerequisites
+comments: true
+keywords: Microservices, Prerequisites
+categories: Microservices
+tags: Microservices
 ---
 
 Inspire by the [post](https://martinfowler.com/bliki/MicroservicePrerequisites.html) by Martin Fowler, wanted to share my thoughts as well.

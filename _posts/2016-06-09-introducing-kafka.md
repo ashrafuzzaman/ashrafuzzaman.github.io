@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Introducing Kafka
+comments: true
+keywords: kafka, producers, consumers, broker
+categories: kafka
+tags: kafka
 ---
 ## What is Kafka
 Kafka is a **distributed**, **partitioned**, **replicated commit log** service.

@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Before splitting into microservices
+comments: true
+keywords: Microservices, Monolith, split
+categories: Microservices
+tags: Microservices, Monolith
 ---
 
 # When ???

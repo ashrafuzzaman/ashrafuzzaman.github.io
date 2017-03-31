@@ -7,7 +7,7 @@ It is simple to dockerize your rails app. Rails maintain an official release of 
 
 So you can create your docker file.
 
-``` docker
+{% highlight docker %}
 FROM rails:5
 ENV WORKDIR /code
 WORKDIR ${WORKDIR}
@@ -18,7 +18,7 @@ ADD Gemfile.lock ${WORKDIR}
 RUN bundle install
 
 ADD . ${WORKDIR}
-```
+{% endhighlight %}
 
 And the docker-compose.yml,
 

@@ -1,7 +1,7 @@
 # Build settings
 permalink   : /blog/:year/:title/
 markdown    : kramdown
-highlighter : rouge
+highlighter : pygments
 gems: [jekyll-paginate]
 
 paginate: 10

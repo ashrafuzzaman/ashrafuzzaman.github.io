@@ -5,8 +5,9 @@ source 'http://rubygems.org'
 group :development do
   gem 'rake'
   gem 'sass'
-  gem 'jekyll', '~> 3.4'
+  gem 'jekyll', '~> 3.9'
   gem 'jekyll-paginate', group: [:jekyll_plugins]
   gem 'jekyll-compose', group: [:jekyll_plugins]
+  gem 'kramdown-parser-gfm', group: [:jekyll_plugins]
   gem 'kramdown', group: [:jekyll_plugins]
 end

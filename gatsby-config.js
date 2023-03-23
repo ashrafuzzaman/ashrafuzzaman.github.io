@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Blog of Jitu`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `A.K.M. Aashrafuzzaman`,
+      summary: `who Muslim, software engineer, like to solve problems.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A blog to record engineering challenges.`,
+    siteUrl: `https://ashrafuzzaman.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `ashrafuzzaman`,
     },
   },
   plugins: [

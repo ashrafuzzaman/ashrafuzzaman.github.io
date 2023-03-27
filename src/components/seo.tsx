@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 type Props = { title: string, description?: string, children?: JSX.Element | JSX.Element[] };
 
 const Seo = ({ title, description, children }: Props) => {
-  const { site, resumeYaml } = useStaticQuery(
+  const { site, profileYaml: profile } = useStaticQuery(
     graphql`
       query {
         site {
@@ -20,7 +20,7 @@ const Seo = ({ title, description, children }: Props) => {
             description
           }
         }
-        resumeYaml {
+        profileYaml {
           name
           summary
           designation
@@ -45,7 +45,7 @@ const Seo = ({ title, description, children }: Props) => {
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
-        content={resumeYaml.links?.twitter || ``}
+        content={profile.links?.twitter || ``}
       />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />

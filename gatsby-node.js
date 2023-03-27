@@ -102,7 +102,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       twitter: String
     }
 
-    type resumeYaml {
+    type profileYaml {
       name: String
       designation: String
       summary: String

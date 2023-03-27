@@ -12,7 +12,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query {
-      resumeYaml {
+      profileYaml {
           name
           summary
           designation
@@ -20,10 +20,10 @@ const Bio = () => {
             twitter
           }
       }
-    }  
+    }
   `)
 
-  const resume = data.resumeYaml;
+  const resume = data.profileYaml;
   const links = resume.links;
 
   return (

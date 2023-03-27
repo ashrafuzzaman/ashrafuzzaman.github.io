@@ -10,15 +10,8 @@
 module.exports = {
   siteMetadata: {
     title: `Blog of Jitu`,
-    author: {
-      name: `A.K.M. Aashrafuzzaman`,
-      summary: `who Muslim, software engineer, like to solve problems.`,
-    },
     description: `A blog to record engineering challenges.`,
     siteUrl: `https://ashrafuzzaman.github.io/`,
-    social: {
-      twitter: `ashrafuzzaman`,
-    },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -119,6 +112,13 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-transformer-yaml-full`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/`,
       },
     },
   ],

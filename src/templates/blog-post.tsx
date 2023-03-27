@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import BlogPostLayout from "../layouts/blog-post"
 import Seo from "../components/seo"
 
 const BlogPostTemplate = ({
@@ -12,7 +12,7 @@ const BlogPostTemplate = ({
   const siteTitle = site.siteMetadata?.title || `Title`
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <BlogPostLayout location={location} title={siteTitle}>
       <article
         className="blog-post"
         itemScope
@@ -57,7 +57,7 @@ const BlogPostTemplate = ({
           </li>
         </ul>
       </nav>
-    </Layout>
+    </BlogPostLayout>
   )
 }
 

@@ -114,7 +114,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-yaml-full`,
+    {
+      resolve: 'gatsby-transformer-yaml-full',
+      options: {
+        plugins: ['gatsby-yaml-full-markdown']
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

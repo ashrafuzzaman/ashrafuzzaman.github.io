@@ -10,21 +10,23 @@ import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
-  const data = useStaticQuery(graphql`
+  const { profileYaml: profile } = useStaticQuery(graphql`
     query {
       profileYaml {
           name
           summary
           designation
           links {
-            twitter
+            twitter {
+              alt
+              url
+            }
           }
       }
     }
   `)
 
-  const resume = data.profileYaml;
-  const links = resume.links;
+  const links = profile.links;
 
   return (
     <div className="bio">
@@ -39,9 +41,9 @@ const Bio = () => {
         alt="Profile picture"
       />
       <p>
-        Written by <strong>{resume.name}</strong> {resume?.summary || null}
+        Written by <strong>{profile.name}</strong> {profile?.summary || null}
         {` `}
-        <a href={`https://twitter.com/${links?.twitter || ``}`}>
+        <a href={links?.twitter.url}>
           You should follow them on Twitter
         </a>
       </p>

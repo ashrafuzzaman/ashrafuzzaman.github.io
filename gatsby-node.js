@@ -107,10 +107,33 @@ exports.createSchemaCustomization = ({ actions }) => {
       designation: String
       summary: String
       links: Links
+      experiences: [Experience]
+      skills: [Skill]
     }
 
     type Links {
-      twitter: String
+      twitter: LinkDetails
+      github: LinkDetails
+      site: LinkDetails
+      linkedIn: LinkDetails
+    }
+
+    type LinkDetails {
+      alt: String
+      url: String
+    }
+
+    type Experience {
+      title: String
+      company: String
+      started: String
+      till: String
+      responsibility: String
+    }
+
+    type Skill {
+      title: String
+      items: [String]
     }
 
     type MarkdownRemark implements Node {

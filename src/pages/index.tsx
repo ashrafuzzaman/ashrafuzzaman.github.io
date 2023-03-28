@@ -11,7 +11,6 @@ const Index = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Bio />
-      <Link to="/blog">Blog</Link>
       <br/>
       This should be the main page
     </Layout>

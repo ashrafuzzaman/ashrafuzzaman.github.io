@@ -2,5 +2,64 @@
 name: A.K.M. Aashrafuzzaman,
 designation: Director of engineering
 summary: who Muslim, software engineer, like to solve problems.,
+contact:
+  email: zmn.ashraf@gmail.com
+  phone: +8801755592433
+  location: Dhaka, Bangladesh
 links:
-  twitter: ashrafuzzaman
+  twitter:
+    alt: ashrafuzzaman
+    url: https://twitter.com/ashrafuzzaman
+  github:
+    alt: ashrafuzzaman
+    url: https://github.com/ashrafuzzaman/
+  site:
+    alt: ashrafuzzaman
+    url: https://ashrafuzzaman.github.io
+  linkedIn:
+    alt: ashrafuzzaman-jitu
+    url: https://www.linkedin.com/in/ashrafuzzaman-jitu/
+skills:
+  - title: Language
+    items:
+      - Typescript, Javascript
+      - Python
+      - Ruby
+  - title: Tools / Technology
+    items:
+      - NodeJs, Express, NestJs
+      - React.js, Angular
+      - Flask, DRF
+      - Ruby on Rails
+      - ELK
+      - Docker
+      - Ansible
+      - Redis, MongoDb, MySql
+      - Apache Spark
+      - OOP
+      - Design Patterns and Principles
+      - Microservice Architectures
+      - Distributed System
+      - TDD
+
+  - title: AWS
+    items:
+      - S3, RDS, Kinesis, SQS, Lambda,
+      - Athena, Redshift, CloudFront,
+      - CloudFormation Template
+experiences:
+  - title: Director Of Engineering
+    company: Optimizely
+    started: Dec, 2021
+    till: Present
+    responsibility: !markdown |
+      I am responsible for the R&D organization in Dhaka. My primary responsibility is to create an engineering organization where we research, innovate, solve problems and provide value through efficient iterative development and continuous delivery. Our tech stack is mainly of NodeJs, Python on AWS stack. For data storage we used MongoDb, MySql, ElasticSearch, etc.
+      * I lead multiple teams of 55+ Engineers
+      * Create a management structure that encourages career growth through regular contextual feedback loop and coaching in timely skills
+      * Make strategic decision to guide the organization to manage engineering department
+      * Set and measure performance metrics and manage year-end performance based increments
+      * As one of the architects, I consult, design, guide teams and  build scalable architecture
+      * As one of the Engineering Leaders, I coach engineers on best practices for writing maintainable code and system design
+      * Line manage a group of five talented engineers and engineering managers
+      * Facilitate in-house growth through encouraging and actively participating in tech talks and focused group coaching
+      * Responsible for the technical interview process and ensuring that we hire the best engineers

@@ -25,7 +25,10 @@ const Seo = ({ title, description, children }: Props) => {
           summary
           designation
           links {
-            twitter
+            twitter {
+              alt
+              url
+            }
           }
       }
     }
@@ -45,10 +48,10 @@ const Seo = ({ title, description, children }: Props) => {
       <meta name="twitter:card" content="summary" />
       <meta
         name="twitter:creator"
-        content={profile.links?.twitter || ``}
+        content={profile.links?.twitter.alt || ``}
       />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:title" content={profile.links?.twitter.alt} />
+      <meta name="twitter:description" content={profile.links?.twitter.alt} />
       {children}
     </>
   )

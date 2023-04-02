@@ -1,0 +1,14 @@
+:root {
+  --deep-backgrond: #21252B;
+  --backgrond: #282C34;
+  --text: #ffffff;
+}
+
+.box {
+  display: flex;
+  height: 100vh;
+}
+
+.box .element {
+  margin: auto;
+}

@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.6",
     "@fontsource/merriweather": "^4.5.14",
     "@fontsource/montserrat": "^4.5.14",
+    "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.14",
     "gatsby": "^5.7.0",
     "gatsby-plugin-feed": "^5.7.0",

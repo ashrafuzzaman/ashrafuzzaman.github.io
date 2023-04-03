@@ -8,6 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 
 const Bio = () => {
   const { profileYaml: profile } = useStaticQuery(graphql`
@@ -29,25 +30,31 @@ const Bio = () => {
   const links = profile.links;
 
   return (
-    <div className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Profile picture"
-      />
-      <p>
-        Written by <strong>{profile.name}</strong> {profile?.summary || null}
-        {` `}
-        <a href={links?.twitter.url}>
-          You should follow them on Twitter
-        </a>
-      </p>
-    </div>
+    <Box>
+        <StaticImage
+          layout="fixed"
+          formats={["auto", "webp", "avif"]}
+          src="../images/profile-pic-slim.webp"
+          width={250}
+          height={250}
+          quality={95}
+          alt="Profile picture"
+        />
+
+      <Box>
+        <Typography variant="body2">
+          Written by <strong>{profile.name}</strong> {profile?.summary || null}
+          {` `}
+          <a href={links?.twitter.url}>
+            You should follow them on Twitter
+          </a>
+        </Typography>
+      </Box>
+      <Box>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </Box>
+    </Box>
   )
 }
 

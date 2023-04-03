@@ -12,10 +12,6 @@ const Layout = ({ location, title, children }) => {
       <div className="box">
         <div className="element">
           <Box sx={{ justifyContent: 'center' }}>
-            <Link to="/resume">Resume</Link>
-            <Link to="/blog">Blog</Link>
-            <br />
-
             {children}
           </Box>
         </div>

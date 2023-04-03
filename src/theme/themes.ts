@@ -22,7 +22,7 @@ export const lightTheme: ThemeOptions = {
   palette: {
     mode: "light",
     primary: {
-      main: lightBlue[800],
+      main: "#61AFEF",
       contrastText: lightBlue[900],
     },
     secondary: {

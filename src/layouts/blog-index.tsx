@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import "../style.css"
 
 const BlogIndexLayout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`

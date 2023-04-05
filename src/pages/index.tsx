@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
-import { Box, BoxProps, Fade, Grid, ListItemIcon, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
+import { Box, BoxProps, CircularProgress, Fade, Grid, ListItemIcon, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
@@ -230,7 +230,10 @@ const Index = ({ data, location }) => {
           <Bio></Bio>
         </TabPanel>
         <TabPanel value={tabIndex} index={1}>
-          <Experience/>
+          <Experience />
+        </TabPanel>
+        <TabPanel value={tabIndex} index={2}>
+          <CircularProgress />
         </TabPanel>
         <Footer />
       </Box>

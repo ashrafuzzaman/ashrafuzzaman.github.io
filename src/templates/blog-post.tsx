@@ -9,7 +9,7 @@ const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = site.siteMetadata?.title || `Title`
+  const siteTitle = `Back to home`
 
   return (
     <BlogPostLayout location={location} title={siteTitle}>
@@ -28,7 +28,6 @@ const BlogPostTemplate = ({
         />
         <hr />
         <footer>
-          <Bio />
         </footer>
       </article>
       <nav className="blog-post-nav">

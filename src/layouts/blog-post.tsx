@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Button, Grid } from '@mui/material'
+import HomeIcon from '@mui/icons-material/Home';
 
 const BlogPostLayout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -14,9 +16,14 @@ const BlogPostLayout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      <Grid>
+        <Button variant="outlined" href="/" startIcon={<HomeIcon />}>
+          Back to home
+        </Button>
+        <Button sx={{ml: "10px"}} variant="outlined" href="/blog" startIcon={<HomeIcon />}>
+          Back to blog index
+        </Button>
+      </Grid>
     )
   }
 

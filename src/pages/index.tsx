@@ -46,8 +46,8 @@ const Index = ({ data, location }) => {
     <Box sx={{
       ml: 1,
       float: "right",
-      width: 16,
-      height: 16,
+      width: 12,
+      height: 12,
       borderRadius: "50%",
       backgroundColor: props.color,
       '&:hover': {
@@ -62,7 +62,6 @@ const Index = ({ data, location }) => {
       sx={{
         display: "flex",
         width: "100%",
-        pr: 2
       }}
       justifyContent="flex-end"
       alignItems={"center"}
@@ -73,6 +72,23 @@ const Index = ({ data, location }) => {
         <Circle color={colors.nav.circles.red} />
       </Stack>
     </Grid>
+  );
+
+  const WindowTopBar = () => (
+    <Box sx={{
+      pt: 1,
+      pb: 1,
+      pr: 1,
+      bgcolor: colors.editor.background,
+      borderTopLeftRadius: borderRadius,
+      borderTopRightRadius: borderRadius,
+      borderBottom: 1,
+      borderColor: colors.nav.deeperBackground,
+    }}>
+      <Grid container display={"flex"} justifyContent={"end"}>
+        <Typography display={'inline'}><DummyWindowActions /></Typography>
+      </Grid>
+    </Box>
   );
 
   const Footer = () => (
@@ -200,6 +216,7 @@ const Index = ({ data, location }) => {
         bgcolor: colors.editor.background,
         borderRadius: borderRadius,
       }}>
+        <WindowTopBar />
         <StyledTabs
           value={tabIndex}
           onChange={(event, index) => { handleTabChange(index) }}
@@ -208,7 +225,6 @@ const Index = ({ data, location }) => {
           <StyledTab label="Profile" />
           <StyledTab label="Experience" />
           <StyledTab component="a" label="Blog" href="/blog" />
-          <DummyWindowActions />
         </StyledTabs>
         <TabPanel value={tabIndex} index={0}>
           <Bio></Bio>

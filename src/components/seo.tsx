@@ -22,7 +22,9 @@ const Seo = ({ title, description, children }: Props) => {
         }
         profileYaml {
           name
-          summary
+          summary {
+            plain
+          }
           designation
           links {
             twitter {
@@ -45,7 +47,7 @@ const Seo = ({ title, description, children }: Props) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content={profile.summary.plain} />
       <meta
         name="twitter:creator"
         content={profile.links?.twitter.alt || ``}

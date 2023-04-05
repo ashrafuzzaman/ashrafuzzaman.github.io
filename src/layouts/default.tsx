@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import Box from '@mui/material/Box';
-import { ThemeWrapper } from '../theme';
+import ThemeWrapper from '../theme/DarkThemeWrapper';
 import '../default-layout.css';
 
 

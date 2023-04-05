@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
-import { Box, Fade, Grid, ListItemIcon, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
+import { Box, BoxProps, Fade, Grid, ListItemIcon, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
@@ -21,6 +21,7 @@ const Index = ({ data, location }) => {
     },
     nav: {
       background: '#1C212E',
+      deeperBackground: '#141820',
       selectedBackground: '#212836',
       highlight: '#212122',
       underline: '#EC4646',
@@ -36,9 +37,67 @@ const Index = ({ data, location }) => {
     }
   }
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (newValue: number) => {
     setTabIndex(newValue);
   };
+
+  const Circle = (props: { color: string }) => (
+    <Box sx={{
+      ml: 1,
+      float: "right",
+      width: 16,
+      height: 16,
+      borderRadius: "50%",
+      backgroundColor: props.color,
+      '&:hover': {
+        backgroundColor: props.color,
+        opacity: [0.9, 0.8, 0.7],
+      },
+    }} />
+  );
+
+  const DummyWindowActions = () => (
+    <Grid
+      sx={{
+        display: "flex",
+        width: "100%",
+        pr: 2
+      }}
+      justifyContent="flex-end"
+      alignItems={"center"}
+    >
+      <Stack direction="row" justifyContent="end">
+        <Circle color={colors.nav.circles.green} />
+        <Circle color={colors.nav.circles.yellow} />
+        <Circle color={colors.nav.circles.red} />
+      </Stack>
+    </Grid>
+  );
+
+  const Footer = () => (
+    <Box sx={{
+      p: 1,
+      pl: 2,
+      bgcolor: colors.editor.background,
+      borderBottomLeftRadius: borderRadius,
+      borderBottomRightRadius: borderRadius,
+      borderTop: 1,
+      borderColor: colors.nav.deeperBackground,
+    }}>
+      <Grid container color={colors.editor.text}>
+        <Grid sx={{ display: "flex" }}
+          md={10}
+          alignItems={"center"}
+        >
+          <CancelIcon fontSize="small" /><Typography display={'inline'} sx={{ pl: 1, pr: 1 }}>0</Typography>
+          <WarningAmberIcon fontSize="small" /><Typography display={'inline'} sx={{ pl: 1 }}>0</Typography>
+        </Grid>
+        <Grid md={2} textAlign={'right'}>
+          <Typography sx={{ pr: 1 }} display={'inline'}>Typescript</Typography>
+        </Grid>
+      </Grid>
+    </Box>
+  );
 
   interface StyledTabsProps {
     children?: React.ReactNode;
@@ -107,27 +166,27 @@ const Index = ({ data, location }) => {
         hidden={value !== index}
         id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`}
-        style={{ minWidth: '600px', minHeight: '400px', color: colors.editor.text }}
+        style={{ minWidth: '600px', color: colors.editor.text }}
         {...other}
       >
         {value === index && (
-          <Fade in={true}>
-            <Grid container>
-              <Box sx={{ backgroundColor: colors.nav.background, height: '400px' }}>
-                <MenuList>
-                  <MenuItem>
-                    <AccountBoxIcon />
-                  </MenuItem>
-                  <MenuItem sx={{ pt: 1 }}>
-                    <CalendarMonthIcon />
-                  </MenuItem>
-                </MenuList>
-              </Box>
-              <Box sx={{ p: 3 }} display={"inline-block"}>
+          <Grid container>
+            <Box sx={{ backgroundColor: colors.nav.deeperBackground }}>
+              <MenuList>
+                <MenuItem selected={tabIndex == 0} sx={{ pt: 1 }} onClick={() => { handleTabChange(0) }}>
+                  <AccountBoxIcon />
+                </MenuItem>
+                <MenuItem selected={tabIndex == 1} sx={{ pt: 1 }} onClick={() => { handleTabChange(1) }}>
+                  <CalendarMonthIcon />
+                </MenuItem>
+              </MenuList>
+            </Box>
+            <Fade in={true}>
+              <Box display={"inline-block"}>
                 {children}
               </Box>
-            </Grid>
-          </Fade>
+            </Fade>
+          </Grid>
         )}
       </div>
     );
@@ -138,71 +197,17 @@ const Index = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Box sx={{
         bgcolor: colors.editor.background,
-        borderTopLeftRadius: borderRadius,
-        borderTopRightRadius: borderRadius
+        borderRadius: borderRadius,
       }}>
         <StyledTabs
           value={tabIndex}
-          onChange={handleChange}
+          onChange={(event, index) => { handleTabChange(index) }}
           sx={{ borderRadius }}
         >
           <StyledTab label="Profile" />
           <StyledTab label="Experience" />
           <StyledTab component="a" label="Blog" href="/blog" />
-          <Grid
-            sx={{
-              display: "flex",
-              width: "100%",
-              pr: 2
-            }}
-            justifyContent="flex-end"
-            alignItems={"center"}
-          >
-            <Stack direction="row" justifyContent="end">
-              <Box
-                sx={{
-                  ml: 1,
-                  float: "right",
-                  width: 16,
-                  height: 16,
-                  borderRadius: "50%",
-                  backgroundColor: colors.nav.circles.green,
-                  '&:hover': {
-                    backgroundColor: colors.nav.circles.green,
-                    opacity: [0.9, 0.8, 0.7],
-                  },
-                }}
-              />
-              <Box
-                sx={{
-                  ml: 1,
-                  float: "right",
-                  width: 16,
-                  height: 16,
-                  borderRadius: "50%",
-                  backgroundColor: colors.nav.circles.yellow,
-                  '&:hover': {
-                    backgroundColor: colors.nav.circles.yellow,
-                    opacity: [0.9, 0.8, 0.7],
-                  },
-                }}
-              />
-              <Box
-                sx={{
-                  ml: 1,
-                  float: "right",
-                  width: 16,
-                  height: 16,
-                  borderRadius: "50%",
-                  backgroundColor: colors.nav.circles.red,
-                  '&:hover': {
-                    backgroundColor: colors.nav.circles.red,
-                    opacity: [0.9, 0.8, 0.7],
-                  },
-                }}
-              />
-            </Stack>
-          </Grid>
+          <DummyWindowActions />
         </StyledTabs>
         <TabPanel value={tabIndex} index={0}>
           <Bio></Bio>
@@ -210,28 +215,9 @@ const Index = ({ data, location }) => {
         <TabPanel value={tabIndex} index={1}>
           Experience
         </TabPanel>
+        <Footer />
       </Box>
-      <Box sx={{
-        p: 1,
-        pl: 2,
-        bgcolor: colors.editor.background,
-        borderBottomLeftRadius: borderRadius,
-        borderBottomRightRadius: borderRadius,
-        borderTop: 1,
-      }}>
-        <Grid container color={colors.editor.text}>
-          <Grid sx={{ display: "flex", }}
-            md={10}
-            alignItems={"center"}>
-            <CancelIcon fontSize="small" /><Typography display={'inline'} sx={{ pl: 1, pr: 1 }}>0</Typography>
-            <WarningAmberIcon fontSize="small" /><Typography display={'inline'} sx={{ pl: 1 }}>0</Typography>
-          </Grid>
-          <Grid md={2} textAlign={'right'}>
-            <Typography sx={{ pr: 1 }} display={'inline'}>Typescript</Typography>
-          </Grid>
-        </Grid>
-      </Box>
-    </Layout>
+    </Layout >
   );
 }
 
@@ -242,7 +228,7 @@ export default Index
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="All posts" description="All blog posts" />
+export const Head = () => <Seo title="A.K.M. Ashrafuzzaman Jitu" description="Introduction to Ashrafuzzaman Jitu" />
 
 export const pageQuery = graphql`
   {

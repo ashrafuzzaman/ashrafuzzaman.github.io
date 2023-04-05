@@ -1,1 +1,1 @@
-export { default as ThemeWrapper } from './ThemeWrapper';
+export { default as ThemeWrapper } from './LightThemeWrapper';

@@ -53,7 +53,9 @@ export const pageQuery = graphql`
     }
     profileYaml {
       name
-      summary
+      summary {
+        html
+      }
       designation
       links {
         twitter {

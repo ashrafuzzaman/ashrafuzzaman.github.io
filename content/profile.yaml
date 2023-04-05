@@ -1,7 +1,12 @@
 ---
-name: A.K.M. Aashrafuzzaman,
+name: A.K.M. Aashrafuzzaman
 designation: Director of engineering
-summary: who Muslim, software engineer, like to solve problems.,
+company: Optimizely
+summary: !markdown |
+  I am a Muslim, software engineer, who like to solve problems, help grow others.\
+  I think there are several ways to reach the mountain's summit.\
+  Being goal-oriented and accepting of alternative approaches enables adaptability and fosters growth in others.\
+  My [blog](/blog) is where I talk about technology.
 contact:
   email: zmn.ashraf@gmail.com
   phone: +8801755592433

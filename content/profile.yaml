@@ -55,16 +55,31 @@ skills:
 experiences:
   - title: Director Of Engineering
     company: Optimizely
-    started: Dec, 2021
+    from: Dec, 2021
     till: Present
-    responsibility: !markdown |
+    brief: !markdown |
+      Optimizely [acquired](https://www.optimizely.com/company/press/optimizely-to-acquire-welcome/) Welcome on Dec 2021.
+
+  - title: Director Of Engineering
+    company: Welcome
+    from: Aug 2020
+    till: Dec 2021
+    brief: !markdown |
+      NewsCred [changed the brand name](https://techcrunch.com/2020/10/14/newscred-relaunches-as-welcome/) to Welcome.
+
+  - title: Director Of Engineering
+    company: Newscred
+    from: Sep 2018
+    till: Aug 2020
+    brief: !markdown |
       I am responsible for the R&D organization in Dhaka. My primary responsibility is to create an engineering organization where we research, innovate, solve problems and provide value through efficient iterative development and continuous delivery. Our tech stack is mainly of NodeJs, Python on AWS stack. For data storage we used MongoDb, MySql, ElasticSearch, etc.
-      * I lead multiple teams of 55+ Engineers
-      * Create a management structure that encourages career growth through regular contextual feedback loop and coaching in timely skills
-      * Make strategic decision to guide the organization to manage engineering department
-      * Set and measure performance metrics and manage year-end performance based increments
-      * As one of the architects, I consult, design, guide teams and  build scalable architecture
-      * As one of the Engineering Leaders, I coach engineers on best practices for writing maintainable code and system design
-      * Line manage a group of five talented engineers and engineering managers
-      * Facilitate in-house growth through encouraging and actively participating in tech talks and focused group coaching
-      * Responsible for the technical interview process and ensuring that we hire the best engineers
+    responsibilities:
+      - I lead multiple teams of 55+ Engineers
+      - Create a management structure that encourages career growth through regular contextual feedback loop and coaching in timely skills
+      - Make strategic decision to guide the organization to manage engineering department
+      - Set and measure performance metrics and manage year-end performance based increments
+      - As one of the architects, I consult, design, guide teams and  build scalable architecture
+      - As one of the Engineering Leaders, I coach engineers on best practices for writing maintainable code and system design
+      - Line manage a group of five talented engineers and engineering managers
+      - Facilitate in-house growth through encouraging and actively participating in tech talks and focused group coaching
+      - Responsible for the technical interview process and ensuring that we hire the best engineers

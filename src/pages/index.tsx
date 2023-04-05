@@ -9,6 +9,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Experience from '../components/experience'
 
 
 const Index = ({ data, location }) => {
@@ -182,7 +183,7 @@ const Index = ({ data, location }) => {
               </MenuList>
             </Box>
             <Fade in={true}>
-              <Box display={"inline-block"}>
+              <Box display={"inline-block"} sx={{ maxWidth: "1100px" }}>
                 {children}
               </Box>
             </Fade>
@@ -213,7 +214,7 @@ const Index = ({ data, location }) => {
           <Bio></Bio>
         </TabPanel>
         <TabPanel value={tabIndex} index={1}>
-          Experience
+          <Experience/>
         </TabPanel>
         <Footer />
       </Box>

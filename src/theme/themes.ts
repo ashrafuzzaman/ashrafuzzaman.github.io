@@ -1,5 +1,5 @@
 import { ThemeOptions, useTheme } from "@mui/material";
-import { deepOrange, lightBlue, grey } from "@mui/material/colors";
+import { deepOrange, lightBlue, grey, orange } from "@mui/material/colors";
 import { createMakeAndWithStyles } from "tss-react";
 
 import { makeMuiCache } from "./cache";
@@ -16,7 +16,8 @@ export const darkTheme: ThemeOptions = {
       contrastText: deepOrange[900],
     },
     text: {
-      primary: grey[100]
+      primary: grey[100],
+      secondary: orange[300]
     },
     background: {
       default: 'white',

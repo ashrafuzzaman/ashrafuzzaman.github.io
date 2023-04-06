@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import "../style.css"
 import HomeIcon from '@mui/icons-material/Home';
-import { Button, Typography } from '@mui/material';
+import { Button } from '@mui/material';
 
 const BlogIndexLayout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`

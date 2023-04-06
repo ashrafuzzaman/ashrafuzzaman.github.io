@@ -56,7 +56,7 @@ const Bio = () => {
       <Grid direction={'column'} sx={{ p: 3 }}>
         <StaticImage
           formats={["auto", "webp", "avif"]}
-          src="../images/profile-pic.png"
+          src="../images/profile-pic-slim.webp"
           width={150}
           height={150}
           quality={95}
@@ -77,7 +77,7 @@ const Bio = () => {
           </Link>
         </Box>
       </Grid>
-      <Grid sx={{ m: 0, borderLeftColor: theme.palette.divider, borderLeftStyle: "solid", borderLeftWidth: "1px" }}>
+      <Grid sx={{ m: 0, borderLeftColor: theme.palette.divider, borderLeftStyle: "solid", borderLeftWidth: "1px", maxWidth: "900px" }}>
         <Box sx={{ p: 3 }}>
           <Typography variant="h4" color={theme.palette.text.primary}>{profile.name}</Typography>
           <Typography variant="caption" display={"inline-block"} sx={{ mb: 3 }} color={theme.palette.text.primary}>

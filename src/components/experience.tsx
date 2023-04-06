@@ -41,6 +41,7 @@ const Experience = () => {
           flex: 0,
           padding: 0,
         },
+        // maxHeight: "600px"
       }}
     >
       {experiences.map((experience) => (
@@ -49,14 +50,19 @@ const Experience = () => {
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>
-            <Typography variant="h6" color={theme.palette.text.primary} display={"inline-block"}>{experience.title} @ {experience.company}</Typography>
-            <Typography variant="subtitle1" color={theme.palette.text.secondary} sx={{ ml: "20px" }} display={"inline-block"}>
-              {experience.from} to {experience.till}
-            </Typography>
-            <Typography variant="body1" color={theme.palette.text.primary}>
-              <div dangerouslySetInnerHTML={{ __html: experience.brief.html }} />
-            </Typography>
+          <TimelineContent sx={{ pt: 0 }}>
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography variant="h6" color={theme.palette.text.primary}>{experience.title}</Typography>
+              <Typography variant="subtitle1" color={theme.palette.text.secondary} sx={{ ml: "20px" }}>
+                {experience.from} to {experience.till}
+              </Typography>
+            </Box>
+            <Typography variant="subtitle2" sx={{ fontStyle: "italic" }} color={theme.palette.text.secondary}>{experience.company}</Typography>
+            {experience.brief ? (
+              <Typography variant="body1" color={theme.palette.text.primary}>
+                <div dangerouslySetInnerHTML={{ __html: experience.brief.html }} />
+              </Typography>
+            ) : ""}
             {experience.responsibilities ? (
               <Typography variant="body1">
                 <List>

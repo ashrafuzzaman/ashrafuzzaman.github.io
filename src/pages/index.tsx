@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
-import { Box, BoxProps, CircularProgress, Fade, Grid, ListItemIcon, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
+import { Box, BoxProps, CircularProgress, Fade, Grid, Hidden, ListItemIcon, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
@@ -122,7 +122,7 @@ const Index = ({ data, location }) => {
     onChange: (event: React.SyntheticEvent, newValue: number) => void;
   }
 
-  const StyledTabs = styled((props: StyledTabsProps) => (
+  const EditorTabs = styled((props: StyledTabsProps) => (
     <Tabs
       {...props}
       TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
@@ -151,7 +151,7 @@ const Index = ({ data, location }) => {
     href?: string;
   }
 
-  const StyledTab = styled((props: StyledTabProps) => (
+  const EditorTab = styled((props: StyledTabProps) => (
     <Tab disableRipple {...props} />
   ))(({ theme }) => ({
     textTransform: 'none',
@@ -188,16 +188,18 @@ const Index = ({ data, location }) => {
       >
         {value === index && (
           <Grid container>
-            <Box sx={{ backgroundColor: colors.nav.deeperBackground }}>
-              <MenuList>
-                <MenuItem selected={tabIndex == 0} sx={{ pt: 1 }} onClick={() => { handleTabChange(0) }}>
-                  <AccountBoxIcon />
-                </MenuItem>
-                <MenuItem selected={tabIndex == 1} sx={{ pt: 1 }} onClick={() => { handleTabChange(1) }}>
-                  <CalendarMonthIcon />
-                </MenuItem>
-              </MenuList>
-            </Box>
+            <Hidden lgDown>
+              <Box sx={{ backgroundColor: colors.nav.deeperBackground }}>
+                <MenuList>
+                  <MenuItem selected={tabIndex == 0} sx={{ pt: 1 }} onClick={() => { handleTabChange(0) }}>
+                    <AccountBoxIcon />
+                  </MenuItem>
+                  <MenuItem selected={tabIndex == 1} sx={{ pt: 1 }} onClick={() => { handleTabChange(1) }}>
+                    <CalendarMonthIcon />
+                  </MenuItem>
+                </MenuList>
+              </Box>
+            </Hidden>
             <Fade in={true}>
               <Box display={"inline-block"} sx={{ maxWidth: "1100px" }}>
                 {children}
@@ -217,15 +219,15 @@ const Index = ({ data, location }) => {
         borderRadius: borderRadius,
       }}>
         <WindowTopBar />
-        <StyledTabs
+        <EditorTabs
           value={tabIndex}
           onChange={(event, index) => { handleTabChange(index) }}
           sx={{ borderRadius }}
         >
-          <StyledTab label="Profile" />
-          <StyledTab label="Experience" />
-          <StyledTab component="a" label="Blog" href="/blog" />
-        </StyledTabs>
+          <EditorTab label="Profile" />
+          <EditorTab label="Experience" />
+          <EditorTab component="a" label="Blog" href="/blog" />
+        </EditorTabs>
         <TabPanel value={tabIndex} index={0}>
           <Bio></Bio>
         </TabPanel>

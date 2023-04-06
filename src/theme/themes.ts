@@ -30,14 +30,6 @@ export const darkTheme: ThemeOptions = {
 export const lightTheme: ThemeOptions = {
   palette: {
     mode: "light",
-    primary: {
-      main: "#61AFEF",
-      contrastText: lightBlue[900],
-    },
-    secondary: {
-      main: deepOrange[800],
-      contrastText: deepOrange[900],
-    },
   },
 };
 

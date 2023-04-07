@@ -30,6 +30,10 @@ export const darkTheme: ThemeOptions = {
 export const lightTheme: ThemeOptions = {
   palette: {
     mode: "light",
+    text: {
+      primary: grey[800],
+      secondary: orange[500]
+    },
   },
 };
 

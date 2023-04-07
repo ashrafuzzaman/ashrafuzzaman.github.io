@@ -74,14 +74,20 @@ const Index = ({ data, location }) => {
     </Grid>
   );
 
+  const borderRadius = '10px';
+  const responsiveBorderRadius = {
+    xs: 0,
+    lg: borderRadius
+  };
+
   const WindowTopBar = () => (
     <Box sx={{
       pt: 1,
       pb: 1,
       pr: 1,
       bgcolor: colors.editor.background,
-      borderTopLeftRadius: borderRadius,
-      borderTopRightRadius: borderRadius,
+      borderTopLeftRadius: responsiveBorderRadius,
+      borderTopRightRadius: responsiveBorderRadius,
       borderBottom: 1,
       borderColor: colors.nav.deeperBackground,
     }}>
@@ -96,8 +102,8 @@ const Index = ({ data, location }) => {
       p: 1,
       pl: 2,
       bgcolor: colors.editor.background,
-      borderBottomLeftRadius: borderRadius,
-      borderBottomRightRadius: borderRadius,
+      borderBottomLeftRadius: responsiveBorderRadius,
+      borderBottomRightRadius: responsiveBorderRadius,
       borderTop: 1,
       borderColor: colors.nav.deeperBackground,
     }}>
@@ -211,18 +217,17 @@ const Index = ({ data, location }) => {
     );
   }
 
-  const borderRadius = '10px';
   return (
     <Layout location={location} title={siteTitle}>
       <Box sx={{
         bgcolor: colors.editor.background,
-        borderRadius: borderRadius,
+        borderRadius: responsiveBorderRadius,
       }}>
         <WindowTopBar />
         <EditorTabs
           value={tabIndex}
           onChange={(event, index) => { handleTabChange(index) }}
-          sx={{ borderRadius }}
+          sx={{ borderRadius: responsiveBorderRadius }}
         >
           <EditorTab label="Profile" />
           <EditorTab label="Experience" />

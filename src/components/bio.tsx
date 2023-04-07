@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Link, List, ListItem, ListItemText, Typography, useTheme } from '@mui/material'
+import { Box, Grid, Hidden, Link, List, ListItem, ListItemText, Typography, useTheme } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -51,33 +51,64 @@ const Bio = () => {
 
   const links = profile.links;
 
+  const SmallProfileImage = () => (
+    <StaticImage
+      formats={["auto", "webp", "avif"]}
+      src="../images/profile-pic-slim.webp"
+      width={150}
+      height={150}
+      quality={95}
+      alt="Profile picture"
+      imgStyle={{
+        padding: "2px",
+      }}
+    />
+  );
+
+  const BigProfileImage = () => (
+    <StaticImage
+      formats={["auto", "webp", "avif"]}
+      src="../images/profile-pic-slim.webp"
+      width={350}
+      height={350}
+      quality={95}
+      alt="Profile picture"
+      imgStyle={{
+        padding: "2px",
+      }}
+    />
+  );
+
   return (
     <Grid container justifyContent={"center"}>
       <Grid direction={'column'} sx={{ p: 3 }}>
-        <StaticImage
-          formats={["auto", "webp", "avif"]}
-          src="../images/profile-pic-slim.webp"
-          width={150}
-          height={150}
-          quality={95}
-          alt="Profile picture"
-          imgStyle={{
-            padding: "2px",
-          }}
-        />
+        <Hidden lgUp>
+          <BigProfileImage />
+        </Hidden>
+        <Hidden lgDown>
+          <SmallProfileImage />
+        </Hidden>
+
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
-          <Link href={profile.links.github.url} target="_blank" variant="body2" sx={{ pr: 1 }}>
+          <Link href={links.github.url} target="_blank" variant="body2" sx={{ pr: 1 }}>
             <GitHubIcon />
           </Link>
-          <Link href={profile.links.linkedIn.url} target="_blank" variant="body2" sx={{ pr: 1 }}>
+          <Link href={links.linkedIn.url} target="_blank" variant="body2" sx={{ pr: 1 }}>
             <LinkedInIcon />
           </Link>
-          <Link href={profile.links.twitter.url} target="_blank" variant="body2">
+          <Link href={links.twitter.url} target="_blank" variant="body2">
             <TwitterIcon />
           </Link>
         </Box>
       </Grid>
-      <Grid sx={{ m: 0, borderLeftColor: theme.palette.divider, borderLeftStyle: "solid", borderLeftWidth: "1px", maxWidth: "900px" }}>
+      <Grid sx={{
+        m: 0, borderLeftColor: theme.palette.divider,
+        borderLeftStyle: {
+          xs: "none",
+          lg: "solid",
+        },
+        borderLeftWidth: "1px", maxWidth: "900px"
+      }}>
         <Box sx={{ p: 3 }}>
           <Typography variant="h4" color={theme.palette.text.primary}>{profile.name}</Typography>
           <Typography variant="caption" display={"inline-block"} sx={{ mb: 3 }} color={theme.palette.text.primary}>

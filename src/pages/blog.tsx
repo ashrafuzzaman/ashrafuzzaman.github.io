@@ -2,10 +2,10 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import BlogIndexLayout from "../layouts/blog-index"
+import BlogLayout from "../layouts/blog"
 import Seo from "../components/seo"
-import "../blog.css"
 import { Typography } from '@mui/material'
+import ArticleContent from '../components/article-content'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -13,19 +13,19 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
-      <BlogIndexLayout location={location} title={siteTitle}>
+      <BlogLayout>
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
           gatsby-config.js).
         </p>
-      </BlogIndexLayout>
+      </BlogLayout>
     )
   }
 
   return (
-    <BlogIndexLayout location={location} title={siteTitle}>
+    <BlogLayout>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug;
@@ -46,17 +46,17 @@ const BlogIndex = ({ data, location }) => {
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
-                  <Typography
+                  <ArticleContent
                     variant="body1"
                     dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }}>
-                  </Typography>
+                  </ArticleContent>
                 </section>
               </article>
             </li>
           )
         })}
       </ol>
-    </BlogIndexLayout>
+    </BlogLayout>
   )
 }
 

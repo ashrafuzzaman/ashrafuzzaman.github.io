@@ -237,7 +237,9 @@ const Index = ({ data, location }) => {
           <Experience />
         </TabPanel>
         <TabPanel value={tabIndex} index={2}>
-          <CircularProgress />
+          <Grid sx={{ display: "flex", justifyItems: "center" , justifyContent: "center", minHeight: "300px", minWidth: "600px" }}>
+            <CircularProgress />
+          </Grid>
         </TabPanel>
         <Footer />
       </Box>

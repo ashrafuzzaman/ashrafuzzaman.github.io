@@ -17,10 +17,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone';
+import "../blog.css"
 
 
 const drawerWidth = 240;
@@ -94,7 +93,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-export default function BlogIndexLayout({ children }) {
+export default function BlogLayout({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 

@@ -1,19 +1,20 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import BlogPostLayout from "../layouts/blog-post"
+import BlogLayout from '../layouts/blog';
 import Seo from "../components/seo"
-import { Typography } from '@mui/material'
+import { Typography, styled } from '@mui/material'
+import ArticleContent from '../components/article-content';
+
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
   location,
 }) => {
-  const siteTitle = `Back to home`
+  const siteTitle = `Back to home`;
 
   return (
-    <BlogPostLayout location={location} title={siteTitle}>
+    <BlogLayout>
       <article
         className="blog-post"
         itemScope
@@ -24,10 +25,10 @@ const BlogPostTemplate = ({
           <p>{post.frontmatter.date}</p>
         </header>
         <section itemProp="articleBody">
-          <Typography
+          <ArticleContent
             variant="body1"
             dangerouslySetInnerHTML={{ __html: post.html }}>
-          </Typography>
+          </ArticleContent>
         </section>
         <hr />
         <footer>
@@ -59,7 +60,7 @@ const BlogPostTemplate = ({
           </li>
         </ul>
       </nav>
-    </BlogPostLayout>
+    </BlogLayout>
   )
 }
 

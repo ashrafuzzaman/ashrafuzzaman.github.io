@@ -1,5 +1,5 @@
 import { ThemeOptions, useTheme } from "@mui/material";
-import { deepOrange, lightBlue, grey, orange } from "@mui/material/colors";
+import { deepOrange, lightBlue, grey, orange, blue } from "@mui/material/colors";
 import { createMakeAndWithStyles } from "tss-react";
 
 import { makeMuiCache } from "./cache";
@@ -32,7 +32,7 @@ export const lightTheme: ThemeOptions = {
     mode: "light",
     text: {
       primary: grey[800],
-      secondary: orange[500]
+      secondary: blue[900],
     },
   },
 };

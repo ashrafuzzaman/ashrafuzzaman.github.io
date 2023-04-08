@@ -21,8 +21,8 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <Typography variant="h2">{post.frontmatter.title}</Typography>
+          <Typography variant="subtitle1" sx={{ pl: 1 }}>{post.frontmatter.date}</Typography>
         </header>
         <section itemProp="articleBody">
           <ArticleContent

@@ -19,7 +19,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone';
-import "../blog.css"
 
 
 const drawerWidth = 240;

@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import BlogPostLayout from "../layouts/blog-post"
 import Seo from "../components/seo"
+import { Typography } from '@mui/material'
 
 const BlogPostTemplate = ({
   data: { previous, next, site, markdownRemark: post },
@@ -22,10 +23,12 @@ const BlogPostTemplate = ({
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section itemProp="articleBody">
+          <Typography
+            variant="body1"
+            dangerouslySetInnerHTML={{ __html: post.html }}>
+          </Typography>
+        </section>
         <hr />
         <footer>
         </footer>

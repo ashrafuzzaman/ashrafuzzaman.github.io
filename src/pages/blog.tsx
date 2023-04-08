@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import BlogIndexLayout from "../layouts/blog-index"
 import Seo from "../components/seo"
 import "../blog.css"
+import { Typography } from '@mui/material'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -45,12 +46,10 @@ const BlogIndex = ({ data, location }) => {
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
+                  <Typography
+                    variant="body1"
+                    dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }}>
+                  </Typography>
                 </section>
               </article>
             </li>

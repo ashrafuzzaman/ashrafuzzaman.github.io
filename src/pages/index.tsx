@@ -107,15 +107,12 @@ const Index = ({ data, location }) => {
       borderTop: 1,
       borderColor: colors.nav.deeperBackground,
     }}>
-      <Grid container color={colors.editor.text}>
-        <Grid sx={{ display: "flex" }}
-          md={10}
-          alignItems={"center"}
-        >
+      <Grid container color={colors.editor.text} sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Grid sx={{ display: "flex" }} alignItems={"center"}>
           <CancelIcon fontSize="small" /><Typography display={'inline'} sx={{ pl: 1, pr: 1 }}>0</Typography>
           <WarningAmberIcon fontSize="small" /><Typography display={'inline'} sx={{ pl: 1 }}>0</Typography>
         </Grid>
-        <Grid md={2} textAlign={'right'}>
+        <Grid>
           <Typography sx={{ pr: 1 }} display={'inline'}>Typescript</Typography>
         </Grid>
       </Grid>

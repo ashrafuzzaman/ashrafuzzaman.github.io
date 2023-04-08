@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import BlogLayout from '../layouts/blog';
 import Seo from "../components/seo"
-import { Typography, styled } from '@mui/material'
+import { Link, Typography, styled } from '@mui/material'
 import ArticleContent from '../components/article-content';
 
 
@@ -12,7 +12,10 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = `Back to home`;
-
+  const PostTitle = styled(Typography)(({ theme }) => ({
+    color: theme.palette.text.primary
+  }));
+  
   return (
     <BlogLayout>
       <article
@@ -21,7 +24,7 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <Typography variant="h2">{post.frontmatter.title}</Typography>
+          <PostTitle variant="h2">{post.frontmatter.title}</PostTitle>
           <Typography variant="subtitle1" sx={{ pl: 1 }}>{post.frontmatter.date}</Typography>
         </header>
         <section itemProp="articleBody">
@@ -46,14 +49,14 @@ const BlogPostTemplate = ({
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link href={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link href={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

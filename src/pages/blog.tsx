@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import BlogLayout from "../layouts/blog"
 import Seo from "../components/seo"
-import { Typography } from '@mui/material'
+import { Typography, styled } from '@mui/material'
 import ArticleContent from '../components/article-content'
 
 const BlogIndex = ({ data, location }) => {
@@ -24,6 +24,16 @@ const BlogIndex = ({ data, location }) => {
     )
   }
 
+  const PostTitle = styled(Typography)(({ theme }) => ({
+    "& a": {
+      color: theme.palette.text.secondary
+    }
+  }));
+  const PostDate = styled(Typography)(({ theme }) => ({
+    color: theme.palette.text.secondary
+  }));
+
+
   return (
     <BlogLayout>
       <ol style={{ listStyle: `none` }}>
@@ -38,16 +48,19 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2>
+                  <PostTitle variant="h5">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
+                  </PostTitle>
+                  <PostDate variant="subtitle2" sx={{ pl: 1 }}>{post.frontmatter.date}</PostDate>
                 </header>
                 <section>
                   <ArticleContent
                     variant="body1"
+                    sx={{
+                      mb: 2
+                    }}
                     dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }}>
                   </ArticleContent>
                 </section>
@@ -56,7 +69,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
-    </BlogLayout>
+    </BlogLayout >
   )
 }
 

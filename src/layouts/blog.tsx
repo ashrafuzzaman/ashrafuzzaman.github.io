@@ -177,9 +177,9 @@ export default function BlogLayout({ children }) {
             </ListItem>
           </List>
         </Drawer>
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <Box sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
-          <main>{children}</main>
+          {children}
         </Box>
       </Box>
     </ThemeWrapper>

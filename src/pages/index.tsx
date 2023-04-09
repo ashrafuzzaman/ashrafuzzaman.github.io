@@ -224,7 +224,6 @@ const Index = ({ data, location }) => {
         <EditorTabs
           value={tabIndex}
           onChange={(event, index) => { handleTabChange(index) }}
-          sx={{ borderRadius: responsiveBorderRadius }}
         >
           <EditorTab label="Profile" />
           <EditorTab label="Experience" />

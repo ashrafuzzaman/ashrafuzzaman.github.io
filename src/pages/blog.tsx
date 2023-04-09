@@ -4,8 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import BlogLayout from "../layouts/blog"
 import Seo from "../components/seo"
-import { Typography, styled } from '@mui/material'
-import ArticleContent from '../components/article-content'
+import { Typography } from '@mui/material'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -24,16 +23,6 @@ const BlogIndex = ({ data, location }) => {
     )
   }
 
-  const PostTitle = styled(Typography)(({ theme }) => ({
-    "& a": {
-      color: theme.palette.text.secondary
-    }
-  }));
-  const PostDate = styled(Typography)(({ theme }) => ({
-    color: theme.palette.text.secondary
-  }));
-
-
   return (
     <BlogLayout>
       <ol style={{ listStyle: `none` }}>
@@ -48,21 +37,21 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <PostTitle variant="h5">
+                  <Typography variant="h2">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
-                  </PostTitle>
-                  <PostDate variant="subtitle2" sx={{ pl: 1 }}>{post.frontmatter.date}</PostDate>
+                  </Typography>
+                  <Typography variant="subtitle1" sx={{ pl: 1 }}>{post.frontmatter.date}</Typography>
                 </header>
                 <section>
-                  <ArticleContent
+                  <Typography
                     variant="body1"
                     sx={{
                       mb: 2
                     }}
                     dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }}>
-                  </ArticleContent>
+                  </Typography>
                 </section>
               </article>
             </li>

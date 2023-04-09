@@ -6,7 +6,6 @@ import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
@@ -21,7 +20,7 @@ import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone';
 
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
@@ -39,8 +38,8 @@ const closedMixin = (theme: Theme): CSSObject => ({
   }),
   overflowX: 'hidden',
   width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
+  [theme.breakpoints.down('md')]: {
+    width: 0,
   },
 });
 
@@ -107,7 +106,6 @@ export default function BlogLayout({ children }) {
   return (
     <ThemeWrapper>
       <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
         <AppBar position="fixed" open={open}>
           <Toolbar>
             <IconButton

@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import BlogLayout from '../layouts/blog';
 import Seo from "../components/seo"
 import { Link, Typography, styled } from '@mui/material'
-import ArticleContent from '../components/article-content';
 
 
 const BlogPostTemplate = ({
@@ -12,10 +11,7 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = `Back to home`;
-  const PostTitle = styled(Typography)(({ theme }) => ({
-    color: theme.palette.text.primary
-  }));
-  
+
   return (
     <BlogLayout>
       <article
@@ -24,14 +20,14 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <PostTitle variant="h2">{post.frontmatter.title}</PostTitle>
+          <Typography variant="h2">{post.frontmatter.title}</Typography>
           <Typography variant="subtitle1" sx={{ pl: 1 }}>{post.frontmatter.date}</Typography>
         </header>
         <section itemProp="articleBody">
-          <ArticleContent
+          <Typography
             variant="body1"
             dangerouslySetInnerHTML={{ __html: post.html }}>
-          </ArticleContent>
+          </Typography>
         </section>
         <hr />
         <footer>

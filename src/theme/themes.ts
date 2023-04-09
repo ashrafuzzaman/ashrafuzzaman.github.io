@@ -35,6 +35,63 @@ export const lightTheme: ThemeOptions = {
       secondary: blue[900],
     },
   },
+  typography: {
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    h2: {
+      fontSize: "1.8rem",
+      fontWeight: "bold",
+      color: blue[900],
+      "& a": {
+        color: blue[900]
+      }
+    },
+    subtitle1: {
+      fontSize: "1rem",
+      color: orange[800],
+    },
+    body1: {
+      color: grey[900],
+      "& h1": {
+        fontSize: "1.5rem",
+        color: "#141820",  
+      },
+      "& h2": {
+        fontSize: "1.3rem",
+        color: "#141820",  
+      },
+      "& a": {
+        color: blue[800],  
+      },
+    },
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: "#212836"
+        }
+      }
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: blue[800],
+          textDecoration: "none",
+        }
+      }
+    }
+  }
 };
 
 export const muiCache = makeMuiCache();

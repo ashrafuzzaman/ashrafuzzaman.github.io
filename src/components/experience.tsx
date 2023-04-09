@@ -41,7 +41,6 @@ const Experience = () => {
           flex: 0,
           padding: 0,
         },
-        // maxHeight: "600px"
       }}
     >
       {experiences.map((experience) => (
@@ -53,7 +52,7 @@ const Experience = () => {
           <TimelineContent sx={{ pt: 0 }}>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
               <Typography variant="h6" color={theme.palette.text.primary}>{experience.title}</Typography>
-              <Typography variant="subtitle1" color={theme.palette.text.secondary} sx={{ ml: "20px" }}>
+              <Typography variant="subtitle1" color={theme.palette.text.secondary}>
                 {experience.from} to {experience.till}
               </Typography>
             </Box>

@@ -4,6 +4,8 @@ import { graphql } from "gatsby"
 import BlogLayout from '../layouts/blog';
 import Seo from "../components/seo"
 import { Box, BoxProps, Link, Typography, styled, useTheme } from '@mui/material'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 const BlogPostTemplate = ({
@@ -14,7 +16,7 @@ const BlogPostTemplate = ({
   const theme = useTheme();
 
   console.log(theme.palette.primary.dark);
-  
+
 
   const Article = styled((props: BoxProps) => (
     <Box
@@ -59,15 +61,15 @@ const BlogPostTemplate = ({
         >
           <li>
             {previous && (
-              <Link href={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+              <Link href={previous.fields.slug} rel="prev" sx={{ display: "flex", alignItems: "center" }}>
+                <ArrowBackIcon />{previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link href={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+              <Link href={next.fields.slug} rel="next" sx={{ display: "flex", alignItems: "center" }}>
+                {next.frontmatter.title} <ArrowForwardIcon />
               </Link>
             )}
           </li>

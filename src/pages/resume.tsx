@@ -3,9 +3,14 @@ import { graphql } from "gatsby"
 
 import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Box, Grid, GridProps, Typography, TypographyProps, styled } from '@mui/material';
+import { Box, Grid, GridProps, Link, List, ListItem, ListItemIcon, ListItemText, Typography, TypographyProps, styled } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import Experience from '../components/experience';
+import EmailIcon from '@mui/icons-material/Email';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 const Resume = ({ data, location }) => {
@@ -21,7 +26,7 @@ const Resume = ({ data, location }) => {
     <Grid {...props} />
   ))({
     background: colors.column.left,
-    maxWidth: "220px",
+    maxWidth: "240px",
     padding: "40px 20px",
     "@media print": {
       maxWidth: "30vw"
@@ -63,6 +68,31 @@ const Resume = ({ data, location }) => {
     borderBottomWidth: "thin",
   });
 
+  const contacts = [
+    {
+      icon: <EmailIcon fontSize="small" />,
+      text: profile.contact.email
+    },
+    {
+      icon: <LocalPhoneIcon fontSize="small" />,
+      text: profile.contact.phone
+    },
+    {
+      icon: <LocationOnIcon fontSize="small" />,
+      text: profile.contact.location
+    },
+    {
+      icon: <GitHubIcon fontSize="small" />,
+      url: profile.links.github.url,
+      text: profile.links.github.alt,
+    },
+    {
+      icon: <LinkedInIcon fontSize="small" />,
+      url: profile.links.linkedIn.url,
+      text: profile.links.linkedIn.alt
+    },
+  ];
+
   return (
     <ThemeWrapper>
       <Box sx={{ display: "flex" }}>
@@ -80,6 +110,19 @@ const Resume = ({ data, location }) => {
                   padding: "2px",
                 }}
               />
+              <GeneralHeading>Contact</GeneralHeading>
+              <List dense>
+                {contacts.map((contact) => (
+                  <ListItem sx={{ padding: 0 }}>
+                    <ListItemIcon sx={{ minWidth: "30px" }}>
+                      {contact.icon}
+                    </ListItemIcon>
+                    <ListItemText>
+                      {contact.url ? <Link href={contact.url} target="_blank">{contact.text}</Link> : contact.text}
+                    </ListItemText>
+                  </ListItem>
+                ))}
+              </List>
 
               <GeneralHeading>Skills</GeneralHeading>
               {profile.skills.map(skill => {
@@ -129,8 +172,17 @@ export const pageQuery = graphql`
       }
       designation
       company
+      contact {
+        email
+        phone
+        location
+      }
       links {
-        twitter {
+        linkedIn {
+          alt
+          url
+        }
+        github {
           alt
           url
         }
@@ -138,9 +190,6 @@ export const pageQuery = graphql`
       skills {
         title
         items
-      }
-      experiences {
-        title
       }
     }
   }

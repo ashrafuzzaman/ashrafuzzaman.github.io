@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import BlogLayout from '../layouts/blog';
 import Seo from "../components/seo"
-import { Link, Typography, styled } from '@mui/material'
+import { Box, BoxProps, Link, Typography, styled, useTheme } from '@mui/material'
 
 
 const BlogPostTemplate = ({
@@ -11,16 +11,32 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = `Back to home`;
+  const theme = useTheme();
+
+  console.log(theme.palette.primary.dark);
+  
+
+  const Article = styled((props: BoxProps) => (
+    <Box
+      {...props}
+      component="article"
+    />
+  ))({
+    '& header h1': {
+      fontSize: "2rem",
+      fontWeight: "bold",
+    },
+  });
 
   return (
     <BlogLayout>
-      <article
+      <Article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <Typography variant="h2">{post.frontmatter.title}</Typography>
+          <Typography variant="h1">{post.frontmatter.title}</Typography>
           <Typography variant="subtitle1" sx={{ pl: 1 }}>{post.frontmatter.date}</Typography>
         </header>
         <section itemProp="articleBody">
@@ -30,9 +46,7 @@ const BlogPostTemplate = ({
           </Typography>
         </section>
         <hr />
-        <footer>
-        </footer>
-      </article>
+      </Article>
       <nav className="blog-post-nav">
         <ul
           style={{

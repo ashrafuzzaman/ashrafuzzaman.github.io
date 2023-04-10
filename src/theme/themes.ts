@@ -30,9 +30,13 @@ export const darkTheme: ThemeOptions = {
 export const lightTheme: ThemeOptions = {
   palette: {
     mode: "light",
+    primary: {
+      main: "#141820",
+      dark: "#141820",
+    },
     text: {
-      primary: grey[800],
-      secondary: blue[900],
+      primary: "#141820",
+      secondary: orange[100],
     },
   },
   typography: {
@@ -48,13 +52,8 @@ export const lightTheme: ThemeOptions = {
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
-    h2: {
-      fontSize: "1.8rem",
-      fontWeight: "bold",
-      color: blue[900],
-      "& a": {
-        color: blue[900]
-      }
+    h1: {
+      color: blue[800],
     },
     subtitle1: {
       fontSize: "1rem",
@@ -62,16 +61,17 @@ export const lightTheme: ThemeOptions = {
     },
     body1: {
       color: grey[900],
+      fontSize: "1.2rem",
       "& h1": {
         fontSize: "1.5rem",
-        color: "#141820",  
+        color: "#141820",
       },
       "& h2": {
         fontSize: "1.3rem",
-        color: "#141820",  
+        color: "#141820",
       },
       "& a": {
-        color: blue[800],  
+        color: blue[800],
       },
     },
   },

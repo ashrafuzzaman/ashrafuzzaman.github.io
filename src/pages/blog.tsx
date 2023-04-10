@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import BlogLayout from "../layouts/blog"
 import Seo from "../components/seo"
-import { List, ListItem, ListItemText, Typography } from '@mui/material'
+import { Link, List, ListItem, ListItemText, Typography } from '@mui/material'
 
 
 const BlogIndex = ({ data, location }) => {
@@ -38,10 +38,8 @@ const BlogIndex = ({ data, location }) => {
                   itemType="http://schema.org/Article"
                 >
                   <header>
-                    <Typography variant="h2">
-                      <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                      </Link>
+                    <Typography variant="h1">
+                      <Link href={post.fields.slug} sx={{ fontSize: "1.8rem", fontWeight: "bold" }} itemProp="url">{title}</Link>
                     </Typography>
                     <Typography variant="subtitle1">{post.frontmatter.date}</Typography>
                   </header>
@@ -49,7 +47,7 @@ const BlogIndex = ({ data, location }) => {
                     <Typography
                       variant="body1"
                       sx={{
-                        mb: 2
+                        mb: 2,
                       }}
                       dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }}>
                     </Typography>

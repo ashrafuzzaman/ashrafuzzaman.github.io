@@ -44,7 +44,7 @@ const Experience = () => {
       }}
     >
       {experiences.map((experience) => (
-        <TimelineItem>
+        <TimelineItem sx={{ pageBreakInside: "avoid" }}>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
@@ -52,13 +52,21 @@ const Experience = () => {
           <TimelineContent sx={{ pt: 0 }}>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
               <Typography variant="h6" color={theme.palette.text.primary}>{experience.title}</Typography>
-              <Typography variant="subtitle1" color={theme.palette.text.secondary}>
+              <Typography variant="subtitle1">
                 {experience.from} to {experience.till}
               </Typography>
             </Box>
-            <Typography variant="subtitle2" sx={{ fontStyle: "italic" }} color={theme.palette.text.secondary}>{experience.company}</Typography>
+            <Typography variant="subtitle2">{experience.company}</Typography>
             {experience.brief ? (
-              <Typography variant="body1" color={theme.palette.text.primary}>
+              <Typography variant="body1" color={theme.palette.text.primary}
+                sx={{
+                  "& p": {
+                    marginBlockStart: 0,
+                    marginBlockEnd: 0,
+                    fontSize: "1rem",
+                  }
+                }}
+              >
                 <div dangerouslySetInnerHTML={{ __html: experience.brief.html }} />
               </Typography>
             ) : ""}

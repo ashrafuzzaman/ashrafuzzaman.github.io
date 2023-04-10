@@ -25,6 +25,32 @@ export const darkTheme: ThemeOptions = {
     },
     divider: "#141820"
   },
+  typography: {
+    subtitle1: {
+      fontSize: ".8rem",
+      fontWeight: "600",
+      color: orange[300],
+    },
+    subtitle2: {
+      fontSize: "1rem",
+      fontStyle: "italic",
+      fontWeight: "600",
+      color: orange[300],
+      marginBottom: ".5rem"
+    },
+  },
+  components: {
+    MuiListItemText: {
+      styleOverrides: {
+        primary: {
+          fontSize: "1rem",
+        },
+        root: {
+          margin: 0,
+        }
+      }
+    }
+  }
 };
 
 export const lightTheme: ThemeOptions = {
@@ -36,7 +62,7 @@ export const lightTheme: ThemeOptions = {
     },
     text: {
       primary: "#141820",
-      secondary: orange[100],
+      secondary: orange[800],
     },
   },
   typography: {
@@ -53,10 +79,28 @@ export const lightTheme: ThemeOptions = {
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
+      fontSize: "3rem",
+      fontWeight: "600",
       color: blue[800],
     },
+    h2: {
+      fontSize: "1.8rem",
+      fontWeight: "400",
+    },
+    h3: {
+      fontSize: "1.5rem",
+      fontWeight: "400",
+      marginTop: ".8rem",
+    },
     subtitle1: {
-      fontSize: "1rem",
+      fontSize: ".8rem",
+      fontWeight: "600",
+      color: orange[800],
+    },
+    subtitle2: {
+      marginBottom: ".5rem",
+      fontStyle: "italic",
+      fontWeight: "600",
       color: orange[800],
     },
     body1: {
@@ -88,6 +132,16 @@ export const lightTheme: ThemeOptions = {
         root: {
           color: blue[800],
           textDecoration: "none",
+        }
+      }
+    },
+    MuiListItemText: {
+      styleOverrides: {
+        primary: {
+          fontSize: "1rem",
+        },
+        root: {
+          margin: 0,
         }
       }
     }

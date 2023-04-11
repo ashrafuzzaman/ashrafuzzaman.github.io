@@ -39,6 +39,10 @@ const Experience = () => {
       sx={{
         margin: 0,
         padding: 0,
+        "& a": {
+          color: theme.palette.primary.main,
+          textDecoration: "none",
+        },
         [`& .${timelineItemClasses.root}:before`]: {
           flex: 0,
           padding: 0,

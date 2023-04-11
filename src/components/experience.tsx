@@ -37,6 +37,8 @@ const Experience = () => {
   return (
     <Timeline
       sx={{
+        margin: 0,
+        padding: 0,
         [`& .${timelineItemClasses.root}:before`]: {
           flex: 0,
           padding: 0,
@@ -44,7 +46,7 @@ const Experience = () => {
       }}
     >
       {experiences.map((experience) => (
-        <TimelineItem sx={{ pageBreakInside: "avoid" }}>
+        <TimelineItem sx={{ pageBreakInside: "avoid", paddingTop: "1rem" }}>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />

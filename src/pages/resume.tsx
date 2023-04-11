@@ -11,6 +11,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import "../print.css"
 
 
 const Resume = ({ data, location }) => {
@@ -156,7 +157,7 @@ export default Resume
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="All posts" description="All blog posts" />
+export const Head = () => <Seo title="Resume of A.K.M. Ashrafuzzaman Jitu" />
 
 export const pageQuery = graphql`
   {

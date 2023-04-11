@@ -28,13 +28,12 @@ const Index = ({ data, location }) => {
           component: <Experience />,
         },
         {
+          title: "Resume",
+          href: "/resume",
+        },
+        {
           title: "Blog",
           href: "/blog",
-          component: (
-            <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "300px", minWidth: "600px" }}>
-              <CircularProgress />
-            </Grid>
-          ),
         },
       ]} />
     </Layout >

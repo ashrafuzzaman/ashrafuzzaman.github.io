@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { Box, Fade, Grid, Hidden, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
+import { Box, CircularProgress, Fade, Grid, Hidden, MenuItem, MenuList, Stack, Tab, Tabs, Typography, styled } from '@mui/material'
 import CancelIcon from '@mui/icons-material/Cancel';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
@@ -160,7 +160,7 @@ interface EditorContent {
   title: string;
   href?: string;
   icon?: React.ReactNode;
-  component: React.ReactNode;
+  component?: React.ReactNode;
 }
 interface EditorProps {
   contents: EditorContent[];
@@ -211,7 +211,11 @@ function Editor({ contents }: EditorProps) {
               </Hidden>
               <Fade in={true}>
                 <Box display={"inline-block"} sx={{ maxWidth: "1100px" }}>
-                  {content.component}
+                  {content.component ? content.component :
+                    <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "300px", minWidth: "600px" }}>
+                      <CircularProgress />
+                    </Grid>
+                  }
                 </Box>
               </Fade>
             </Grid>

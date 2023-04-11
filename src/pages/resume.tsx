@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Box, Grid, GridProps, Link, List, ListItem, ListItemIcon, ListItemText, Typography, TypographyProps, styled } from '@mui/material';
+import { Box, Grid, GridProps, Link, List, ListItem, ListItemIcon, ListItemText, Typography, TypographyProps, styled, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import Experience from '../components/experience';
 import EmailIcon from '@mui/icons-material/Email';
@@ -15,6 +15,8 @@ import "../print.css"
 
 
 const Resume = ({ data, location }) => {
+  const theme = useTheme();
+
   const profile = data.profileYaml;
   const colors = {
     column: {
@@ -27,6 +29,7 @@ const Resume = ({ data, location }) => {
     <Grid {...props} />
   ))({
     background: colors.column.left,
+    color: theme.palette.text.primary,
     maxWidth: "240px",
     padding: "40px 20px",
     "@media print": {

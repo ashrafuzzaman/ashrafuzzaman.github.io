@@ -30,7 +30,6 @@ const Resume = ({ data, location }) => {
   ))({
     background: colors.column.left,
     color: theme.palette.text.primary,
-    maxWidth: "240px",
     padding: "40px 20px",
     "@media print": {
       maxWidth: "30vw"
@@ -52,14 +51,8 @@ const Resume = ({ data, location }) => {
   ))({
     background: colors.column.right,
     padding: "40px 20px",
-    maxWidth: "580px",
     "@media print": {
       maxWidth: "70vw",
-      "@page": {
-        "li.MuiTimelineItem-root": {
-          padding: "20px 0px"
-        },
-      },
     },
   });
 
@@ -71,6 +64,46 @@ const Resume = ({ data, location }) => {
     borderBottomColor: "#aaa",
     borderBottomWidth: "thin",
   });
+
+  const ProfilePicture = ({ size }: { size: number }) => (
+    <StaticImage
+      formats={["auto", "webp", "avif"]}
+      src="../images/profile-pic-slim.webp"
+      width={size}
+      height={size}
+      quality={95}
+      alt="Profile picture"
+      imgStyle={{
+        padding: "2px",
+      }}
+    />
+  );
+
+  const ContactInfo = ({ contacts }) => (
+    <List dense>
+      {contacts.map((contact) => (
+        <ListItem sx={{ padding: 0 }}>
+          <ListItemIcon sx={{ minWidth: "30px" }}>
+            {contact.icon}
+          </ListItemIcon>
+          <ListItemText>
+            {contact.url ? <Link href={contact.url} target="_blank">{contact.text}</Link> : contact.text}
+          </ListItemText>
+        </ListItem>
+      ))}
+    </List>
+  );
+
+  const Skills = ({ skills }) => (
+    skills.map(skill => {
+      return (
+        <div>
+          <Typography variant="h4">{skill.title}</Typography>
+          <Typography variant="body1">{skill.items.map(skill => <li>{skill}</li>)}</Typography>
+        </div>
+      )
+    })
+  );
 
   const contacts = [
     {
@@ -101,44 +134,15 @@ const Resume = ({ data, location }) => {
     <ThemeWrapper>
       <Box sx={{ display: "flex" }}>
         <Box sx={{ margin: "auto" }}>
-          <Grid container>
-            <LeftColumn>
-              <StaticImage
-                formats={["auto", "webp", "avif"]}
-                src="../images/profile-pic-slim.webp"
-                width={200}
-                height={200}
-                quality={95}
-                alt="Profile picture"
-                imgStyle={{
-                  padding: "2px",
-                }}
-              />
+          <Grid container sx={{ maxWidth: 1200 }}>
+            <LeftColumn item sm={3}>
+              <ProfilePicture size={200} />
               <GeneralHeading>Contact</GeneralHeading>
-              <List dense>
-                {contacts.map((contact) => (
-                  <ListItem sx={{ padding: 0 }}>
-                    <ListItemIcon sx={{ minWidth: "30px" }}>
-                      {contact.icon}
-                    </ListItemIcon>
-                    <ListItemText>
-                      {contact.url ? <Link href={contact.url} target="_blank">{contact.text}</Link> : contact.text}
-                    </ListItemText>
-                  </ListItem>
-                ))}
-              </List>
-
+              <ContactInfo contacts={contacts} />
               <GeneralHeading>Skills</GeneralHeading>
-              {profile.skills.map(skill => {
-                return (
-                  <div>
-                    <Typography variant="h4">{skill.title}</Typography>
-                    {skill.items.map(skill => <li>{skill}</li>)}
-                  </div>
-                )
-              })}
+              <Skills skills={profile.skills} />
             </LeftColumn>
-            <RightColumn sx={{ background: colors.column.right }}>
+            <RightColumn item sm={9} sx={{ background: colors.column.right }}>
               <Typography variant="h1">{profile.name}</Typography>
               <Typography variant="h2">{profile.designation}, {profile.company}</Typography>
               <GeneralHeading>Experience</GeneralHeading>
@@ -154,14 +158,7 @@ const Resume = ({ data, location }) => {
 }
 
 export default Resume
-
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Resume of A.K.M. Ashrafuzzaman Jitu" />
-
 export const pageQuery = graphql`
   {
     site {

@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "Ashrafuzzaman Site",
   "private": true,
   "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
@@ -38,14 +38,14 @@
   "devDependencies": {
     "prettier": "^2.8.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://ashrafuzzaman.github.io/",
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/ashrafuzzaman/ashrafuzzaman.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",

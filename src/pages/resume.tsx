@@ -34,15 +34,21 @@ const Resume = ({ data, location }) => {
     "@media print": {
       maxWidth: "30vw"
     },
+    "& h3": {
+      fontSize: "1.3rem",
+      fontWeight: "500",
+      marginTop: ".5rem",
+    },
     "& h4": {
       fontSize: "1rem",
-      fontWeight: "600",
+      fontWeight: "500",
       marginTop: "1rem",
       padding: ".3rem .5rem",
       background: "#e4d0b2",
     },
     "& li": {
-      fontSize: ".8rem",
+      fontSize: "1rem",
+      paddingLeft: ".3rem",
     }
   });
 
@@ -65,12 +71,12 @@ const Resume = ({ data, location }) => {
     borderBottomWidth: "thin",
   });
 
-  const ProfilePicture = ({ size }: { size: number }) => (
+  const ProfilePicture = () => (
     <StaticImage
       formats={["auto", "webp", "avif"]}
       src="../images/profile-pic-slim.webp"
-      width={size}
-      height={size}
+      width={200}
+      height={200}
       quality={95}
       alt="Profile picture"
       imgStyle={{
@@ -97,10 +103,10 @@ const Resume = ({ data, location }) => {
   const Skills = ({ skills }) => (
     skills.map(skill => {
       return (
-        <div>
+        <Box sx={{ pageBreakInside: "avoid" }}>
           <Typography variant="h4">{skill.title}</Typography>
           <Typography variant="body1">{skill.items.map(skill => <li>{skill}</li>)}</Typography>
-        </div>
+        </Box>
       )
     })
   );
@@ -135,14 +141,14 @@ const Resume = ({ data, location }) => {
       <Box sx={{ display: "flex" }}>
         <Box sx={{ margin: "auto" }}>
           <Grid container sx={{ maxWidth: 1200 }}>
-            <LeftColumn item sm={3}>
-              <ProfilePicture size={200} />
+            <LeftColumn item md={3}>
+              <ProfilePicture />
               <GeneralHeading>Contact</GeneralHeading>
               <ContactInfo contacts={contacts} />
               <GeneralHeading>Skills</GeneralHeading>
               <Skills skills={profile.skills} />
             </LeftColumn>
-            <RightColumn item sm={9} sx={{ background: colors.column.right }}>
+            <RightColumn item md={9} sx={{ background: colors.column.right }}>
               <Typography variant="h1">{profile.name}</Typography>
               <Typography variant="h2">{profile.designation}, {profile.company}</Typography>
               <GeneralHeading>Experience</GeneralHeading>

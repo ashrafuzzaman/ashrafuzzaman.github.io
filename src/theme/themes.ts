@@ -26,6 +26,9 @@ export const darkTheme: ThemeOptions = {
     divider: "#141820"
   },
   typography: {
+    fontFamily: [
+      'Roboto',
+    ].join(','),
     subtitle1: {
       fontSize: ".8rem",
       fontWeight: "600",
@@ -67,16 +70,7 @@ export const lightTheme: ThemeOptions = {
   },
   typography: {
     fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
       'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
     ].join(','),
     h1: {
       fontSize: "3rem",

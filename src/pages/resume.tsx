@@ -3,15 +3,15 @@ import { graphql } from "gatsby"
 
 import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Box, Grid, GridProps, Link, List, ListItem, ListItemIcon, ListItemText, Typography, TypographyProps, styled, useTheme } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
+import { Avatar, Box, Grid, GridProps, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
 import Experience from '../components/experience';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import "../print.css"
+import "../print.css";
+import profileImg from "../images/profile-pic-slim.webp";
 
 
 const Resume = ({ data, location }) => {
@@ -71,16 +71,20 @@ const Resume = ({ data, location }) => {
     borderBottomWidth: "thin",
   });
 
-  const ProfilePicture = () => (
-    <StaticImage
-      formats={["auto", "webp", "avif"]}
-      src="../images/profile-pic-slim.webp"
-      width={200}
-      height={200}
-      quality={95}
-      alt="Profile picture"
-      imgStyle={{
-        padding: "2px",
+  const ProfilePicture = ({ size }) => (
+    <Avatar
+      src={profileImg}
+      variant="square"
+      sx={{
+        width: size,
+        height: size,
+        margin: "0 auto",
+        "& img": {
+          objectFit: "contain",
+        },
+        "@media print": {
+          maxWidth: "200px",
+        },
       }}
     />
   );
@@ -141,12 +145,14 @@ const Resume = ({ data, location }) => {
       <Box sx={{ display: "flex" }}>
         <Box sx={{ margin: "auto" }}>
           <Grid container sx={{ maxWidth: 1200 }}>
-            <LeftColumn item md={3}>
-              <ProfilePicture />
-              <GeneralHeading>Contact</GeneralHeading>
-              <ContactInfo contacts={contacts} />
-              <GeneralHeading>Skills</GeneralHeading>
-              <Skills skills={profile.skills} />
+            <LeftColumn item md={3} xs={12} sx={{ display: "flex", justifyContent: "center" }}>
+              <Stack>
+                <ProfilePicture size={250} />
+                <GeneralHeading>Contact</GeneralHeading>
+                <ContactInfo contacts={contacts} />
+                <GeneralHeading>Skills</GeneralHeading>
+                <Skills skills={profile.skills} />
+              </Stack>
             </LeftColumn>
             <RightColumn item md={9} sx={{ background: colors.column.right }}>
               <Typography variant="h1">{profile.name}</Typography>

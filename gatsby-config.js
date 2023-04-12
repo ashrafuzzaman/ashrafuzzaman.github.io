@@ -103,7 +103,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `A.K.M. Ashrafuzzaman's site`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,

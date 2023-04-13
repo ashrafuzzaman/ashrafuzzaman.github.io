@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Avatar, Box, Grid, GridProps, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
+import { Box, Grid, GridProps, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
 import Experience from '../components/experience';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -12,7 +12,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PrintIcon from '@mui/icons-material/Print';
 import HomeIcon from '@mui/icons-material/Home';
-import "../print.css";
+import "../styles/print.css";
 import { StaticImage } from 'gatsby-plugin-image';
 
 

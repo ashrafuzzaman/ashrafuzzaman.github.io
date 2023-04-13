@@ -1,4 +1,3 @@
-import { CacheProvider } from "@emotion/react";
 import {
   createTheme,
   CssBaseline,
@@ -7,7 +6,7 @@ import {
 } from "@mui/material";
 import React, { ReactNode, useMemo } from "react";
 
-import { darkTheme, muiCache } from "./themes";
+import { darkTheme } from "./themes";
 
 const ThemeWrapper = (props: { children: ReactNode }) => {
   const { children } = props;
@@ -19,12 +18,10 @@ const ThemeWrapper = (props: { children: ReactNode }) => {
   }, []);
 
   return (
-    <CacheProvider value={muiCache}>
-      <ThemeProvider theme={activeTheme}>
-        <CssBaseline enableColorScheme />
-        {children}
-      </ThemeProvider>
-    </CacheProvider>
+    <ThemeProvider theme={activeTheme}>
+      <CssBaseline enableColorScheme />
+      {children}
+    </ThemeProvider>
   );
 };
 

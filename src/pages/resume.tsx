@@ -3,15 +3,17 @@ import { graphql } from "gatsby"
 
 import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Avatar, Box, Grid, GridProps, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
+import { Avatar, Box, Grid, GridProps, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
 import Experience from '../components/experience';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PrintIcon from '@mui/icons-material/Print';
+import HomeIcon from '@mui/icons-material/Home';
 import "../print.css";
-import profileImg from "../images/profile-pic-slim.webp";
+import { StaticImage } from 'gatsby-plugin-image';
 
 
 const Resume = ({ data, location }) => {
@@ -34,22 +36,6 @@ const Resume = ({ data, location }) => {
     "@media print": {
       maxWidth: "30vw"
     },
-    "& h3": {
-      fontSize: "1.3rem",
-      fontWeight: "500",
-      marginTop: ".5rem",
-    },
-    "& h4": {
-      fontSize: "1rem",
-      fontWeight: "500",
-      marginTop: "1rem",
-      padding: ".3rem .5rem",
-      background: "#e4d0b2",
-    },
-    "& li": {
-      fontSize: "1rem",
-      paddingLeft: ".3rem",
-    }
   });
 
   const RightColumn = styled((props: GridProps) => (
@@ -63,28 +49,24 @@ const Resume = ({ data, location }) => {
   });
 
   const GeneralHeading = styled((props: TypographyProps) => (
-    <Typography variant="h3" {...props} />
+    <Typography variant="h5" {...props} />
   ))({
-    padding: "10px 0",
+    padding: ".8rem 0 .2rem 0",
     borderBottomStyle: "solid",
     borderBottomColor: "#aaa",
     borderBottomWidth: "thin",
   });
 
-  const ProfilePicture = ({ size }) => (
-    <Avatar
-      src={profileImg}
-      variant="square"
-      sx={{
-        width: size,
-        height: size,
-        margin: "0 auto",
-        "& img": {
-          objectFit: "contain",
-        },
-        "@media print": {
-          maxWidth: "200px",
-        },
+  const ProfilePicture = () => (
+    <StaticImage
+      formats={["auto", "webp", "avif"]}
+      src="../images/profile-pic-slim.webp"
+      width={350}
+      height={350}
+      quality={95}
+      alt="Profile picture"
+      imgStyle={{
+        padding: "2px",
       }}
     />
   );
@@ -108,11 +90,28 @@ const Resume = ({ data, location }) => {
     skills.map(skill => {
       return (
         <Box sx={{ pageBreakInside: "avoid" }}>
-          <Typography variant="h4">{skill.title}</Typography>
+          <Typography variant="h6" sx={{
+            marginTop: "1rem",
+            padding: ".3rem .5rem",
+            background: "#e4d0b2",
+          }}>
+            {skill.title}
+          </Typography>
           <Typography variant="body1">{skill.items.map(skill => <li>{skill}</li>)}</Typography>
         </Box>
       )
     })
+  );
+
+  const ActionButtons = () => (
+    <Stack direction={"row"} sx={{ displayPrint: "none" }}>
+      <IconButton aria-label="Print" onClick={() => { window.print(); }}>
+        <PrintIcon />
+      </IconButton>
+      <IconButton aria-label="Print" href="/">
+        <HomeIcon />
+      </IconButton>
+    </Stack>
   );
 
   const contacts = [
@@ -147,7 +146,7 @@ const Resume = ({ data, location }) => {
           <Grid container sx={{ maxWidth: 1200 }}>
             <LeftColumn item md={3} xs={12} sx={{ display: "flex", justifyContent: "center" }}>
               <Stack>
-                <ProfilePicture size={250} />
+                <ProfilePicture />
                 <GeneralHeading>Contact</GeneralHeading>
                 <ContactInfo contacts={contacts} />
                 <GeneralHeading>Skills</GeneralHeading>
@@ -155,8 +154,11 @@ const Resume = ({ data, location }) => {
               </Stack>
             </LeftColumn>
             <RightColumn item md={9} sx={{ background: colors.column.right }}>
-              <Typography variant="h1">{profile.name}</Typography>
-              <Typography variant="h2">{profile.designation}, {profile.company}</Typography>
+              <Stack direction={"row"} sx={{ justifyContent: "space-between", alignItems: "flex-start" }}>
+                <Typography variant="h2" color={theme.palette.primary.dark}>{profile.name}</Typography>
+                <ActionButtons />
+              </Stack>
+              <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
               <GeneralHeading>Experience</GeneralHeading>
               <Box sx={{ maxWidth: "800px" }}>
                 <Experience />

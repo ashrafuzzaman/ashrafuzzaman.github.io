@@ -38,8 +38,8 @@ const BlogIndex = ({ data, location }) => {
                   itemType="http://schema.org/Article"
                 >
                   <header>
-                    <Typography variant="h1">
-                      <Link href={post.fields.slug} sx={{ fontSize: "1.8rem", fontWeight: "bold" }} itemProp="url">{title}</Link>
+                    <Typography variant="h4">
+                      <Link href={post.fields.slug} itemProp="url">{title}</Link>
                     </Typography>
                     <Typography variant="subtitle1">{post.frontmatter.date}</Typography>
                   </header>

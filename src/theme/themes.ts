@@ -30,24 +30,16 @@ export const darkTheme: ThemeOptions = {
       'Roboto',
     ].join(','),
     subtitle1: {
-      fontSize: ".8rem",
-      fontWeight: "600",
       color: orange[300],
     },
     subtitle2: {
-      fontSize: "1rem",
       fontStyle: "italic",
-      fontWeight: "600",
       color: orange[300],
-      marginBottom: ".5rem"
     },
   },
   components: {
     MuiListItemText: {
       styleOverrides: {
-        primary: {
-          fontSize: "1rem",
-        },
         root: {
           margin: 0,
         }
@@ -73,39 +65,21 @@ export const lightTheme: ThemeOptions = {
       'Roboto',
     ].join(','),
     h1: {
-      fontSize: "3rem",
-      fontWeight: "600",
       color: blue[800],
     },
-    h2: {
-      fontSize: "1.8rem",
-      fontWeight: "400",
-    },
-    h3: {
-      fontSize: "1.5rem",
-      fontWeight: "400",
-      marginTop: ".8rem",
-    },
     subtitle1: {
-      fontSize: ".8rem",
-      fontWeight: "600",
       color: orange[800],
     },
     subtitle2: {
-      marginBottom: ".5rem",
       fontStyle: "italic",
-      fontWeight: "600",
       color: orange[800],
     },
     body1: {
       color: grey[900],
-      fontSize: "1.2rem",
       "& h1": {
-        fontSize: "1.5rem",
         color: "#141820",
       },
       "& h2": {
-        fontSize: "1.3rem",
         color: "#141820",
       },
       "& a": {
@@ -146,10 +120,4 @@ export const muiCache = makeMuiCache();
 
 export const { makeStyles, withStyles } = createMakeAndWithStyles({
   useTheme,
-  /*
-  OR, if you have extended the default mui theme adding your own custom properties:
-  Let's assume the myTheme object that you provide to the <ThemeProvider /> is of
-  type MyTheme then you'll write:
-  */
-  // "useTheme": useTheme as (()=> MyTheme)
 });

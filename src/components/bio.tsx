@@ -120,7 +120,7 @@ const Bio = () => {
             <Masonry columns={2} spacing={2}>
               {profile.skills.map((skill, index) => (
                 <Box key={index}>
-                  <Typography fontWeight={700} sx={{ background: theme.palette.divider, p: 1 }}>{skill.title}</Typography>
+                  <Typography sx={{ background: theme.palette.divider, p: 1 }}>{skill.title}</Typography>
                   <List>
                     {skill.items.map((skill, skillIndex) => (
                       <ListItem key={skillIndex} sx={{ m: 0, pl: 2, pb: 0, pt: 0 }}>

@@ -19,12 +19,12 @@ const ThemeWrapper = (props: { children: ReactNode }) => {
   }, []);
 
   return (
-    <CacheProvider value={muiCache}>
-      <ThemeProvider theme={activeTheme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
-    </CacheProvider>
+    // <CacheProvider value={muiCache}>
+    <ThemeProvider theme={activeTheme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+    // </CacheProvider>
   );
 };
 

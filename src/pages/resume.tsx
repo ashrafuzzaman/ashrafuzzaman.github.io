@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Box, Grid, GridProps, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
+import { Box, Grid, GridProps, Hidden, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
 import Experience from '../components/experience';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -67,6 +67,7 @@ const Resume = ({ data, location }) => {
       alt="Profile picture"
       imgStyle={{
         padding: "2px",
+        objectFit: "contain"
       }}
     />
   );
@@ -147,6 +148,11 @@ const Resume = ({ data, location }) => {
             <LeftColumn item md={3} xs={12} sx={{ display: "flex", justifyContent: "center" }}>
               <Stack>
                 <ProfilePicture />
+                <Hidden mdUp>
+                  <Typography variant="h2" sx={{ marginTop: "1rem" }} color={theme.palette.primary.dark}>{profile.name}</Typography>
+                  <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
+                  <ActionButtons />
+                </Hidden>
                 <GeneralHeading>Contact</GeneralHeading>
                 <ContactInfo contacts={contacts} />
                 <GeneralHeading>Skills</GeneralHeading>
@@ -154,11 +160,13 @@ const Resume = ({ data, location }) => {
               </Stack>
             </LeftColumn>
             <RightColumn item md={9} sx={{ background: colors.column.right }}>
-              <Stack direction={"row"} sx={{ justifyContent: "space-between", alignItems: "flex-start" }}>
-                <Typography variant="h2" color={theme.palette.primary.dark}>{profile.name}</Typography>
-                <ActionButtons />
-              </Stack>
-              <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
+              <Hidden mdDown>
+                <Stack direction={"row"} sx={{ justifyContent: "space-between", alignItems: "flex-start" }}>
+                  <Typography variant="h2" color={theme.palette.primary.dark}>{profile.name}</Typography>
+                  <ActionButtons />
+                </Stack>
+                <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
+              </Hidden>
               <GeneralHeading>Experience</GeneralHeading>
               <Box sx={{ maxWidth: "800px", paddingTop: "1rem" }}>
                 <Experience />

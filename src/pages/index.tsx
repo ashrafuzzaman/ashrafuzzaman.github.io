@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
-import { CircularProgress, Grid } from '@mui/material'
+import { Box, CircularProgress, Grid } from '@mui/material'
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import Experience from '../components/experience'
@@ -25,7 +25,7 @@ const Index = ({ data, location }) => {
         {
           title: "Experience",
           icon: <CalendarMonthIcon />,
-          component: <Experience />,
+          component: <Box sx={{ padding: "1rem 2rem" }}><Experience /></Box>,
         },
         {
           title: "Resume",

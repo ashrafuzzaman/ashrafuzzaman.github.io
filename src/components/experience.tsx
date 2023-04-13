@@ -50,7 +50,7 @@ const Experience = () => {
       }}
     >
       {experiences.map((experience) => (
-        <TimelineItem sx={{ pageBreakInside: "avoid", padding: "1rem 2rem" }}>
+        <TimelineItem sx={{ pageBreakInside: "avoid" }}>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />

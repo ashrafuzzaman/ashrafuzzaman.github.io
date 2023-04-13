@@ -160,7 +160,7 @@ const Resume = ({ data, location }) => {
               </Stack>
               <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
               <GeneralHeading>Experience</GeneralHeading>
-              <Box sx={{ maxWidth: "800px" }}>
+              <Box sx={{ maxWidth: "800px", paddingTop: "1rem" }}>
                 <Experience />
               </Box>
             </RightColumn>

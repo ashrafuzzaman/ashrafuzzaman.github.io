@@ -21,7 +21,7 @@ const ThemeWrapper = (props: { children: ReactNode }) => {
   return (
     <CacheProvider value={muiCache}>
       <ThemeProvider theme={activeTheme}>
-        <CssBaseline />
+        <CssBaseline enableColorScheme />
         {children}
       </ThemeProvider>
     </CacheProvider>

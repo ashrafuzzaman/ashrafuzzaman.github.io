@@ -26,9 +26,6 @@ export const darkTheme: ThemeOptions = {
     divider: "#141820"
   },
   typography: {
-    fontFamily: [
-      'Roboto',
-    ].join(','),
     subtitle1: {
       color: orange[300],
     },
@@ -61,9 +58,6 @@ export const lightTheme: ThemeOptions = {
     },
   },
   typography: {
-    fontFamily: [
-      'Roboto',
-    ].join(','),
     h1: {
       color: blue[800],
     },

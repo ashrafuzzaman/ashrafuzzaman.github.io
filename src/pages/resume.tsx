@@ -168,9 +168,7 @@ const Resume = ({ data, location }) => {
                 <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
               </Hidden>
               <GeneralHeading>Experience</GeneralHeading>
-              <Box sx={{ maxWidth: "800px", paddingTop: "1rem" }}>
-                <Experience />
-              </Box>
+              <Experience />
             </RightColumn>
           </Grid>
         </Box>

@@ -9,6 +9,7 @@ export const darkTheme: ThemeOptions = {
     mode: "dark",
     primary: {
       main: lightBlue[800],
+      dark: orange[300],
       contrastText: lightBlue[900],
     },
     secondary: {
@@ -26,9 +27,6 @@ export const darkTheme: ThemeOptions = {
     divider: "#141820"
   },
   typography: {
-    subtitle1: {
-      color: orange[300],
-    },
     subtitle2: {
       fontStyle: "italic",
       color: orange[300],
@@ -50,19 +48,16 @@ export const lightTheme: ThemeOptions = {
     mode: "light",
     primary: {
       main: "#141820",
-      dark: "#141820",
+      dark: blue[800],
     },
     text: {
       primary: "#141820",
-      secondary: orange[800],
+      secondary: orange["A700"],
     },
   },
   typography: {
     h1: {
       color: blue[800],
-    },
-    subtitle1: {
-      color: orange[800],
     },
     subtitle2: {
       fontStyle: "italic",

@@ -79,11 +79,11 @@ experiences:
     brief: !markdown |
       NewsCred [changed the brand name](https://techcrunch.com/2020/10/14/newscred-relaunches-as-welcome/) to Welcome.
 
-  - title: ENGINEERING MANAGER
+  - title: Engineering Manager
     company: Newscred
     from: Apr 2015
     till: Sep 2018
-  - title: LEAD SOFTWARE ENGINEER
+  - title: Lead Software Engineer
     company: Newscred
     till: Apr 2015
     from: Oct 2014
@@ -100,7 +100,7 @@ experiences:
       - Closely work with DevOps and BI to improve system services, setting up automation, monitoring
       - Actively collaborates with product owners to create product roadmaps
       - Actively participates in technical interviews
-  - title: LEAD SOFTWARE ENGINEER
+  - title: Lead Software Engineer
     company: Tasawr
     till: Oct 2014
     from: Apr 2012
@@ -114,7 +114,7 @@ experiences:
       - Development of new platforms (especially backend Server/DB systems and mobile platforms)
       - Provide on-call and shift rotations when necessary
       - Writes technical blog posts on the corporate website periodically
-  - title: SR. TECHNOLOGY ANALYST
+  - title: Sr. Technology Analyst
     company: Orbund, LLC
     till: Apr 2012
     from: Oct 2011
@@ -125,13 +125,13 @@ experiences:
       - Collaborate with the remote clients and stakeholders
       - Facilitate in-house training and knowledge development
       - Research on new technologies
-  - title: CONSULTANT
+  - title: Consultant
     company: Simple Signup, Sweden
     from: Oct 2009
     till: Apr 2011
     brief: !markdown |
       We build an online event management system with Ruby on Rails and MySql. I worked as an part time software developer in Stockholm.
-  - title: SOFTWARE ENGINEER
+  - title: Software Engineer
     company: Code71
     till: Aug 2009
     from: May 2008
@@ -141,7 +141,7 @@ experiences:
       - Design and Develop software
       - Collaborate with the remote clients and stakeholders
       - Facilitate in-house training and knowledge development
-  - title: SENIOR SOFTWARE DEVELOPER
+  - title: Senior Software Developer
     company: DSi
     till: Feb 2008
     from: Jan 2007

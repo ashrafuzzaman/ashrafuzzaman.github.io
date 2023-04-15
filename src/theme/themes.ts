@@ -43,56 +43,6 @@ export const darkTheme: ThemeOptions = {
   }
 };
 
-export const lightTheme: ThemeOptions = {
-  palette: {
-    mode: "light",
-    primary: {
-      main: "#141820",
-      dark: blue[800],
-    },
-    text: {
-      primary: grey[900],
-      secondary: orange["A700"],
-    },
-  },
-  typography: {
-    h1: {
-      color: blue[800],
-    },
-    subtitle2: {
-      fontStyle: "italic",
-      color: orange[800],
-    },
-  },
-  components: {
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          background: "#212836"
-        }
-      }
-    },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          color: blue[800],
-          textDecoration: "none",
-        }
-      }
-    },
-    MuiListItemText: {
-      styleOverrides: {
-        primary: {
-          fontSize: "1rem",
-        },
-        root: {
-          margin: 0,
-        }
-      }
-    }
-  }
-};
-
 export const muiCache = makeMuiCache();
 
 export const { makeStyles, withStyles } = createMakeAndWithStyles({

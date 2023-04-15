@@ -1,9 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import ThemeWrapper from '../theme/LightThemeWrapper';
 import Seo from "../components/seo"
-import { Box, Grid, GridProps, Hidden, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
+import { Box, CssBaseline, Grid, GridProps, Hidden, IconButton, Link, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, TypographyProps, styled, useTheme } from '@mui/material';
 import Experience from '../components/experience';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
@@ -79,7 +78,7 @@ const Resume = ({ data, location }) => {
           <ListItemIcon sx={{ minWidth: "30px" }}>
             {contact.icon}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText sx={{ margin: 0, "& span": { fontSize: "1rem" } }}>
             {contact.url ? <Link href={contact.url} target="_blank">{contact.text}</Link> : contact.text}
           </ListItemText>
         </ListItem>
@@ -141,39 +140,38 @@ const Resume = ({ data, location }) => {
   ];
 
   return (
-    <ThemeWrapper>
-      <Box sx={{ display: "flex" }}>
-        <Box sx={{ margin: "auto" }}>
-          <Grid container sx={{ maxWidth: 1200 }}>
-            <LeftColumn item md={3} xs={12} sx={{ display: "flex", justifyContent: "center" }}>
-              <Stack>
-                <ProfilePicture />
-                <Hidden mdUp>
-                  <Typography variant="h2" sx={{ marginTop: "1rem" }} color={theme.palette.primary.dark}>{profile.name}</Typography>
-                  <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
-                  <ActionButtons />
-                </Hidden>
-                <GeneralHeading>Contact</GeneralHeading>
-                <ContactInfo contacts={contacts} />
-                <GeneralHeading>Skills</GeneralHeading>
-                <Skills skills={profile.skills} />
-              </Stack>
-            </LeftColumn>
-            <RightColumn item md={9} sx={{ background: colors.column.right }}>
-              <Hidden mdDown>
-                <Stack direction={"row"} sx={{ justifyContent: "space-between", alignItems: "flex-start" }}>
-                  <Typography variant="h2" color={theme.palette.primary.dark}>{profile.name}</Typography>
-                  <ActionButtons />
-                </Stack>
-                <Typography variant="h4">{profile.designation}, {profile.company}</Typography>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline enableColorScheme />
+      <Box sx={{ margin: "auto" }}>
+        <Grid container sx={{ maxWidth: 1200 }}>
+          <LeftColumn item md={3} xs={12} sx={{ display: "flex", justifyContent: "center" }}>
+            <Stack>
+              <ProfilePicture />
+              <Hidden mdUp>
+                <Typography variant="h3" sx={{ marginTop: "1rem" }} color={theme.palette.primary.dark}>{profile.name}</Typography>
+                <Typography variant="h5">{profile.designation}, {profile.company}</Typography>
+                <ActionButtons />
               </Hidden>
-              <GeneralHeading>Experience</GeneralHeading>
-              <Experience />
-            </RightColumn>
-          </Grid>
-        </Box>
+              <GeneralHeading>Contact</GeneralHeading>
+              <ContactInfo contacts={contacts} />
+              <GeneralHeading>Skills</GeneralHeading>
+              <Skills skills={profile.skills} />
+            </Stack>
+          </LeftColumn>
+          <RightColumn item md={9} sx={{ background: colors.column.right }}>
+            <Hidden mdDown>
+              <Stack direction={"row"} sx={{ justifyContent: "space-between", alignItems: "flex-start" }}>
+                <Typography variant="h3" color={theme.palette.primary.dark}>{profile.name}</Typography>
+                <ActionButtons />
+              </Stack>
+              <Typography variant="h5">{profile.designation}, {profile.company}</Typography>
+            </Hidden>
+            <GeneralHeading>Experience</GeneralHeading>
+            <Experience />
+          </RightColumn>
+        </Grid>
       </Box>
-    </ThemeWrapper>
+    </Box>
   )
 }
 

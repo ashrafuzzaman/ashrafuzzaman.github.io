@@ -1,5 +1,4 @@
 import * as React from "react"
-import ThemeWrapper from '../theme/LightThemeWrapper';
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';

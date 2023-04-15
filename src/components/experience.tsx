@@ -39,10 +39,10 @@ const Experience = () => {
       <Timeline
         sx={{
           margin: 0,
+          padding: 0,
           paddingTop: "1rem",
           "& a": {
             color: theme.palette.primary.main,
-            textDecoration: "none",
           },
           [`& .${timelineItemClasses.root}:before`]: {
             flex: 0,
@@ -79,8 +79,8 @@ const Experience = () => {
               <Typography variant="body1">
                 <List>
                   {experience.responsibilities.map((responsibility, index) => (
-                    <ListItem key={index} sx={{ m: 0, p: 0 }}>
-                      <ListItemIcon>
+                    <ListItem key={index} sx={{ m: 0, p: 0, alignItems: "flex-start" }}>
+                      <ListItemIcon sx={{ minWidth: "34px", mt: "3px" }}>
                         <KeyboardArrowRightIcon />
                       </ListItemIcon>
                       <ListItemText primary={responsibility} />

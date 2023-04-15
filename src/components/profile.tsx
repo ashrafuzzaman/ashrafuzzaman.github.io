@@ -12,7 +12,7 @@ import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Masonry } from '@mui/lab';
-import RssFeedIcon from '@mui/icons-material/RssFeed';
+import ArticleIcon from '@mui/icons-material/Article';
 import profilePic from "../images/profile-pic-slim.webp";
 
 
@@ -77,12 +77,12 @@ const Profile = () => {
       target: "_blank",
     },
     {
-      icon: <RssFeedIcon color="secondary" fontSize="small" />,
+      icon: <ArticleIcon color="secondary" fontSize="small" />,
       text: profile.links.blog.alt,
       url: profile.links.blog.url,
     },
     {
-      icon: <RssFeedIcon color="secondary" fontSize="small" />,
+      icon: <ArticleIcon color="secondary" fontSize="small" />,
       text: profile.links.blogOnDistributedSystem.alt,
       url: profile.links.blogOnDistributedSystem.url,
     },

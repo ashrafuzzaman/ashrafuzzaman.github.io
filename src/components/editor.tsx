@@ -193,7 +193,7 @@ function Editor({ contents }: EditorProps) {
           hidden={tabIndex !== tabContentIndex}
           id={`simple-tabpanel-${tabContentIndex}`}
           aria-labelledby={`simple-tab-${tabContentIndex}`}
-          style={{ minWidth: '600px', color: colors.editor.text }}
+          style={{ color: colors.editor.text }}
         >
           {tabIndex === tabContentIndex && (
             <Grid container>
@@ -210,9 +210,9 @@ function Editor({ contents }: EditorProps) {
                 </Box>
               </Hidden>
               <Fade in={true}>
-                <Box display={"inline-block"} sx={{ maxWidth: "1100px" }}>
+                <Box display={"inline-block"}>
                   {content.component ? content.component :
-                    <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "300px", minWidth: "600px" }}>
+                    <Grid sx={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "300px" }}>
                       <CircularProgress />
                     </Grid>
                   }

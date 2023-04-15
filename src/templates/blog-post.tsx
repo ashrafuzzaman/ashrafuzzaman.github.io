@@ -3,10 +3,10 @@ import { graphql } from "gatsby"
 
 import BlogLayout from '../layouts/blog';
 import Seo from "../components/seo"
-import { Box, BoxProps, Link, Typography, styled, useTheme } from '@mui/material'
+import { Box, BoxProps, Link, Typography, styled } from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { blue, grey } from '@mui/material/colors';
+import colors from "../colors/blog";
 
 
 const BlogPostTemplate = ({
@@ -14,7 +14,6 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = `Back to home`;
-  const theme = useTheme();
 
   const Article = styled((props: BoxProps) => (
     <Box
@@ -36,23 +35,23 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <Typography variant="h1">{post.frontmatter.title}</Typography>
-          <Typography variant="subtitle1">{post.frontmatter.date}</Typography>
+          <Typography variant="h1" color={colors.typography.title}>{post.frontmatter.title}</Typography>
+          <Typography variant="subtitle1" color={colors.typography.subtitle}>{post.frontmatter.date}</Typography>
         </header>
         <section itemProp="articleBody">
           <Typography
             sx={{
-              color: grey[900],
+              color: colors.typography.text,
               "& h1": {
-                color: grey[800]
+                color: colors.typography.header,
               },
               "& h2": {
-                color: grey[800]
+                color: colors.typography.header,
               },
               "& a": {
-                color: blue["A700"],
+                color: colors.typography.link,
                 textDecoration: "none"
-              },        
+              },
             }}
             dangerouslySetInnerHTML={{ __html: post.html }}>
           </Typography>
@@ -71,14 +70,14 @@ const BlogPostTemplate = ({
         >
           <li>
             {previous && (
-              <Link href={previous.fields.slug} rel="prev" sx={{ display: "flex", alignItems: "center" }}>
+              <Link href={previous.fields.slug} rel="prev" sx={{ display: "flex", alignItems: "center", color: colors.typography.link }}>
                 <ArrowBackIcon />{previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link href={next.fields.slug} rel="next" sx={{ display: "flex", alignItems: "center" }}>
+              <Link href={next.fields.slug} rel="next" sx={{ display: "flex", alignItems: "center", color: colors.typography.link }}>
                 {next.frontmatter.title} <ArrowForwardIcon />
               </Link>
             )}

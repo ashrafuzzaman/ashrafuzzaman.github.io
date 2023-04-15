@@ -5,6 +5,7 @@ import Profile from "../components/profile"
 import BlogLayout from "../layouts/blog"
 import Seo from "../components/seo"
 import { Link, List, ListItem, ListItemText, Typography } from '@mui/material'
+import colors from "../colors/blog";
 
 
 const BlogIndex = ({ data, location }) => {
@@ -39,15 +40,18 @@ const BlogIndex = ({ data, location }) => {
                 >
                   <header>
                     <Typography variant="h4">
-                      <Link href={post.fields.slug} itemProp="url">{title}</Link>
+                      <Link href={post.fields.slug} color={colors.typography.title} sx={{ textDecoration: "none" }} itemProp="url">
+                        {title}
+                      </Link>
                     </Typography>
-                    <Typography variant="subtitle1">{post.frontmatter.date}</Typography>
+                    <Typography variant="subtitle1" color={colors.typography.subtitle}>{post.frontmatter.date}</Typography>
                   </header>
                   <section>
                     <Typography
                       variant="body1"
                       sx={{
                         mb: 2,
+                        color: colors.typography.text
                       }}
                       dangerouslySetInnerHTML={{ __html: post.frontmatter.description || post.excerpt }}>
                     </Typography>

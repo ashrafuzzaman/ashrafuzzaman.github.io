@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import { Box, BoxProps, Link, Typography, styled, useTheme } from '@mui/material'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { blue, grey } from '@mui/material/colors';
 
 
 const BlogPostTemplate = ({
@@ -14,9 +15,6 @@ const BlogPostTemplate = ({
 }) => {
   const siteTitle = `Back to home`;
   const theme = useTheme();
-
-  console.log(theme.palette.primary.dark);
-
 
   const Article = styled((props: BoxProps) => (
     <Box
@@ -39,11 +37,23 @@ const BlogPostTemplate = ({
       >
         <header>
           <Typography variant="h1">{post.frontmatter.title}</Typography>
-          <Typography variant="subtitle1" sx={{ pl: 1 }}>{post.frontmatter.date}</Typography>
+          <Typography variant="subtitle1">{post.frontmatter.date}</Typography>
         </header>
         <section itemProp="articleBody">
           <Typography
-            variant="body1"
+            sx={{
+              color: grey[900],
+              "& h1": {
+                color: grey[800]
+              },
+              "& h2": {
+                color: grey[800]
+              },
+              "& a": {
+                color: blue["A700"],
+                textDecoration: "none"
+              },        
+            }}
             dangerouslySetInnerHTML={{ __html: post.html }}>
           </Typography>
         </section>

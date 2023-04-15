@@ -51,7 +51,7 @@ export const lightTheme: ThemeOptions = {
       dark: blue[800],
     },
     text: {
-      primary: "#141820",
+      primary: grey[900],
       secondary: orange["A700"],
     },
   },
@@ -62,18 +62,6 @@ export const lightTheme: ThemeOptions = {
     subtitle2: {
       fontStyle: "italic",
       color: orange[800],
-    },
-    body1: {
-      color: grey[900],
-      "& h1": {
-        color: "#141820",
-      },
-      "& h2": {
-        color: "#141820",
-      },
-      "& a": {
-        color: blue[800],
-      },
     },
   },
   components: {

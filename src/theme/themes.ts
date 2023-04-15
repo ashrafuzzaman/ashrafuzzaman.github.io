@@ -8,16 +8,16 @@ export const darkTheme: ThemeOptions = {
   palette: {
     mode: "dark",
     primary: {
-      main: lightBlue[800],
+      main: lightBlue[400],
       dark: orange[300],
       contrastText: lightBlue[900],
     },
     secondary: {
-      main: deepOrange[800],
+      main: orange[300],
       contrastText: deepOrange[900],
     },
     text: {
-      primary: grey[100],
+      primary: lightBlue[400],
       secondary: orange[300]
     },
     background: {

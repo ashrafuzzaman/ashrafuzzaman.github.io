@@ -7,15 +7,16 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { Box, Grid, Hidden, Link, List, ListItem, ListItemText, Typography, useTheme } from '@mui/material'
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { Box, Grid, Hidden, Link, List, ListItem, ListItemIcon, ListItemText, Typography, useTheme } from '@mui/material'
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Masonry } from '@mui/lab';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
+import profilePic from "../images/profile-pic-slim.webp";
 
 
-const Bio = () => {
+const Profile = () => {
   const theme = useTheme();
 
   const { profileYaml: profile } = useStaticQuery(graphql`
@@ -40,6 +41,14 @@ const Bio = () => {
             alt
             url
           }
+          blog {
+            alt
+            url
+          }
+          blogOnDistributedSystem {
+            alt
+            url
+          }
         }
         skills {
           title
@@ -49,57 +58,55 @@ const Bio = () => {
     }
   `)
 
-  const links = profile.links;
-
-  const SmallProfileImage = () => (
-    <StaticImage
-      formats={["auto", "webp", "avif"]}
-      src="../images/profile-pic-slim.webp"
-      width={150}
-      height={150}
-      quality={95}
-      alt="Profile picture"
-      imgStyle={{
-        padding: "2px",
-      }}
-    />
-  );
-
-  const BigProfileImage = () => (
-    <StaticImage
-      formats={["auto", "webp", "avif"]}
-      src="../images/profile-pic-slim.webp"
-      width={350}
-      height={350}
-      quality={95}
-      alt="Profile picture"
-      imgStyle={{
-        padding: "2px",
-      }}
-    />
-  );
+  const links = [
+    {
+      icon: <ContactPageIcon color="secondary" fontSize="small" />,
+      text: "Resume",
+      url: "/resume",
+    },
+    {
+      icon: <LinkedInIcon color="secondary" fontSize="small" />,
+      text: profile.links.linkedIn.alt,
+      url: profile.links.linkedIn.url,
+      target: "_blank",
+    },
+    {
+      icon: <GitHubIcon color="secondary" fontSize="small" />,
+      text: profile.links.github.alt,
+      url: profile.links.github.url,
+      target: "_blank",
+    },
+    {
+      icon: <RssFeedIcon color="secondary" fontSize="small" />,
+      text: profile.links.blog.alt,
+      url: profile.links.blog.url,
+    },
+    {
+      icon: <RssFeedIcon color="secondary" fontSize="small" />,
+      text: profile.links.blogOnDistributedSystem.alt,
+      url: profile.links.blogOnDistributedSystem.url,
+    },
+  ];
 
   return (
     <Grid container justifyContent={"center"}>
       <Grid direction={'column'} sx={{ p: 3 }}>
-        <Hidden lgUp>
-          <BigProfileImage />
-        </Hidden>
-        <Hidden lgDown>
-          <SmallProfileImage />
-        </Hidden>
-
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 1 }}>
-          <Link href={links.github.url} target="_blank" variant="body2" sx={{ pr: 1 }}>
-            <GitHubIcon />
-          </Link>
-          <Link href={links.linkedIn.url} target="_blank" variant="body2" sx={{ pr: 1 }}>
-            <LinkedInIcon />
-          </Link>
-          <Link href={links.twitter.url} target="_blank" variant="body2">
-            <TwitterIcon />
-          </Link>
-        </Box>
+        <img
+          style={{ maxWidth: 250 }}
+          src={profilePic}
+        />
+        <List>
+          {links.map((link) => (
+            <ListItem sx={{ padding: 0 }}>
+              <ListItemIcon sx={{ minWidth: "30px" }}>
+                {link.icon}
+              </ListItemIcon>
+              <ListItemText sx={{ "& a": { color: theme.palette.primary.main } }}>
+                {link.url ? <Link href={link.url} target={link.target || "_parent"}>{link.text}</Link> : link.text}
+              </ListItemText>
+            </ListItem>
+          ))}
+        </List>
       </Grid>
       <Grid sx={{
         m: 0, borderLeftColor: theme.palette.divider,
@@ -111,11 +118,17 @@ const Bio = () => {
       }}>
         <Box sx={{ p: 3 }}>
           <Typography variant="h4" color={theme.palette.text.primary}>{profile.name}</Typography>
-          <Typography variant="caption" display={"inline-block"} sx={{ mb: 3 }} color={theme.palette.text.primary}>
+          <Typography variant="caption" display={"inline-block"} sx={{ mb: 1 }} color={theme.palette.text.primary}>
             {profile.designation}@{profile.company}
           </Typography>
           <Typography variant="body1">
-            <div dangerouslySetInnerHTML={{ __html: profile.summary.html }} />
+            <Typography
+              variant="body1"
+              sx={{
+                "& a": { color: theme.palette.text.primary }
+              }}
+              dangerouslySetInnerHTML={{ __html: profile.summary.html }}>
+            </Typography>
             <Typography variant="body1" sx={{ mb: 2 }}>The technologies I am working on recently are,</Typography>
             <Masonry columns={2} spacing={2}>
               {profile.skills.map((skill, index) => (
@@ -138,4 +151,4 @@ const Bio = () => {
   )
 }
 
-export default Bio
+export default Profile

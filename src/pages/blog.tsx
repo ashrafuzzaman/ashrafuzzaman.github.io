@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import Profile from "../components/profile"
 import BlogLayout from "../layouts/blog"
 import Seo from "../components/seo"
 import { Link, List, ListItem, ListItemText, Typography } from '@mui/material'
@@ -14,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <BlogLayout>
-        <Bio />
+        <Profile />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in

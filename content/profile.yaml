@@ -25,6 +25,12 @@ links:
   site:
     alt: ashrafuzzaman
     url: https://ashrafuzzaman.github.io
+  blog:
+    alt: Blog
+    url: /blog
+  blogOnDistributedSystem:
+    alt: Blog on distributed system
+    url: http://distash.blogspot.com/
   linkedIn:
     alt: ashrafuzzaman-jitu
     url: https://www.linkedin.com/in/ashrafuzzaman-jitu/

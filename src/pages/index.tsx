@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import Profile from "../components/profile"
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
 import { Box, CircularProgress, Grid } from '@mui/material'
@@ -20,20 +20,12 @@ const Index = ({ data, location }) => {
         {
           title: "Profile",
           icon: <AccountBoxIcon />,
-          component: <Bio />,
+          component: <Profile />,
         },
         {
           title: "Experience",
           icon: <CalendarMonthIcon />,
           component: <Box sx={{ padding: "1rem 2rem" }}><Experience /></Box>,
-        },
-        {
-          title: "Resume",
-          href: "/resume",
-        },
-        {
-          title: "Blog",
-          href: "/blog",
         },
       ]} />
     </Layout >

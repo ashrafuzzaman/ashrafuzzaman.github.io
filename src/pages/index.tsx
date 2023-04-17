@@ -22,11 +22,6 @@ const Index = ({ data, location }) => {
           icon: <AccountBoxIcon />,
           component: <Profile />,
         },
-        {
-          title: "Experience",
-          icon: <CalendarMonthIcon />,
-          component: <Box sx={{ padding: "1rem 2rem" }}><Experience /></Box>,
-        },
       ]} />
     </Layout >
   );

@@ -13,7 +13,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { Masonry } from '@mui/lab';
 import ArticleIcon from '@mui/icons-material/Article';
-import profilePic from "../images/profile-pic-slim.webp";
+import { StaticImage } from 'gatsby-plugin-image';
 
 
 const Profile = () => {
@@ -58,6 +58,20 @@ const Profile = () => {
     }
   `)
 
+  const ProfilePicture = () => (
+    <StaticImage
+      formats={["auto", "webp"]}
+      src="../images/profile-pic-slim.webp"
+      width={250}
+      height={250}
+      quality={100}
+      alt="Profile picture"
+      imgStyle={{
+        objectFit: "contain"
+      }}
+    />
+  );
+
   const links = [
     {
       icon: <ContactPageIcon color="secondary" fontSize="small" />,
@@ -91,10 +105,7 @@ const Profile = () => {
   return (
     <Grid container justifyContent={"center"}>
       <Grid direction={'column'} sx={{ p: 3 }}>
-        <img
-          style={{ maxWidth: 250 }}
-          src={profilePic}
-        />
+        <ProfilePicture />
         <List>
           {links.map((link) => (
             <ListItem sx={{ padding: 0 }}>

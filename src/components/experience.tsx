@@ -12,27 +12,8 @@ import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 
-const Experience = () => {
+const Experience = ({ experiences }) => {
   const theme = useTheme();
-
-  const { profileYaml: profile } = useStaticQuery(graphql`
-    query {
-      profileYaml {
-        experiences {
-          title
-          company
-          from
-          till
-          brief {
-            html
-          }
-          responsibilities
-        }
-      }
-    }
-  `)
-
-  const experiences = profile.experiences;
 
   return (
     experiences.map((experience) => (

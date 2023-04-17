@@ -1,0 +1,70 @@
+---
+name: Sharmin Sultana
+designation: Junior Transport Engineer
+company: Untapped Ideas Limited
+summary: !markdown |
+  I consider myself to be a person who is persistent and determined.
+  I am constantly eager to learn new things. My exposure to the academic and industrial worlds strengthened my belief in commitment
+  and hard work as well as my confidence in my abilities. I am currently looking for opportunities to put the skills I have acquired
+  through my education and experience to use. For diploma course I take class on “Transportation engineering" and took class on “Transport and Traffic Design”,
+  Conducting transportation lab on “Highway materials and Traffic engineering lab”, “Transportation Engineering Sessional I”.
+  Doing Project on “Intelligent transport system (ITS)”​
+contact:
+  email: sust.rumjhum@gmail.com
+  phone: "+880 1710589581"
+  location: Dhaka, Bangladesh
+links:
+  linkedIn:
+    alt: rumjhum
+    url: https://www.linkedin.com/in/rumjhum/
+skills:
+  - title: Achievement
+    items:
+      - Won EASTS best Research Paper Special Awardees in the field of public transportation and active mobility research out of 454 manuscripts
+  - title: Skills
+    items:
+      - Transportation Planning (Modelling)
+      - Traffic Engineering
+      - Traffic safety
+      - Structural Engineering
+      - Geotechnical engineering
+      - Environmental Engineering
+  - title: Master's Thesis Topic
+    items:
+      - Service Quality Perception & Preference For Public Bus Users In Dhaka City, Through The Lens Of Gender
+  - title: Bachelor's Thesis Topic
+    items:
+      - Transport Mode Choice Model For Dhaka Sylhet Trip
+experiences:
+  - title: Junior Transport Engineer
+    company: Untapped Ideas Limited
+    till: Present
+    from: March, 2023
+
+  - title: Associate Transport planner
+    company: BETS Consulting service ltd.
+    till: May, 2020
+    from: December, 2019
+    brief: !markdown |
+      Consultancy services for feasibility study for construction of Circular Rail line around Dhaka city project.
+
+  - title: Lecturer
+    company: World University Of Bangladesh - Dhanmondi
+    till: December, 2019
+    from: August, 2017
+    brief: !markdown |
+      I had joined as a lecturer here, and took classes for Structural Engineering, Environmental engineering, Transportation and Geotechnical engineering.
+
+  - title: Academic Service
+    company: "Reviewed for Journal: GEOFORUM, January, 2023"
+
+sections:
+  - title: Publications
+    items:
+      - title: Conference
+        items:
+          - "Sultana, S., Rouf, K. B. A., Hossain, D. M. and Hossain, M. Service quality perception and preference of public bus users in Dhaka city: through the lens of gender. In the 98th Annual Meeting of TRB, Washington DC, USA. 13-17 January, 2019."
+          - "Sultana, S., Rouf, K. B. A., Ahmed, S. S., Hossain, M. and Hossain, D. M. Redesigning the Interiors of Public Buses in Dhaka City: Exploring the Gender based Perceptions and Preferences. In the Proceedings of the Eastern Asia Society for Transportation Studies, Colombo, Sri Lanka. 9-11 September, 2019."
+  - title: Journal
+    items:
+      - "Sultana, S., Rouf, K. B. A., Ahmed, S. S., Hossain, M. and Hossain, D. M. (2020) Redesigning the Interiors of Public Buses in Dhaka City: Exploring the Gender based Perceptions and Preferences, Asian Transport Studies. Vol.6."

@@ -98,44 +98,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       siteUrl: String
     }
 
-    type Social {
-      twitter: String
-    }
-
-    type profileYaml {
-      name: String
-      designation: String
-      summary: String
-      links: Links
-      experiences: [Experience]
-      skills: [Skill]
-    }
-
-    type Links {
-      twitter: LinkDetails
-      github: LinkDetails
-      site: LinkDetails
-      linkedIn: LinkDetails
-    }
-
-    type LinkDetails {
-      alt: String
-      url: String
-    }
-
-    type Experience {
-      title: String
-      company: String
-      started: String
-      till: String
-      responsibility: String
-    }
-
-    type Skill {
-      title: String
-      items: [String]
-    }
-
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields

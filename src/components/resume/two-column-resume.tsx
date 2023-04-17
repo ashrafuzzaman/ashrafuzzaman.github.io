@@ -109,7 +109,7 @@ const TwoColumnResume = ({ profile, profilePicture }) => {
     </Stack>
   );
 
-  const contacts = [
+  let contacts: { icon: React.ReactElement, text: string, url?: string }[] = [
     {
       icon: <EmailIcon fontSize="small" />,
       text: profile.contact.email
@@ -122,17 +122,22 @@ const TwoColumnResume = ({ profile, profilePicture }) => {
       icon: <LocationOnIcon fontSize="small" />,
       text: profile.contact.location
     },
-    {
+  ];
+
+  if (profile.links.github) {
+    contacts.push({
       icon: <GitHubIcon fontSize="small" />,
       url: profile.links.github.url,
       text: profile.links.github.alt,
-    },
-    {
+    });
+  }
+  if (profile.links.linkedIn) {
+    contacts.push({
       icon: <LinkedInIcon fontSize="small" />,
       url: profile.links.linkedIn.url,
       text: profile.links.linkedIn.alt
-    },
-  ];
+    });
+  }
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -162,7 +167,7 @@ const TwoColumnResume = ({ profile, profilePicture }) => {
               <Typography variant="h5">{profile.designation}, {profile.company}</Typography>
             </Hidden>
             <GeneralHeading>Experience</GeneralHeading>
-            <Experience />
+            <Experience experiences={profile.experiences} />
           </RightColumn>
         </Grid>
       </Box>

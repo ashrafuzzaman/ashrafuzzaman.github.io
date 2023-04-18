@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "A.K.M. Ashrafuzzaman's site",
   "version": "2.2.0",
   "scripts": {
     "dev": "astro check --watch & astro dev",

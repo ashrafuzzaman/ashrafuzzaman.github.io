@@ -1,6 +1,6 @@
 ---
 title: Introducing Kafka
-pubDatetime: 2016-06-09T16:39:18Z
+pubDate: 2016-06-09
 tags: ["kafka", "broker"]
 description:
   A brief introduction to Kafka

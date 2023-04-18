@@ -1,6 +1,6 @@
 ---
 title: Ruby DSL 101
-pubDatetime: 2017-03-31
+pubDate: 2017-03-31
 tags: ["Ruby", "DSL"]
 description:
   Ruby DSL let's you write clean code in a declarative approach

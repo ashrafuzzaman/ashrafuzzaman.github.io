@@ -1,6 +1,6 @@
 ---
 title: Dockerize rails
-pubDatetime: 2017-03-31
+pubDate: 2017-03-31
 tags: ["Docker", "Rails"]
 description:
   Dockerize rails app

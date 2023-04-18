@@ -1,7 +1,7 @@
 ---
 title: Before splitting into microservices
 postSlug: before splitting into microservices
-pubDatetime: 2017-03-24
+pubDate: 2017-03-24
 featured: true
 tags: ["Microservices", "Monolith"]
 description:

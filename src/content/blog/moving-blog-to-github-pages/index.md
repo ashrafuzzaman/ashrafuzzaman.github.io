@@ -1,6 +1,6 @@
 ---
 title: Moving blog to github pages
-pubDatetime: 2016-02-12T16:39:18Z
+pubDate: 2016-02-12
 description:
   Moving blog to github pages
 ---

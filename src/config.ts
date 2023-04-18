@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Sat Naing",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
   title: "A.K.M. Ashrafuzzaman",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "/assets/profile-pic.webp",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
@@ -13,7 +13,7 @@ export const SITE: Site = {
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default
 
 export const LOGO_IMAGE = {
-  enable: false,
+  enable: true,
   svg: true,
   width: 216,
   height: 46,

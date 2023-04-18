@@ -4,7 +4,7 @@ comments: true
 date: "2016-06-09T16:39:18Z"
 keywords: kafka, producers, consumers, broker
 categories: kafka
-tags: kafka
+tags: ["kafka"]
 ---
 ## What is Kafka
 Kafka is a **distributed**, **partitioned**, **replicated commit log** service.

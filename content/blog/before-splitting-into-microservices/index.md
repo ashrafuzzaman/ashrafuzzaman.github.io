@@ -4,7 +4,7 @@ comments: true
 Date: "2017-03-24"
 keywords: Microservices, Monolith, split
 categories: Microservices
-tags: Microservices, Monolith
+tags: ["Microservices", "Monolith"]
 ---
 
 # When ???

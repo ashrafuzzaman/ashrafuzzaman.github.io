@@ -4,7 +4,7 @@ comments: true
 date: "2017-03-31"
 keywords: Ruby, DSL, Domain Specific Language
 categories: Ruby
-tags: Ruby, DSL
+tags: ["Ruby", "DSL"]
 draft: true
 ---
 

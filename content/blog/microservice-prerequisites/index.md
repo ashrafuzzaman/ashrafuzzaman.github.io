@@ -4,7 +4,7 @@ comments: true
 date: "2017-03-27"
 keywords: Microservices, Prerequisites
 categories: Microservices
-tags: Microservices
+tags: ["Microservices"]
 ---
 
 Inspire by the [post](https://martinfowler.com/bliki/MicroservicePrerequisites.html) by Martin Fowler, wanted to share my thoughts as well.

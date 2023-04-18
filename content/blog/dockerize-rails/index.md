@@ -4,7 +4,7 @@ comments: true
 date: "2017-03-31"
 keywords: Docker, Rails
 categories: Docker
-tags: Docker, Rails
+tags: ["Docker", "Rails"]
 ---
 
 It is simple to dockerize your rails app. Rails maintain an official release of [rails base image](https://hub.docker.com/r/library/rails/), where you have all your basic prerequisites installed.

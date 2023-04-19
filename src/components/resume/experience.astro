@@ -18,10 +18,10 @@ const { title, company, from, till, brief, responsibilities } = experience;
   {brief ? <p>{brief}</p> : ""}
   {
     responsibilities ? (
-      <ul>
+      <ul class="ml-3">
         {responsibilities.map(responsibility => (
           <li class="m-0 p-0">
-            <Icon class="w-[18px]" name="mdi:arrow-right-bold" />
+            <Icon class="w-[18px]" name="mdi:arrow-right-thin" />
             <span>{responsibility}</span>
           </li>
         ))}

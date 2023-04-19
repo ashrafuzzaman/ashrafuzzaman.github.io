@@ -1,11 +1,14 @@
 ---
 export interface Props {
-  title: string;
-  brief: string;
+  experience: any;
 }
 
-const { title, brief } = Astro.props;
+const { experience } = Astro.props;
+const { title, company, brief } = experience;
 ---
 
-<h3>{title}</h3>
-{brief ? <p>{brief}</p> : ""}
+<div class="break-inside-avoid-column">
+  <h2 class="mt-2 font-[500]">{title}</h2>
+  <h4 class="font-[500]">{company}</h4>
+  {brief ? <p>{brief}</p> : ""}
+</div>

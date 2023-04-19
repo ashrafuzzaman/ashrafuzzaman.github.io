@@ -1,0 +1,15 @@
+---
+export interface Props {
+  skill: any;
+}
+
+const { skill } = Astro.props;
+const { title, items } = skill;
+---
+
+<div class="break-inside-avoid-column">
+  <h2 class="mt-2 font-[500]">{title}</h2>
+  <ul>
+    {skill.items.map(item => <li>{item}</li>)}
+  </ul>
+</div>

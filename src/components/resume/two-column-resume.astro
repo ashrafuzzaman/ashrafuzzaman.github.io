@@ -5,17 +5,18 @@ import Experience from "@components/resume/experience.astro";
 import Skill from "@components/resume/skill.astro";
 
 const { profile } = Astro.props;
-const { name, designation, company, contact, skills, experiences } = profile;
+const { name, designation, summary, company, contact, skills, experiences } =
+  profile;
 ---
 
 <Layout>
   <main
-    class="prose m-auto flex flex-col sm:min-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row"
+    class="m-auto flex flex-col sm:min-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row"
   >
     <section class="w-full bg-[#F0E5D4] p-5 sm:w-auto">
       <img class="m-auto w-40 border-none" src="/assets/profile-pic.webp" />
-      <h2 class="mt-2">Contact</h2>
-      <div class="w-[220px]">
+      <h2 class="h2 mt-3">Contact</h2>
+      <div class="w-[240px]">
         <div>
           <Icon class="w-[18px]" name="mdi:email" />
           {contact.email}
@@ -29,14 +30,15 @@ const { name, designation, company, contact, skills, experiences } = profile;
           {contact.location}
         </div>
       </div>
-      <h2 class="mt-2">Skills</h2>
+      <h2 class="h2">Skills</h2>
       {skills.map(skill => <Skill skill={skill} />)}
     </section>
     <section class="bg-[#FFF9F1] p-5">
-      <h1>{name}</h1>
-      <h3 class="mt-0">{designation} @ {company}</h3>
-      <h2 class="mt-3">Experience</h2>
-      <hr class="mb-1" />
+      <h1 class="text-4xl font-bold">{name}</h1>
+      <h3 class="h3 mt-0">{designation} @ {company}</h3>
+      <p>{summary}</p>
+      <h2 class="h2">Experience</h2>
+      <hr class="mb-1 border-[#999]" />
       {experiences.map(experience => <Experience experience={experience} />)}
     </section>
   </main>
@@ -46,4 +48,12 @@ const { name, designation, company, contact, skills, experiences } = profile;
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  .h3 {
+    @apply mt-3 text-lg font-semibold
+  }
+
+  .h2 {
+    @apply font-bold text-lg
+  }
 </style>

@@ -7,9 +7,9 @@ const { skill } = Astro.props;
 const { title, items } = skill;
 ---
 
-<div class="break-inside-avoid-column">
-  <h2 class="mt-2 font-[500]">{title}</h2>
+<div class="break-inside-avoid">
+  <h4 class="mt-2 p-1 font-semibold bg-[#E1D0B2]">{title}</h4>
   <ul>
-    {skill.items.map(item => <li>{item}</li>)}
+    {skill.items.map(item => <li class="p-0 m-0">{item}</li>)}
   </ul>
 </div>

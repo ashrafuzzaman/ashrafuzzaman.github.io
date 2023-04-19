@@ -1,0 +1,35 @@
+---
+import Layout from "@layouts/ResumeLayout.astro";
+import profile from "@content/profile/jitu.yaml";
+import { Icon } from "astro-icon";
+import Experience from "@components/resume/experience.astro";
+---
+
+<Layout>
+  <main class="prose m-auto flex print:m-0 min-w-[1000px]">
+    <section class="bg-[#F0E5D4] p-5 min-w-[270px]">
+      <img class="m-auto w-40" src="/assets/profile-pic.webp" />
+      <h2>Contact</h2>
+      <div>
+        <div><Icon class="w-[18px]" name="mdi:email" /> {profile.contact.email}</div>
+        <div><Icon class="w-[18px]" name="mdi:phone" /> {profile.contact.phone}</div>
+        <div><Icon class="w-[18px]" name="mdi:location" /> {profile.contact.location}</div>
+      </div>
+    </section>
+    <section class="bg-[#FFF9F1] p-5">
+      <h2>Experience</h2>
+      {
+        profile.experiences.map(({ title, brief }) => (
+          <Experience title={title} brief={brief} />
+        ))
+      }
+    </section>
+  </main>
+</Layout>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+</style>

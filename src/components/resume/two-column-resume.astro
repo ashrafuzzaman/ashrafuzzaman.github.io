@@ -1,59 +1,51 @@
 ---
-import Layout from "@layouts/ResumeLayout.astro";
+import ResumeLayout from "@layouts/ResumeLayout.astro";
 import { Icon } from "astro-icon";
 import Experience from "@components/resume/experience.astro";
 import Skill from "@components/resume/skill.astro";
+import ThemeSwitcher from "@components/theme-switcher.astro";
 
 const { profile } = Astro.props;
 const { name, designation, summary, company, contact, skills, experiences } =
   profile;
 ---
 
-<Layout>
-  <main
-    class="m-auto flex flex-col sm:min-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row"
-  >
-    <section class="w-full bg-[#F0E5D4] p-5 sm:w-auto">
+<ResumeLayout>
+  <main>
+    <section id="left-column">
       <img class="m-auto w-40 border-none" src="/assets/profile-pic.webp" />
       <h2 class="h2 mt-3">Contact</h2>
-      <div class="w-[240px]">
+      <div class="min-w-[230px]">
         <div>
-          <Icon class="w-[18px]" name="mdi:email" />
+          <Icon name="mdi:email" />
           {contact.email}
         </div>
         <div>
-          <Icon class="w-[18px]" name="mdi:phone" />
+          <Icon name="mdi:phone" />
           {contact.phone}
         </div>
         <div>
-          <Icon class="w-[18px]" name="mdi:location" />
+          <Icon name="mdi:location" />
           {contact.location}
         </div>
       </div>
-      <h2 class="h2">Skills</h2>
+      <h2>Skills</h2>
       {skills.map(skill => <Skill skill={skill} />)}
     </section>
-    <section class="bg-[#FFF9F1] p-5">
-      <h1 class="text-4xl font-bold">{name}</h1>
-      <h3 class="h3 mt-0">{designation} @ {company}</h3>
-      <p>{summary}</p>
-      <h2 class="h2">Experience</h2>
-      <hr class="mb-1 border-[#999]" />
+    <section id="right-column">
+      <h1>{name}</h1>
+      <div class="flex justify-between">
+        <h3 class="mt-0">{designation} @ {company}</h3>
+        <div id="action-buttons" class="flex items-center">
+          <ThemeSwitcher />
+          <button class="p-1" onclick="window.print();"><Icon name="mdi:printer" /></button>
+          <a class="p-1" href="/"><Icon name="mdi:home" /></a>
+        </div>
+      </div>
+      <p class="mt-2">{summary}</p>
+      <h2>Experience</h2>
+      <hr />
       {experiences.map(experience => <Experience experience={experience} />)}
     </section>
   </main>
-</Layout>
-
-<style>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  .h3 {
-    @apply mt-3 text-lg font-semibold
-  }
-
-  .h2 {
-    @apply font-bold text-lg
-  }
-</style>
+</ResumeLayout>

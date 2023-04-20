@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  html[data-theme="light"] {
+    --color-fill: 255, 249, 241;
+    --color-text-base: 40, 39, 40;
+    --color-text-secondary: 255, 107, 1;
+    --color-accent: 0, 108, 172;
+    --color-card: 240, 229, 212;
+    --color-card-muted: 225, 208, 178;
+    --color-border: 207, 202, 202;
+  }
+  html[data-theme="dark"] {
+    --color-fill: 33, 39, 55;
+    --color-text-base: 234, 237, 243;
+    --color-text-secondary: 93, 110, 150;
+    --color-accent: 255, 107, 1;
+    --color-card: 61, 73, 102;
+    --color-card-muted: 51, 62, 89;
+    --color-border: 22, 26, 36;
+  }
+  #sun-svg,
+  html[data-theme="dark"] #moon-svg {
+    display: none;
+  }
+  #moon-svg,
+  html[data-theme="dark"] #sun-svg {
+    display: block;
+  }
+
+  body {
+    @apply flex min-h-screen flex-col bg-skin-fill text-skin-base 
+    selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
+  }
+
+  a {
+    @apply outline-2 outline-offset-1 text-skin-accent focus-visible:no-underline focus-visible:outline-dashed;
+  }
+
+  svg {
+    @apply inline-block h-6 w-6 fill-skin-accent group-hover:fill-skin-accent;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-skin-accent
+  }
+
+  h2 {
+    @apply font-bold text-2xl mt-2
+  }
+
+  h4 {
+    @apply font-bold text-xl mt-2 text-skin-accent
+  }
+
+  #skills div:nth-child(2) {
+    @apply row-span-2
+  }
+}

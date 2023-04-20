@@ -22,7 +22,7 @@ const { name, contact, designation, company, summary, links, skills } = profile;
       </div>
     </div>
     <div class="bg-skin-fill flex justify-between items-center">
-      <div class="w-fit border-b-2 border-skin-accent bg-skin-card-muted p-2">
+      <div class="w-fit border-b-2 border-skin-accent bg-skin-card p-2">
         Profile
       </div>
       <div class="mr-2">
@@ -52,12 +52,18 @@ const { name, contact, designation, company, summary, links, skills } = profile;
       </div>
       <div class="p-10">
         <h1>{name}</h1>
-        <h3 class="mt-0">{designation} @ {company}</h3>
+        <h3 class="mt-0 text-skin-secondary font-bold">{designation} @ {company}</h3>
         <p class="mt-2">{summary}</p>
         <div id="skills" class="grid grid-cols-2 grid-flow-row">
           {skills.map(skill => <Skill skill={skill} />)}  
         </div>
       </div>
+    </div>
+    <div class="bg-skin-card-muted p-2 flex justify-between rounded-b-md">
+      <div class="flex items-center space-x-1">
+        <Icon name="mdi:close-circle" /> <span>0</span> <Icon name="mdi:alert" /> <span>0</span>
+      </div>
+      <div>Typescript</div>
     </div>
   </main>
 </ProfileLayout>

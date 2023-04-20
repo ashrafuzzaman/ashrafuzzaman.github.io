@@ -1,0 +1,158 @@
+---
+name: A.K.M. Ashrafuzzaman
+designation: Director of engineering
+company: Optimizely
+summary:
+  I consider myself a passionate polyglot programmer with more
+  than 16+ years of experience in working variety of languages and
+  technologies mostly on the web stack. Working with microservice
+  architecture, distributed system, serverless, scaling with cost
+  optimization in mind, grow engineering organization with the
+  culture aligned with organizational objectives are some of the fields
+  that excites me.
+contact:
+  email: zmn.ashraf@gmail.com
+  phone: "+8801755592433"
+  location: Dhaka, Bangladesh
+links:
+  twitter:
+    alt: ashrafuzzaman
+    url: https://twitter.com/ashrafuzzaman
+  github:
+    alt: ashrafuzzaman
+    url: https://github.com/ashrafuzzaman/
+  site:
+    alt: ashrafuzzaman
+    url: https://ashrafuzzaman.github.io
+  blog:
+    alt: Blog
+    url: /blog
+  blogOnDistributedSystem:
+    alt: Distributed system
+    url: http://distash.blogspot.com/
+  linkedIn:
+    alt: ashrafuzzaman-jitu
+    url: https://www.linkedin.com/in/ashrafuzzaman-jitu/
+skills:
+  - title: Language
+    items:
+      - Typescript, Javascript
+      - Python
+      - Ruby
+  - title: Tools / Technology
+    items:
+      - NodeJs, Express, NestJs
+      - React.js, Angular
+      - Flask, DRF
+      - Docker, Ansible
+      - MongoDb, MySql, Redis
+      - Apache Spark
+      - REST, Hateoas
+      - Design Patterns and Principles
+      - Microservice Architectures
+      - Distributed System, Serverless
+      - TDD
+
+  - title: AWS
+    items:
+      - S3, RDS, Lambda,
+      - Kinesis, SQS
+      - Athena, Redshift, CloudFront,
+      - CloudFormation Template
+experiences:
+  - title: Director Of Engineering
+    company: Optimizely
+    till: Present
+    from: Dec, 2021
+    brief:
+      Optimizely acquired Welcome on Dec 2021.
+    responsibilities:
+      - Lead multiple teams of 55+ Engineers
+      - Create a management structure that encourages career growth through regular contextual feedback loop and coaching in timely skills
+      - Make strategic decision to guide the organization to manage engineering department
+      - Set and measure performance metrics and manage year-end performance based increments
+      - As one of the architects, I consult, design, guide teams and  build scalable architecture
+      - As one of the Engineering Leaders, I coach engineers on best practices for writing maintainable code and system design
+      - Line manage a group of five talented engineers and engineering managers
+      - Facilitate in-house growth through encouraging and actively participating in tech talks and focused group coaching
+      - Responsible for the technical interview process and ensuring that we hire the best engineers
+
+  - title: Director Of Engineering
+    company: Welcome
+    till: Dec 2021
+    from: Aug 2020
+    brief:
+      NewsCred changed the brand name to Welcome.
+
+  - title: Engineering Manager
+    company: Newscred
+    from: Apr 2015
+    till: Sep 2018
+  - title: Lead Software Engineer
+    company: Newscred
+    till: Apr 2015
+    from: Oct 2014
+    brief:
+      In pursuit of career growth in Newscred, took the
+      challenge of being an engineering manager to
+      coach and guide fellow engineers. In addition to
+      being a software engineer also took the role of an
+      architect.
+    responsibilities:
+      - Break monolithic python and node based application to modular micro-services with CI/CD pipeline
+      - Make the application resilient on data loss, make the app highly available and scalable keeping the infrastructure cost minimum
+      - In Newscred we believe in failing fast, so build something to ship fast, fail fast or plan on evolution the prototype to a robust system
+      - Closely work with DevOps and BI to improve system services, setting up automation, monitoring
+      - Actively collaborates with product owners to create product roadmaps
+      - Actively participates in technical interviews
+  - title: Lead Software Engineer
+    company: Tasawr
+    till: Oct 2014
+    from: Apr 2012
+    brief:
+      In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
+    responsibilities:
+      - Following the Agile Tasawr Software Development processes in development and support
+      - Work with the Platform Architect and Technical Director to achieve development (dev/ops) technical excellence
+      - Work with the team to build solutions that enhance our market position and be a professional developer and a strong customer advocate
+      - Learn new web and mobile development platforms to be applied on Tasawr internal and client solutions
+      - Development of new platforms (especially backend Server/DB systems and mobile platforms)
+      - Provide on-call and shift rotations when necessary
+      - Writes technical blog posts on the corporate website periodically
+  - title: Sr. Technology Analyst
+    company: Orbund, LLC
+    till: Apr 2012
+    from: Oct 2011
+    brief:
+      We build a student management system with J2EE with MySql.
+    responsibilities:
+      - Design and Develop software
+      - Collaborate with the remote clients and stakeholders
+      - Facilitate in-house training and knowledge development
+      - Research on new technologies
+  - title: Consultant
+    company: Simple Signup, Sweden
+    from: Oct 2009
+    till: Apr 2011
+    brief:
+      We build an online event management system with Ruby on Rails and MySql. I worked as an part time software developer in Stockholm.
+  - title: Software Engineer
+    company: Code71
+    till: Aug 2009
+    from: May 2008
+    brief:
+      We build a SCRUM management tool with Ruby on Rails and MySql.
+    responsibilities:
+      - Design and Develop software
+      - Collaborate with the remote clients and stakeholders
+      - Facilitate in-house training and knowledge development
+  - title: Senior Software Developer
+    company: DSi
+    till: Feb 2008
+    from: Jan 2007
+    brief:
+      We build a different client projects with J2EE, Struts, Spring, Hibernate.
+    responsibilities:
+      - Design and Develop software
+      - Collaborate with the remote clients and stakeholders
+      - Facilitate in-house training and knowledge development

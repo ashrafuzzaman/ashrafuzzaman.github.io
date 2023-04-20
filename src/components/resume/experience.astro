@@ -1,0 +1,33 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  experience: any;
+}
+
+const { experience } = Astro.props;
+const { title, company, from, till, brief, responsibilities } = experience;
+---
+
+<div class="break-inside-avoid">
+  <h2 class="mt-3 text-xl font-semibold">{title}</h2>
+  <div class="flex justify-between mb-2">
+    <h4 class="text-skin-accent">{company}</h4>
+    <h4 class="text-skin-secondary">{from} - {till}</h4>
+  </div>
+  {brief ? <p>{brief}</p> : ""}
+  {
+    responsibilities ? (
+      <ul class="ml-3">
+        {responsibilities.map(responsibility => (
+          <li class="m-0 p-0">
+            <Icon class="w-[18px]" name="mdi:arrow-right-thin" />
+            <span>{responsibility}</span>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      ""
+    )
+  }
+</div>

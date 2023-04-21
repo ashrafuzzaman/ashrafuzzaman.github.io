@@ -10,10 +10,10 @@ const { name, contact, designation, company, summary, links, skills } = profile;
 
 <ProfileLayout>
   <main
-    class="m-auto max-w-[1000px] rounded-md border-[1px] border-skin-line bg-skin-card"
+    class="m-auto max-w-[1000px] border-[1px] border-skin-line bg-skin-card sm:rounded-md"
   >
     <div
-      class="rounded-t-md border-b-[1px] border-skin-line bg-skin-card-muted"
+      class="border-b-[1px] border-skin-line bg-skin-card-muted sm:rounded-t-md"
     >
       <div class="flex justify-end space-x-1 p-2">
         <div class="h-[12px] w-[12px] rounded-full bg-[#24ca42]"></div>
@@ -21,7 +21,7 @@ const { name, contact, designation, company, summary, links, skills } = profile;
         <div class="h-[12px] w-[12px] rounded-full bg-[#ff5d5a]"></div>
       </div>
     </div>
-    <div class="bg-skin-fill flex justify-between items-center">
+    <div class="flex items-center justify-between bg-skin-fill">
       <div class="w-fit border-b-2 border-skin-accent bg-skin-card p-2">
         Profile
       </div>
@@ -29,7 +29,7 @@ const { name, contact, designation, company, summary, links, skills } = profile;
         <ThemeSwitcher />
       </div>
     </div>
-    <div class="flex">
+    <div class="flex flex-col sm:flex-row">
       <div class="min-w-[240px] p-5">
         <img class="m-auto w-60 border-none" src="/assets/profile-pic.webp" />
         <div class="mt-2">
@@ -45,23 +45,38 @@ const { name, contact, designation, company, summary, links, skills } = profile;
         <ul id="action-links" class="mt-2">
           <li><a href="/resume"><Icon name="mdi:resume" /> Resume</a></li>
           <li><a href="/blog"><Icon name="carbon:blog" /> Blog</a></li>
-          <li><a target="_blank" href={links.blogOnDistributedSystem.url}><Icon name="carbon:blog" /> {links.blogOnDistributedSystem.alt}</a></li>
-          <li><a target="_blank" href={links.github.url}><Icon name="mdi:github" /> {links.github.alt}</a></li>
-          <li><a target="_blank" href={links.linkedIn.url}><Icon name="mdi:linkedin" /> {links.linkedIn.alt}</a></li>
+          <li>
+            <a target="_blank" href={links.blogOnDistributedSystem.url}
+              ><Icon name="carbon:blog" />
+              {links.blogOnDistributedSystem.alt}</a>
+          </li>
+          <li>
+            <a target="_blank" href={links.github.url}
+              ><Icon name="mdi:github" /> {links.github.alt}</a>
+          </li>
+          <li>
+            <a target="_blank" href={links.linkedIn.url}
+              ><Icon name="mdi:linkedin" /> {links.linkedIn.alt}</a>
+          </li>
         </ul>
       </div>
       <div class="p-10">
         <h1>{name}</h1>
-        <h3 class="mt-0 text-skin-secondary font-bold">{designation} @ {company}</h3>
+        <h3 class="mt-0 font-bold text-skin-secondary">
+          {designation} @ {company}
+        </h3>
         <p class="mt-2">{summary}</p>
-        <div id="skills" class="grid grid-cols-2 grid-flow-row">
-          {skills.map(skill => <Skill skill={skill} />)}  
+        <div id="skills" class="grid grid-flow-row grid-cols-2">
+          {skills.map(skill => <Skill skill={skill} />)}
         </div>
       </div>
     </div>
-    <div class="bg-skin-card-muted p-2 flex justify-between rounded-b-md">
+    <div class="flex justify-between bg-skin-card-muted p-2 sm:rounded-b-md">
       <div class="flex items-center space-x-1">
-        <Icon name="mdi:close-circle" /> <span>0</span> <Icon name="mdi:alert" /> <span>0</span>
+        <Icon name="mdi:close-circle" />
+        <span>0</span>
+        <Icon name="mdi:alert" />
+        <span>0</span>
       </div>
       <div>Typescript</div>
     </div>

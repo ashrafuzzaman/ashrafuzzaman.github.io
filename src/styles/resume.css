@@ -31,14 +31,14 @@
     display: block;
   }
   #action-buttons {
-    @apply print:hidden fill-skin-accent;
+    @apply fill-skin-accent print:hidden;
   }
   body {
     @apply flex min-h-screen flex-col bg-skin-fill text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   main {
-    @apply m-auto flex flex-col sm:max-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row
+    @apply m-auto flex flex-col sm:max-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill 
@@ -54,47 +54,48 @@
   }
 
   #left-column {
-    @apply w-full bg-skin-card p-5 sm:w-auto print:max-w-[250px]
+    @apply w-full bg-skin-card p-5 sm:w-auto print:max-w-[250px];
   }
 
   #left-column h4 {
-    @apply mt-2 p-1 font-semibold bg-skin-card-muted
+    @apply mt-2 bg-skin-card-muted p-1 font-semibold;
   }
 
   #left-column svg {
-    @apply w-[18px]
+    @apply w-[18px];
   }
 
   #right-column {
-    @apply w-full bg-skin-fill p-5 sm:w-auto border-r-2 border-skin-line
+    @apply w-full border-r-2 border-skin-line bg-skin-fill p-5 sm:w-auto;
   }
-  
+
   #action-buttons svg[astro-icon] {
     @apply text-skin-accent;
   }
 
   h1 {
-    @apply text-4xl font-bold text-skin-accent
+    @apply text-4xl font-bold text-skin-accent;
   }
 
   h2 {
-    @apply font-bold text-2xl mt-2
+    @apply mt-2 text-2xl font-bold;
   }
 
   h3 {
-    @apply mt-3 text-lg font-semibold
+    @apply mt-3 text-lg font-semibold;
   }
 
   h4 {
-    @apply font-semibold
+    @apply font-semibold;
   }
 
   hr {
-    @apply border-skin-line mt-2
+    @apply mt-2;
   }
 
-  p, li {
-    @apply leading-[1.2rem] text-sm
+  p,
+  li {
+    @apply text-sm leading-[1.2rem];
   }
 
   /* width */

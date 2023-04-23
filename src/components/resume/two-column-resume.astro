@@ -4,6 +4,7 @@ import { Icon } from "astro-icon";
 import Experience from "@components/resume/experience.astro";
 import Skill from "@components/resume/skill.astro";
 import ThemeSwitcher from "@components/theme-switcher.astro";
+import Hr from "@components/Hr.astro";
 
 const { profile } = Astro.props;
 const { name, designation, summary, company, contact, skills, experiences } =
@@ -38,13 +39,15 @@ const { name, designation, summary, company, contact, skills, experiences } =
         <h3 class="mt-0">{designation} @ {company}</h3>
         <div id="action-buttons" class="flex items-center">
           <ThemeSwitcher />
-          <button class="p-1" onclick="window.print();"><Icon name="mdi:printer" /></button>
+          <button class="p-1" onclick="window.print();"
+            ><Icon name="mdi:printer" /></button
+          >
           <a class="p-1" href="/"><Icon name="mdi:home" /></a>
         </div>
       </div>
       <p class="mt-2">{summary}</p>
       <h2>Experience</h2>
-      <hr />
+      <Hr noPadding />
       {experiences.map(experience => <Experience experience={experience} />)}
     </section>
   </main>

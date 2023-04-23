@@ -1,13 +1,9 @@
 ---
-import { LOGO_IMAGE, SITE } from "@config";
-import Hr from "./Hr.astro";
-import LinkButton from "./LinkButton.astro";
+import { SITE } from "@config";
 
 export interface Props {
   activeNav?: "posts" | "tags" | "about" | "search";
 }
-
-const { activeNav } = Astro.props;
 ---
 
 {
@@ -37,41 +33,3 @@ const { activeNav } = Astro.props;
     @apply scale-125 hover:rotate-12 sm:scale-100;
   }
 </style>
-
-<script>
-  // Toggle menu
-  const menuBtn = document.querySelector(".hamburger-menu");
-  const menuItems = document.querySelector("#menu-items")?.classList;
-
-  const iconContainer = document.querySelector(".icon-container")?.classList;
-  const firstLine = document.querySelector("#first-line")?.classList;
-  const secondLine = document.querySelector("#second-line ")?.classList;
-  const thirdLine = document.querySelector("#third-line")?.classList;
-
-  menuBtn?.addEventListener("click", function () {
-    const menuExpanded = menuBtn?.getAttribute("aria-expanded");
-    if (menuExpanded === "false") {
-      menuBtn?.setAttribute("aria-expanded", "true");
-      menuBtn?.setAttribute("aria-label", "Close Menu");
-      menuItems?.remove("display-none");
-
-      // icon animation
-      iconContainer?.remove("flex");
-      iconContainer?.add("relative");
-      firstLine?.add("rotate-45", "absolute", "bottom-1/2");
-      thirdLine?.add("display-none");
-      secondLine?.add("!w-full", "-rotate-45", "absolute", "bottom-1/2");
-    } else {
-      menuBtn?.setAttribute("aria-expanded", "false");
-      menuBtn?.setAttribute("aria-label", "Open Menu");
-      menuItems?.add("display-none");
-
-      // icon animation
-      iconContainer?.add("flex");
-      iconContainer?.remove("relative");
-      firstLine?.remove("rotate-45", "absolute", "bottom-1/2");
-      thirdLine?.remove("display-none");
-      secondLine?.remove("!w-full", "-rotate-45", "absolute", "bottom-1/2");
-    }
-  });
-</script>

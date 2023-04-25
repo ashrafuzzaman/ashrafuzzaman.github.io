@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon";
+import ThemeSwitcher from "@components/theme-switcher.astro";
+
+const { name, designation, company } = Astro.props;
+---
+
+<h1>{name}</h1>
+<div class="flex flex-col justify-between sm:flex-row">
+  <h3 class="mt-0">{designation} @ {company}</h3>
+  <div id="action-buttons" class="flex items-center">
+    <ThemeSwitcher />
+    <button class="p-1" onclick="window.print();">
+      <Icon name="mdi:printer" className="w-10" />
+    </button>
+    <a class="p-1" href="/"><Icon name="mdi:home" /></a>
+  </div>
+</div>

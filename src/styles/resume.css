@@ -61,7 +61,7 @@
     @apply mt-2 bg-skin-card-muted p-1 font-semibold;
   }
 
-  #left-column svg {
+  #contact svg {
     @apply w-[18px];
   }
 

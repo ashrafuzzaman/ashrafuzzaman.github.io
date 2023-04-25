@@ -18,15 +18,20 @@ function getPreferTheme() {
 
 let themeValue = getPreferTheme();
 
-function setPreference() {
+function setPreference(themeValue) {
   localStorage.setItem("theme", themeValue);
   reflectPreference();
+}
+
+function getThemeButtons() {
+  return document.querySelectorAll(".theme-btn");
 }
 
 function reflectPreference() {
   document.firstElementChild.setAttribute("data-theme", themeValue);
 
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+  const themeButtons = getThemeButtons();
+  themeButtons?.forEach(btn => btn.setAttribute("aria-label", themeValue));
 }
 
 // set early so no page flashes / CSS is made aware
@@ -37,10 +42,13 @@ window.onload = () => {
   reflectPreference();
 
   // now this script can find and listen for clicks on the control
-  document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    themeValue = themeValue === "light" ? "dark" : "light";
-    setPreference();
-  });
+  const themeButtons = getThemeButtons();
+  themeButtons?.forEach(btn =>
+    btn.addEventListener("click", () => {
+      themeValue = themeValue === "light" ? "dark" : "light";
+      setPreference(themeValue);
+    })
+  );
 };
 
 // sync with system changes
@@ -48,5 +56,5 @@ window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", ({ matches: isDark }) => {
     themeValue = isDark ? "dark" : "light";
-    setPreference();
+    setPreference(themeValue);
   });

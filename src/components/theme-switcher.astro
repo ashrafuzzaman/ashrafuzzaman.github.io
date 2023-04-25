@@ -9,8 +9,7 @@ export interface Props {
 {
   SITE.lightAndDarkMode && (
     <button
-      id="theme-btn"
-      class="focus-outline"
+      class="theme-btn focus-outline"
       title="Toggles light & dark"
       aria-label="auto"
       aria-live="polite"
@@ -26,10 +25,10 @@ export interface Props {
 }
 
 <style>
-  #theme-btn {
+  .theme-btn {
     @apply p-3 sm:p-1;
   }
-  #theme-btn svg {
+  .theme-btn svg {
     @apply scale-125 hover:rotate-12 sm:scale-100;
   }
 </style>

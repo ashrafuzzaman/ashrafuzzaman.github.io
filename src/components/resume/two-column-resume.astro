@@ -27,15 +27,20 @@ const { name, designation, summary, company, contact, skills, experiences } =
       <div id="contact" class="min-w-[230px]">
         <div>
           <Icon name="mdi:email" />
-          {contact.email}
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
         </div>
         <div>
           <Icon name="mdi:phone" />
-          {contact.phone}
+          <a href={`tel:${contact.phone}`}>{contact.phone}</a>
         </div>
         <div>
           <Icon name="mdi:location" />
-          {contact.location}
+          <a
+            href={`https://www.google.com/maps/search/?api=1&${contact.location}`}
+            target="_blank"
+          >
+            {contact.location}
+          </a>
         </div>
       </div>
       <h2>Skills</h2>

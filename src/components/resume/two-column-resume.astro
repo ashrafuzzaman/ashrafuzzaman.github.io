@@ -16,11 +16,11 @@ const { name, designation, summary, company, contact, skills, experiences } =
   <main>
     <section id="left-column">
       <img
-        class="m-auto w-40 border-none"
+        class="w-120 m-auto border-none sm:w-60"
         alt="Ashrafuzzaman Jitu"
         src="/assets/profile-pic.webp"
       />
-      <div class="block sm:hidden">
+      <div class="block sm:hidden print:hidden">
         <NameTitle name={name} designation={designation} company={company} />
       </div>
       <h2 class="h2 mt-3">Contact</h2>
@@ -42,7 +42,7 @@ const { name, designation, summary, company, contact, skills, experiences } =
       {skills.map(skill => <Skill skill={skill} />)}
     </section>
     <section id="right-column">
-      <div class="hidden sm:block">
+      <div class="hidden sm:block print:block">
         <NameTitle name={name} designation={designation} company={company} />
       </div>
       <p class="mt-2">{summary}</p>

@@ -5,7 +5,9 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
-import yaml from '@rollup/plugin-yaml';
+import yaml from "@rollup/plugin-yaml";
+
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,6 +20,7 @@ export default defineConfig({
     }),
     react(),
     sitemap(),
+    mdx(),
   ],
   markdown: {
     remarkPlugins: [
@@ -42,6 +45,6 @@ export default defineConfig({
     plugins: [yaml()],
   },
   experimental: {
-    assets: true
+    assets: true,
   },
 });

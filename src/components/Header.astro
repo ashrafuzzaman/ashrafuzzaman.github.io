@@ -15,7 +15,10 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo"><Icon name="mdi:home" /></a>
+      <div class="row-auto flex">
+        <a href="/"><Icon name="mdi:home" /></a>
+        <a href="/blog" class="ml-2"><Icon name="mdi:post" /></a>
+      </div>
       <nav id="nav-menu">
         <button
           class="hamburger-menu focus-outline"
@@ -92,7 +95,7 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full items-start items-center justify-between p-4 sm:py-8;
   }
   .logo {
     @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;

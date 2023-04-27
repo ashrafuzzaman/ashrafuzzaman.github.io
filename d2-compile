@@ -1,0 +1,7 @@
+#!/bin/bash
+
+inotifywait -r -m -e close_write -t 30 --include '.*\.d2' ./src/assets |
+while read -r directory event filename; do
+  png_file=$(echo $filename | sed -E 's/(\w+)\.d2$/\1.png/')
+  d2 --layout elk $directory$filename $directory$png_file
+done

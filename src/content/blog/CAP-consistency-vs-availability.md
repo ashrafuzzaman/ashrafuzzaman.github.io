@@ -1,10 +1,9 @@
 ---
-title: "CAP theorem: more on consistency"
+title: "CAP theorem: consistency vs availability"
 pubDate: 2023-04-25
 tags: ["CAP", "database"]
 featured: true
-draft: false
-description: More on consistency
+description: "CAP: consistency vs availability"
 ---
 
 ## Consistency
@@ -25,7 +24,11 @@ For quorum read/write the system can survive with n/2-1 node crush, which gives 
 
 ## Sharding
 
-Sharding is an interesting technique to break apart document data, which are naturally disjoint, to different nodes. Although this is a multi master system but for each shard there is only one owner, this is why it is easier to achieve consistency. So mongoDb is a **CP** system.
+Sharding is an interesting technique to break apart document data across different nodes. The reason most document store has sharding is because documents are naturally disjoint unlike relational data or graph data. Through this you can achieve a multi master system but for each shard there is only one owner, this is why it is easier to achieve consistency. So mongoDb is a **CP** system.
 
 ![Mongodb Shards](@assets/blog/CAP-theorem/mongodb-shards.png)
 _Mongodb Shards_
+
+To access a data in a shard mongo goes to the primary node for the shard to write or read data from. Which is why mongo can ensure consistency giving up the availability.\
+\
+So what happens when the master is down for mongo? The writes are halt and a leader election is triggered to select the new master.

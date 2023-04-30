@@ -114,9 +114,12 @@
     @apply bg-skin-card-muted;
   }
 
+  html[data-theme="dark"] article img {
+    @apply mt-0 mb-0 bg-skin-inverted p-5;
+  }
+
   img + em {
     @apply block text-center;
-    margin-top: -1rem;
   }
 }
 

@@ -22,7 +22,8 @@ Partition tolerance refers to the ability of the system to continue operating ev
 
 In practice, most distributed systems prioritize either availability or consistency, with partition tolerance being a non-negotiable requirement. For example, a system designed for high availability might sacrifice consistency by allowing nodes to return stale data, while a system designed for strong consistency might sacrifice availability by blocking requests until all nodes have been updated with the latest data.
 
-![Figure 1: CAP theorem](@assets/blog/CAP-theorem/CAP.png)
+![CAP theorem](@assets/blog/CAP-theorem/CAP-theorem.png)
+_CAP theorem_
 
 The CAP theorem has significant implications for the design and operation of large-scale distributed systems, including databases, messaging systems, and content delivery networks. It underscores the importance of understanding the trade-offs involved in building distributed systems and the need to carefully balance the requirements of different stakeholders.
 
@@ -37,3 +38,4 @@ The definition of availability says that the node needs to respond with reads an
 
 - https://www.ibm.com/topics/cap-theorem
 - [Different type of node failure](http://distash.blogspot.com/2010/02/node-failure.html)
+- [You Can’t Sacrifice Partition Tolerance](https://codahale.com/you-cant-sacrifice-partition-tolerance/)

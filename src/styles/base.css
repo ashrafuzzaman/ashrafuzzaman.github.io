@@ -113,6 +113,11 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-skin-card-muted;
   }
+
+  img + em {
+    @apply block text-center;
+    margin-top: -3rem;
+  }
 }
 
 @layer components {

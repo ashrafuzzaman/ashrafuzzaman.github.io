@@ -30,14 +30,14 @@ const { name, contact, designation, company, summary, links, skills } = profile;
       </div>
     </div>
     <div class="flex flex-col sm:flex-row">
-      <div class="min-w-[240px] p-5 pb-0">
+      <div class="min-w-[260px] p-5 pb-0">
         <img
           class="w-120 m-auto border-none sm:w-60"
           alt="Ashrafuzzaman Jitu"
           src="/assets/profile-pic.webp"
         />
         <div class="block sm:hidden">
-          <h1>{name}</h1>
+          <h1 class="prose-3xl mt-4">{name}</h1>
           <h3 class="mt-0 font-bold text-skin-secondary">
             {designation} @ {company}
           </h3>
@@ -45,11 +45,11 @@ const { name, contact, designation, company, summary, links, skills } = profile;
         <div class="mt-2">
           <div>
             <Icon name="mdi:email" />
-            {contact.email}
+            <span class="prose prose-base">{contact.email}</span>
           </div>
           <div>
             <Icon name="mdi:location" />
-            {contact.location}
+            <span class="prose prose-base">{contact.location}</span>
           </div>
         </div>
         <ul id="action-links" class="mt-2">

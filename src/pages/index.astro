@@ -45,21 +45,23 @@ const { name, contact, designation, company, summary, links, skills } = profile;
         <div class="mt-2">
           <div>
             <Icon name="mdi:email" />
-            <span class="prose prose-base">{contact.email}</span>
+            <span>{contact.email}</span>
           </div>
           <div>
             <Icon name="mdi:location" />
-            <span class="prose prose-base">{contact.location}</span>
+            <span>{contact.location}</span>
           </div>
         </div>
         <ul id="action-links" class="mt-2">
           <li>
             <a href="/resume"
-              ><Icon name="mdi:resume" /><span class="ml-2">Resume</span></a>
+              ><Icon name="mdi:resume" /><span class="ml-2">Resume</span></a
+            >
           </li>
           <li>
             <a href="/blog"
-              ><Icon name="carbon:blog" /><span class="ml-2">Blog</span></a>
+              ><Icon name="carbon:blog" /><span class="ml-2">Blog</span></a
+            >
           </li>
           <li>
             <a target="_blank" href={links.blogOnDistributedSystem.url}>

@@ -53,23 +53,34 @@ const { name, contact, designation, company, summary, links, skills } = profile;
           </div>
         </div>
         <ul id="action-links" class="mt-2">
-          <li><a href="/resume"><Icon name="mdi:resume" /> Resume</a></li>
-          <li><a href="/blog"><Icon name="carbon:blog" /> Blog</a></li>
           <li>
-            <a target="_blank" href={links.blogOnDistributedSystem.url}
-              ><Icon name="carbon:blog" />
-              {links.blogOnDistributedSystem.alt}</a
-            >
+            <a href="/resume"
+              ><Icon name="mdi:resume" /><span class="ml-2">Resume</span></a>
           </li>
           <li>
-            <a target="_blank" href={links.github.url}
-              ><Icon name="mdi:github" /> {links.github.alt}</a
-            >
+            <a href="/blog"
+              ><Icon name="carbon:blog" /><span class="ml-2">Blog</span></a>
           </li>
           <li>
-            <a target="_blank" href={links.linkedIn.url}
-              ><Icon name="mdi:linkedin" /> {links.linkedIn.alt}</a
-            >
+            <a target="_blank" href={links.blogOnDistributedSystem.url}>
+              <Icon name="carbon:blog" /><span class="ml-2"
+                >{links.blogOnDistributedSystem.alt}</span
+              >
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href={links.github.url}>
+              <Icon name="mdi:github" /><span class="ml-2"
+                >{links.github.alt}</span
+              >
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href={links.linkedIn.url}>
+              <Icon name="mdi:linkedin" /><span class="ml-2"
+                >{links.linkedIn.alt}</span
+              >
+            </a>
           </li>
         </ul>
       </div>

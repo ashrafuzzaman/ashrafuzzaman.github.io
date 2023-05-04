@@ -2,8 +2,7 @@
 name: A.K.M. Ashrafuzzaman
 designation: Director of engineering
 company: Optimizely
-summary:
-  I consider myself a passionate polyglot programmer with more
+summary: I consider myself a passionate polyglot programmer with more
   than 16+ years of experience in working variety of languages and
   technologies mostly on the web stack. Working with microservice
   architecture, distributed system, serverless, scaling with cost
@@ -15,20 +14,20 @@ contact:
   phone: "+8801755592433"
   location: Dhaka, Bangladesh
 links:
+  site:
+    alt: ashrafuzzaman.github.io
+    url: https://ashrafuzzaman.github.io/
   twitter:
     alt: ashrafuzzaman
     url: https://twitter.com/ashrafuzzaman
   github:
     alt: ashrafuzzaman
     url: https://github.com/ashrafuzzaman/
-  site:
-    alt: ashrafuzzaman
-    url: https://ashrafuzzaman.github.io
   blog:
     alt: Blog
     url: /blog
   blogOnDistributedSystem:
-    alt: Distributed system
+    alt: Blog on distributed system
     url: http://distash.blogspot.com/
   linkedIn:
     alt: ashrafuzzaman-jitu
@@ -64,8 +63,7 @@ experiences:
     company: Optimizely
     till: Present
     from: Dec, 2021
-    brief:
-      Optimizely acquired Welcome on Dec 2021.
+    brief: Optimizely acquired Welcome on Dec 2021.
     responsibilities:
       - Lead multiple teams of 55+ Engineers
       - Create a management structure that encourages career growth through regular contextual feedback loop and coaching in timely skills
@@ -81,8 +79,7 @@ experiences:
     company: Welcome
     till: Dec 2021
     from: Aug 2020
-    brief:
-      NewsCred changed the brand name to Welcome.
+    brief: NewsCred changed the brand name to Welcome.
 
   - title: Engineering Manager
     company: Newscred
@@ -92,8 +89,7 @@ experiences:
     company: Newscred
     till: Apr 2015
     from: Oct 2014
-    brief:
-      In pursuit of career growth in Newscred, took the
+    brief: In pursuit of career growth in Newscred, took the
       challenge of being an engineering manager to
       coach and guide fellow engineers. In addition to
       being a software engineer also took the role of an
@@ -109,8 +105,7 @@ experiences:
     company: Tasawr
     till: Oct 2014
     from: Apr 2012
-    brief:
-      In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
+    brief: In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
     responsibilities:
       - Following the Agile Tasawr Software Development processes in development and support
       - Work with the Platform Architect and Technical Director to achieve development (dev/ops) technical excellence
@@ -123,8 +118,7 @@ experiences:
     company: Orbund, LLC
     till: Apr 2012
     from: Oct 2011
-    brief:
-      We build a student management system with J2EE with MySql.
+    brief: We build a student management system with J2EE with MySql.
     responsibilities:
       - Design and Develop software
       - Collaborate with the remote clients and stakeholders
@@ -134,14 +128,12 @@ experiences:
     company: Simple Signup, Sweden
     from: Oct 2009
     till: Apr 2011
-    brief:
-      We build an online event management system with Ruby on Rails and MySql. I worked as an part time software developer in Stockholm.
+    brief: We build an online event management system with Ruby on Rails and MySql. I worked as an part time software developer in Stockholm.
   - title: Software Engineer
     company: Code71
     till: Aug 2009
     from: May 2008
-    brief:
-      We build a SCRUM management tool with Ruby on Rails and MySql.
+    brief: We build a SCRUM management tool with Ruby on Rails and MySql.
     responsibilities:
       - Design and Develop software
       - Collaborate with the remote clients and stakeholders
@@ -150,8 +142,7 @@ experiences:
     company: DSi
     till: Feb 2008
     from: Jan 2007
-    brief:
-      We build a different client projects with J2EE, Struts, Spring, Hibernate.
+    brief: We build a different client projects with J2EE, Struts, Spring, Hibernate.
     responsibilities:
       - Design and Develop software
       - Collaborate with the remote clients and stakeholders

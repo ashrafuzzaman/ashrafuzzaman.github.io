@@ -66,7 +66,7 @@
   }
 
   #right-column {
-    @apply w-full border-r-2 border-skin-line bg-skin-fill p-5 sm:w-auto;
+    @apply w-full border-r-2 border-skin-line bg-skin-fill p-5 sm:w-auto print:border-0;
   }
 
   #action-buttons svg[astro-icon] {

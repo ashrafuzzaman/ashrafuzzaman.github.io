@@ -53,6 +53,12 @@
     overflow-y: scroll;
   }
 
+  @page {
+    size: A4;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+  }
+
   #left-column {
     @apply w-full bg-skin-card p-5 sm:w-auto print:max-w-[250px];
   }

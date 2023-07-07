@@ -1,7 +1,7 @@
 ---
 title: "CAP theorem: consistency vs availability"
 pubDate: 2023-04-25
-tags: ["CAP", "database", "sharding", "consistency"]
+tags: ["CAP", "Database", "Sharding", "Consistency"]
 featured: true
 description: "CAP: consistency vs availability"
 ---

@@ -3,6 +3,8 @@ title: Introduction to concepts of Kubernetes
 pubDate: 2023-06-14
 tags: ["Docker", "Kubernetes"]
 description: Basic terms and building blocks for Kubernetes
+draft: true
+featured: true
 resources:
   - https://www.canva.com/design/DAFlxo2I434/NmMa84Q62zsrt6p9lxUL6w/edit?ui=eyJGIjp7fX0&analyticsCorrelationId=cd859320-1b86-43f8-94f7-6e291414e329
 ---

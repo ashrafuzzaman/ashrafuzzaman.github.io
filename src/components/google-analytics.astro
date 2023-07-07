@@ -1,0 +1,19 @@
+---
+import { SITE } from "@config";
+
+const { gaMeasurementId = SITE.gaMeasurementId } = Astro.props;
+---
+
+<script
+  async
+  src=`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  // Need to make this dynamic
+  gtag("config", "UA-73805507-1");
+</script>

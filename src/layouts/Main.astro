@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from "@components/Breadcrumbs.astro";
+import GoogleAnalytics from "@components/google-analytics.astro";
 
 export interface Props {
   pageTitle: string;
@@ -15,6 +16,8 @@ const { pageTitle, pageDesc } = Astro.props;
   <p>{pageDesc}</p>
   <slot />
 </main>
+
+<GoogleAnalytics />
 
 <style>
   #main-content {

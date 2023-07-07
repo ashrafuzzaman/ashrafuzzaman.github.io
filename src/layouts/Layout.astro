@@ -1,6 +1,7 @@
 ---
 import { SITE } from "@config";
 import "@styles/base.css";
+import GoogleAnalytics from "@components/google-analytics.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -78,5 +79,7 @@ const socialImageURL = new URL(
   </head>
   <body>
     <slot />
+
+    <GoogleAnalytics />
   </body>
 </html>

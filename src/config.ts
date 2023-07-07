@@ -8,6 +8,7 @@ export const SITE: Site = {
   ogImage: "/assets/profile-pic.webp",
   lightAndDarkMode: true,
   postPerPage: 3,
+  gaMeasurementId: "UA-73805507-1",
 };
 
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default

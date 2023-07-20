@@ -5,6 +5,7 @@ tags: ["Docker", "Kubernetes"]
 description: Basic terms and building blocks for Kubernetes
 draft: true
 featured: true
+ogImage: /assets/blog/kubernetes/kubernetes-cluster.png
 resources:
   - https://www.canva.com/design/DAFlxo2I434/NmMa84Q62zsrt6p9lxUL6w/edit?ui=eyJGIjp7fX0&analyticsCorrelationId=cd859320-1b86-43f8-94f7-6e291414e329
 ---
@@ -22,7 +23,7 @@ Kubernetes cluster is made of at least one **master node** and **worker nodes**.
 **Worker node:** Mostly referred as Node where the containers are launched\
 **Kubelet:** Kubelet is the primary "node agent" that runs on each worker node, so that they can communicate with each other. They also execute some tasks on the node
 
-![Kubernetes cluster](@assets/blog/kubernetes/kubernetes-cluster.png)
+![Kubernetes cluster](/assets/blog/kubernetes/kubernetes-cluster.png)
 _Kubernetes cluster_
 
 ## Master node

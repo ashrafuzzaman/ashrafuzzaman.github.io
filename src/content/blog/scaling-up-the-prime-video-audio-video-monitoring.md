@@ -9,12 +9,12 @@ The post by ["Prime Video"](https://www.primevideotech.com/video-streaming/scali
 
 My view on this incident is to understand what we can learn from it. In this post, I am not intending to dissect [their post](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90). But for reference here is the previous architecture that they had. Now let's try to see what they did and understand their initial goal.
 
-![Previous architecture](@assets/blog/scaling-up-the-prime-video-audio-video-monitoring/old-arch.png)
+![Previous architecture](/assets/blog/scaling-up-the-prime-video-audio-video-monitoring/old-arch.png)
 _Previous architecture_
 
 From an architecture point of view, this looks nice. They have a serverless implementation so that they can scale very quickly. Step functions allow you to see the progression of the process nicely. If the data is **stored** on S3(multi region), they can use the Lambda@Edge and then the computation can be close to distribution, which would be ideal. But there are [significant disadvantages](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/edge-functions-restrictions.html) to using Lambda. Lambda Edge is available in limited distribution. It can have a cold start time which is not appropriate for a real-time operation. If we use do not use Lambda edge then the data moves around the world and for use case like Prime video it is not appropriate. Now however I look at it the previous architecture was not built to have the scale(globally) and the cost in mind in the first place. Now I think that is a huge learning for me. It is really important to understand the problem that you want to solve before planning on a solution. Sometimes we feel the urge to do something and show. Without clarity of the problem I might think of prototyping to understand the problem better. And there can be a form of iteration on that.
 
-![New architecture](@assets/blog/scaling-up-the-prime-video-audio-video-monitoring/new-arch.png)
+![New architecture](/assets/blog/scaling-up-the-prime-video-audio-video-monitoring/new-arch.png)
 _New architecture_
 
 In the new solution,

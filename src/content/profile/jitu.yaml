@@ -2,13 +2,12 @@
 name: A.K.M. Ashrafuzzaman
 designation: Director of engineering
 company: Optimizely
-summary: I consider myself a passionate polyglot programmer with more
-  than 16+ years of experience in working variety of languages and
-  technologies mostly on the web stack. Working with microservice
-  architecture, distributed system, serverless, scaling with cost
-  optimization in mind, grow engineering organization with the
-  culture aligned with organizational objectives are some of the fields
-  that excites me.
+summary:
+  I consider myself a passionate polyglot programmer with more than 16 years of experience working with a variety of languages
+  and technologies, especially in the web stack. Working with microservice architecture, distributed systems, serverless,
+  scaling with cost reduction in mind, mentoring, and establishing engineering organizations with the culture aligned
+  with corporate objectives are some of the fields that attract me. I am a full-stack engineer
+  with devOps expertise.
 contact:
   email: zmn.ashraf@gmail.com
   phone: "+8801755592433"
@@ -38,24 +37,26 @@ skills:
       - Typescript, Javascript
       - Python
       - Ruby
+      - Java
+
   - title: Tools / Technology
     items:
       - NodeJs, Express, NestJs
       - React.js, Angular
       - Flask, DRF
       - Docker, Ansible
-      - MongoDb, MySql, Redis
+      - Microservice Architectures
+      - Distributed System, Serverless
+      - MongoDb, MySql
       - Apache Spark
       - REST, Hateoas
       - Design Patterns and Principles
-      - Microservice Architectures
-      - Distributed System, Serverless
-      - TDD
+      - TDD, BDD
 
   - title: AWS
     items:
       - S3, RDS, Lambda,
-      - Kinesis, SQS
+      - Kinesis, SQS,
       - Athena, Redshift, CloudFront,
       - CloudFormation Template
 experiences:
@@ -65,15 +66,15 @@ experiences:
     from: Dec, 2021
     brief: Optimizely acquired Welcome on Dec 2021.
     responsibilities:
-      - Lead, coach and grow multiple teams of 55+ Engineers
-      - Create environment that encourages career growth through regular contextual feedback loop and coaching in timely skills
-      - Set and measure engineering performance metrics and manage year-end performance based increments
-      - As one of the architects, I consult, design, guide teams and build scalable architecture
+      - Lead, mentor, and develop many teams of 55+ engineers
+      - Create an atmosphere that encourages career growth by providing coaching and a frequent contextual feedback loop
+      - Manage year-end performance-based increments and establish and monitor engineering performance indicators
+      - As one of the architects, I consult, design, guide teams to build scalable architecture
       - As one of the Engineering Leaders, I coach engineers on best practices for writing maintainable code and system design
       - Make strategic decision to guide the organization to manage engineering department
       - Line manage a group of five talented engineers, staff engineers and engineering managers
       - Facilitate in-house growth through encouraging and actively participating in tech talks and focused group coaching
-      - Responsible for the technical interview process and ensuring that we hire the best engineers
+      - Responsible for the technical interview process and ensuring that we hire the right kind of engineers
 
   - title: Director Of Engineering
     company: Welcome
@@ -92,9 +93,7 @@ experiences:
     from: Oct 2014
     brief:
       In pursuit of career growth in Newscred, took the challenge of being an engineering manager to
-      coach and guide fellow engineers. In addition to being a software engineer also took the role of an architect.
-      One of my success of this role was to deliver product features on time while breaking complex monolyth in to smaller single purpose microservices.
-      I coached engineers who are engineering managers and techleads now and the backbone of our engineering team.
+      lead and coach fellow engineers. In addition to being a software engineer also took the role of an architect.
     responsibilities:
       - Break monolithic python and node based application to modular micro-services with CI/CD pipeline
       - Make the application resilient on data loss, make the app highly available and scalable keeping the infrastructure cost minimum
@@ -109,13 +108,9 @@ experiences:
     from: Apr 2012
     brief: In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
     responsibilities:
-      - Following the Agile Tasawr Software Development processes in development and support
-      - Work with the Platform Architect and Technical Director to achieve development (dev/ops) technical excellence
-      - Work with the team to build solutions that enhance our market position and be a professional developer and a strong customer advocate
-      - Learn new web and mobile development platforms to be applied on Tasawr internal and client solutions
-      - Development of new platforms (especially backend Server/DB systems and mobile platforms)
-      - Provide on-call and shift rotations when necessary
-      - Writes technical blog posts on the corporate website periodically
+      - Learn and apply best practices for internal and client solutions
+      - Deliver high quality software with TDD, unit test and BDD testing
+      - Follow the agile software development processes to ship product in a pradictable manner
   - title: Sr. Technology Analyst
     company: Orbund, LLC
     till: Apr 2012
@@ -125,7 +120,6 @@ experiences:
       - Design and Develop software
       - Collaborate with the remote clients and stakeholders
       - Facilitate in-house training and knowledge development
-      - Research on new technologies
   - title: Consultant
     company: Simple Signup, Sweden
     from: Oct 2009
@@ -137,7 +131,7 @@ experiences:
     from: May 2008
     brief: We build a SCRUM management tool with Ruby on Rails and MySql.
     responsibilities:
-      - Design and Develop software
+      - Design and Develop software with unit test and best practices
       - Collaborate with the remote clients and stakeholders
       - Facilitate in-house training and knowledge development
   - title: Senior Software Developer

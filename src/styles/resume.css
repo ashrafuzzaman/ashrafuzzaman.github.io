@@ -104,7 +104,7 @@
 
   p,
   li {
-    @apply text-sm leading-[1.2rem];
+    @apply text-base leading-[1.2rem];
   }
 
   /* width */

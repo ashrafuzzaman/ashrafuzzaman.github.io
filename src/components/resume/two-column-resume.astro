@@ -25,7 +25,7 @@ const numOfExperienceInFirstPage = 3;
     <section id="first-page">
       <section id="left-column">
         <img
-          class="w-120 m-auto border-none sm:w-60"
+          class="w-120 m-auto rounded-3xl border-none sm:w-60"
           alt="Ashrafuzzaman Jitu"
           src="/assets/profile-pic.webp"
         />
@@ -85,11 +85,11 @@ const numOfExperienceInFirstPage = 3;
         {skills.map(skill => <Skill skill={skill} />)}
       </section>
       <section class="right-column">
-        <div class="hidden sm:block print:block">
+        <div class="mt-5 hidden sm:block print:block">
           <NameTitle name={name} designation={designation} company={company} />
         </div>
-        <p class="mt-2">{summary}</p>
-        <h2>Experience</h2>
+        <p class="mt-5 text-justify">{summary}</p>
+        <h2 class="print:mt-5">Experience</h2>
         <Hr noPadding />
         <div class="print:hidden">
           {

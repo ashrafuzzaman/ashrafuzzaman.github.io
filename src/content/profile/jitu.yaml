@@ -64,17 +64,16 @@ experiences:
     company: Optimizely
     till: Present
     from: Dec, 2021
-    brief: Optimizely acquired Welcome on Dec 2021.
     responsibilities:
-      - Lead, mentor, and develop many teams of 55+ engineers
-      - Create an atmosphere that encourages career growth by providing coaching and a frequent contextual feedback loop
-      - Manage year-end performance-based increments and establish and monitor engineering performance indicators
-      - As one of the architects, I consult, design, guide teams to build scalable architecture
-      - As one of the Engineering Leaders, I coach engineers on best practices for writing maintainable code and system design
+      - Lead, mentor, and work with many teams of 35+ engineers
+      - Create an atmosphere that encourages growth
+      - Consult, design, guide teams to build scalable architecture
+      - Coach engineers on best practices for writing maintainable code and system design
       - Make strategic decision to guide the organization to manage engineering department
       - Line manage a group of five talented engineers, staff engineers and engineering managers
-      - Facilitate in-house growth through encouraging and actively participating in tech talks and focused group coaching
-      - Responsible for the technical interview process and ensuring that we hire the right kind of engineers
+      - Manage year-end performance-based increments and establish and monitor engineering performance indicators
+      - Facilitate in-house growth through technical discussions and focused group coaching
+      - Responsible for the technical interview process for hiring the right kind of engineers
 
   - title: Director Of Engineering
     company: Welcome
@@ -95,9 +94,9 @@ experiences:
       In pursuit of career growth in Newscred, took the challenge of being an engineering manager to
       lead and coach fellow engineers. In addition to being a software engineer also took the role of an architect.
     responsibilities:
-      - Break monolithic python and node based application to modular micro-services with CI/CD pipeline
-      - Make the application resilient on data loss, make the app highly available and scalable keeping the infrastructure cost minimum
-      - In Newscred we believe in failing fast, so build something to ship fast, fail fast or plan on evolution of the prototype to a robust system
+      - Break monolithic application to modular single purposed micro-services with CI/CD pipeline
+      - Build features with high availablity that can scale with low infrastructure cost
+      - Build fast, failing fast or plan on evolution of the prototype to a robust system
       - Closely work with DevOps and BI to improve system services, setting up automation, monitoring
       - Actively collaborates with product owners to create product roadmaps
       - Actively participates in technical interviews
@@ -139,7 +138,3 @@ experiences:
     till: Feb 2008
     from: Jan 2007
     brief: We build a different client projects with J2EE, Struts, Spring, Hibernate.
-    responsibilities:
-      - Design and Develop software
-      - Collaborate with the remote clients and stakeholders
-      - Facilitate in-house training and knowledge development

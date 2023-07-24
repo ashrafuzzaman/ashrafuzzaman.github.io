@@ -17,79 +17,102 @@ const {
   skills,
   experiences,
 } = profile;
+const numOfExperienceInFirstPage = 3;
 ---
 
 <ResumeLayout>
   <main>
-    <section id="left-column">
-      <img
-        class="w-120 m-auto border-none sm:w-60"
-        alt="Ashrafuzzaman Jitu"
-        src="/assets/profile-pic.webp"
-      />
-      <div class="mt-4 block sm:hidden print:hidden">
-        <NameTitle name={name} designation={designation} company={company} />
-      </div>
-      <ul id="contact" class="mt-2 min-w-[230px]">
-        <li>
-          <Icon name="mdi:email" />
-          <a href={`mailto:${contact.email}`}>{contact.email}</a>
-        </li>
-        <li>
-          <Icon name="mdi:phone" />
-          <a href={`tel:${contact.phone}`}>{contact.phone}</a>
-        </li>
-        <li>
-          <Icon name="mdi:location" />
-          <a
-            href={`https://www.google.com/maps/search/?api=1&${contact.location}`}
-            target="_blank"
-          >
-            <span>{contact.location}</span>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href={links.site.url}>
-            <Icon name="mdi:web" />
-            <span>{links.site.alt}</span>
-          </a>
-        </li>
-        <li class="print:hidden">
-          <a href="/blog">
-            <Icon name="mdi:post" />
-            <span>Blog</span>
-          </a>
-        </li>
-        <li class="print:hidden">
-          <a target="_blank" href={links.blogOnDistributedSystem.url}>
-            <Icon name="mdi:post" />
-            <span>{links.blogOnDistributedSystem.alt}</span>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href={links.github.url}>
-            <Icon name="mdi:github" />
-            <span>{links.github.alt}</span>
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href={links.linkedIn.url}>
-            <Icon name="mdi:linkedin" />
-            <span>{links.linkedIn.alt}</span>
-          </a>
-        </li>
-      </ul>
-      <h2>Skills</h2>
-      {skills.map(skill => <Skill skill={skill} />)}
+    <section id="first-page">
+      <section id="left-column">
+        <img
+          class="w-120 m-auto border-none sm:w-60"
+          alt="Ashrafuzzaman Jitu"
+          src="/assets/profile-pic.webp"
+        />
+        <div class="mt-4 block sm:hidden print:hidden">
+          <NameTitle name={name} designation={designation} company={company} />
+        </div>
+        <ul id="contact" class="mt-2 min-w-[230px]">
+          <li>
+            <Icon name="mdi:email" />
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          </li>
+          <li>
+            <Icon name="mdi:phone" />
+            <a href={`tel:${contact.phone}`}>{contact.phone}</a>
+          </li>
+          <li>
+            <Icon name="mdi:location" />
+            <a
+              href={`https://www.google.com/maps/search/?api=1&${contact.location}`}
+              target="_blank"
+            >
+              <span>{contact.location}</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href={links.site.url}>
+              <Icon name="mdi:web" />
+              <span>{links.site.alt}</span>
+            </a>
+          </li>
+          <li class="print:hidden">
+            <a href="/blog">
+              <Icon name="mdi:post" />
+              <span>Blog</span>
+            </a>
+          </li>
+          <li class="print:hidden">
+            <a target="_blank" href={links.blogOnDistributedSystem.url}>
+              <Icon name="mdi:post" />
+              <span>{links.blogOnDistributedSystem.alt}</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href={links.github.url}>
+              <Icon name="mdi:github" />
+              <span>{links.github.alt}</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href={links.linkedIn.url}>
+              <Icon name="mdi:linkedin" />
+              <span>{links.linkedIn.alt}</span>
+            </a>
+          </li>
+        </ul>
+        <h2>Skills</h2>
+        {skills.map(skill => <Skill skill={skill} />)}
+      </section>
+      <section class="right-column">
+        <div class="hidden sm:block print:block">
+          <NameTitle name={name} designation={designation} company={company} />
+        </div>
+        <p class="mt-2">{summary}</p>
+        <h2>Experience</h2>
+        <Hr noPadding />
+        <div class="print:hidden">
+          {
+            experiences.map(experience => (
+              <Experience experience={experience} />
+            ))
+          }
+        </div>
+        <div class="hidden print:block">
+          {
+            experiences
+              .slice(0, numOfExperienceInFirstPage)
+              .map(experience => <Experience experience={experience} />)
+          }
+        </div>
+      </section>
     </section>
-    <section id="right-column">
-      <div class="hidden sm:block print:block">
-        <NameTitle name={name} designation={designation} company={company} />
-      </div>
-      <p class="mt-2">{summary}</p>
-      <h2>Experience</h2>
-      <Hr noPadding />
-      {experiences.map(experience => <Experience experience={experience} />)}
+    <section class="right-column hidden print:block">
+      {
+        experiences
+          .slice(numOfExperienceInFirstPage)
+          .map(experience => <Experience experience={experience} />)
+      }
     </section>
   </main>
 </ResumeLayout>

@@ -24,15 +24,17 @@ const numOfExperienceInFirstPage = 3;
   <main>
     <section id="first-page">
       <section id="left-column">
-        <img
-          class="w-120 m-auto rounded-3xl border-none sm:w-60"
-          alt="Ashrafuzzaman Jitu"
-          src="/assets/profile-pic.webp"
-        />
+        <div class="rounded-b-full bg-skin-card-muted">
+          <img
+            class="w-120 m-auto rounded-full sm:w-60"
+            alt="Ashrafuzzaman Jitu"
+            src="/assets/profile-pic.webp"
+          />
+        </div>
         <div class="mt-4 block sm:hidden print:hidden">
           <NameTitle name={name} designation={designation} company={company} />
         </div>
-        <ul id="contact" class="mt-2 min-w-[230px]">
+        <ul id="contact" class="mt-4 min-w-[230px] px-4">
           <li>
             <Icon name="mdi:email" />
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -62,12 +64,6 @@ const numOfExperienceInFirstPage = 3;
               <span>Blog</span>
             </a>
           </li>
-          <li class="print:hidden">
-            <a target="_blank" href={links.blogOnDistributedSystem.url}>
-              <Icon name="mdi:post" />
-              <span>{links.blogOnDistributedSystem.alt}</span>
-            </a>
-          </li>
           <li>
             <a target="_blank" href={links.github.url}>
               <Icon name="mdi:github" />
@@ -81,7 +77,6 @@ const numOfExperienceInFirstPage = 3;
             </a>
           </li>
         </ul>
-        <h2>Skills</h2>
         {skills.map(skill => <Skill skill={skill} />)}
       </section>
       <section class="right-column">

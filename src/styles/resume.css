@@ -63,11 +63,7 @@
     @apply m-auto flex flex-col sm:max-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row;
   }
   #left-column {
-    @apply w-full bg-skin-card p-5 sm:w-auto print:h-screen print:max-w-[280px] print:p-8;
-  }
-
-  #left-column h4 {
-    @apply mt-2 bg-skin-card-muted p-1 font-semibold;
+    @apply w-full bg-skin-card px-2 sm:w-auto print:h-screen print:max-w-[280px];
   }
 
   #contact svg {

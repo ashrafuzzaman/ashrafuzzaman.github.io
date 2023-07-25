@@ -45,12 +45,12 @@ skills:
       - React.js, Angular
       - Flask, DRF
       - Docker, Ansible
-      - Microservice Architectures
+      - Microservice Architectures and patterns
+      - Object Oriented Design patterns and Principles
       - Distributed System, Serverless
       - MongoDb, MySql
       - Apache Spark
       - REST, Hateoas
-      - Design Patterns and Principles
       - TDD, BDD
 
   - title: AWS
@@ -114,9 +114,9 @@ experiences:
     company: Orbund, LLC
     till: Apr 2012
     from: Oct 2011
-    brief: We build a student management system with J2EE with MySql.
+    brief: We build a student management system with J2EE and MySql.
     responsibilities:
-      - Design and Develop software
+      - Design and Develop software with unit test and best practices
       - Collaborate with the remote clients and stakeholders
       - Facilitate in-house training and knowledge development
   - title: Consultant
@@ -137,4 +137,4 @@ experiences:
     company: DSi
     till: Feb 2008
     from: Jan 2007
-    brief: We build a different client projects with J2EE, Struts, Spring, Hibernate.
+    brief: We build a lot of client projects with J2EE, Struts, Spring, Hibernate, mostly for container and cargo management.

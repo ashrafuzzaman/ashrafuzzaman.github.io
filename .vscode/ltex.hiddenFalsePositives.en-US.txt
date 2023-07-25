@@ -1,2 +1,0 @@
-{"rule":"PASSIVE_VOICE","sentence":"^\\QIf the data is stored on S3(multi region), they can use the Lambda@Edge and then the computation can be close to distribution, which would be ideal.\\E$"}
-{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QThe post by \"Prime Video\" initiated a few misleading posts where some people are claiming \"Microservices are evil” and arguing to move to Monolith.\\E$"}

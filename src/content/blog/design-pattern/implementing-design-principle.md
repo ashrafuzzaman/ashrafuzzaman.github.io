@@ -88,7 +88,7 @@ class Plane {
 
 🤔 Something doesn't feel right.\
 🤔 What happens when we have a new weapon?\
-We would have to change the `Plane` class every time. The plan just need to fire what it has,
+We would have to change the `Plane` class every time if we need to add a new weapon. The plane just need to fire what it has,
 but the behavior of the weapon can change over time. This look like a good time to use the following principle,
 
 > Encapsulate what varies from what stays the same.

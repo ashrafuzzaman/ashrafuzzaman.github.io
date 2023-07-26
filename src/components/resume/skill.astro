@@ -8,10 +8,10 @@ const { title, items } = skill;
 ---
 
 <div class="break-inside-avoid">
-  <h4 class="my-2 bg-skin-card-muted py-1 pl-4 text-lg font-semibold">
+  <h4 class="skill-title">
     {title}
   </h4>
   <ul>
-    {skill.items.map(item => <li class="m-0 px-4 leading-normal">{item}</li>)}
+    {skill.items.map(item => <li class="skill-item">{item}</li>)}
   </ul>
 </div>

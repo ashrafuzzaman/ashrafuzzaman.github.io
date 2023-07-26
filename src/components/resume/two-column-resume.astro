@@ -25,14 +25,14 @@ const numOfExperienceInFirstPage = 3;
     <section id="first-page">
       <section id="left-column">
         <img
-          class="w-120 m-auto mt-2 rounded-full bg-skin-card-muted sm:w-60"
+          id="profile-img"
           alt="Ashrafuzzaman Jitu"
           src="/assets/profile-pic.webp"
         />
         <div class="mt-4 block sm:hidden print:hidden">
           <NameTitle name={name} designation={designation} company={company} />
         </div>
-        <ul id="contact" class="mt-4 min-w-[230px] px-4">
+        <ul id="contact">
           <li>
             <Icon name="mdi:email" />
             <a href={`mailto:${contact.email}`}>{contact.email}</a>

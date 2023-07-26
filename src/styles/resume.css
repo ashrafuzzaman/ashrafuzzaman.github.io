@@ -58,12 +58,21 @@
 
   main {
     @apply m-auto flex flex-col sm:max-w-[1000px];
+    font-family: "Roboto", sans-serif;
   }
   #first-page {
     @apply m-auto flex flex-col sm:max-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row;
   }
   #left-column {
-    @apply ml-2 w-full rounded-t-full bg-skin-card px-2 sm:w-auto print:h-screen print:max-w-[280px];
+    @apply w-full rounded-t-full bg-skin-card px-2 pb-5 sm:w-auto sm:pb-0 print:ml-2 print:h-screen print:max-w-[280px];
+  }
+
+  #profile-img {
+    @apply m-auto mt-2 rounded-full bg-skin-card-muted sm:w-60;
+  }
+
+  #contact {
+    @apply mt-4 min-w-[230px] px-4;
   }
 
   #contact svg {
@@ -76,6 +85,17 @@
 
   #action-buttons svg[astro-icon] {
     @apply text-skin-accent;
+  }
+
+  .skill-title {
+    @apply my-2 bg-skin-card-muted py-1 pl-4 text-lg font-semibold;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .skill-item {
+    @apply m-0 px-4 leading-normal;
   }
 
   h1 {

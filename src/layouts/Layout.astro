@@ -10,10 +10,12 @@ export interface Props {
   author?: string;
   description?: string;
   ogImage?: string;
+  contentType?: string;
 }
 
 const {
   title = SITE.title,
+  contentType = "article",
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
@@ -41,9 +43,11 @@ const socialImageURL = new URL(
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
+    <meta name="article:author" content={author} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
+    <meta property="og:type" content={contentType} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />

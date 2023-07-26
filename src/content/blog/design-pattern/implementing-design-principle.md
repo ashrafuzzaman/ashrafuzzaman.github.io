@@ -203,7 +203,7 @@ class Plane {
 > Keep your code DRY
 
 And do not be afraid to create `Class`. Because, `Class` represent concepts, it helps to define `domain` so that it is easy to communicate the ideas.
-Now you can say, an `Ammo` has a `Coordinate` and a `Plan` also has a `Coordinate`. Those nouns are concepts which are represented in the code.
+Now you can say, an `Ammo` has a `Coordinate` and a `Plane` also has a `Coordinate`. Those nouns are concepts which are represented in the code.
 That is the core of Domain Driven Design.
 
 Now we need to construct bullet every time we fire a gun, and we need a missile every time we fire one. To solve this we need a `Factory`
@@ -244,6 +244,6 @@ Let's re-write the requirements.
 - `Plane` and `Ammo` have `Coordinate`s
 
 The entities are classes, `has a` and `is a` represents relation, `composition` and `inheritance`.
-![Figure 2: Class diagram](/assets/blog/design-patterns/afterburner-class-diagram.webp)
+![Figure 2: Class diagram.](/assets/blog/design-patterns/afterburner-class-diagram.webp)
 
-In the actual school project, of cource there were more requirements and I would continue that in a different post. This is already too long 😂.
+In the actual school project, of course there were more requirements and I would continue that in a different post. This is already too long 😂.

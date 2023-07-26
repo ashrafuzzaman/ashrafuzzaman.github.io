@@ -81,8 +81,8 @@ const numOfExperienceInFirstPage = 3;
         <div class="mt-5 hidden sm:block print:block">
           <NameTitle name={name} designation={designation} company={company} />
         </div>
-        <p class="mt-5 text-justify">{summary}</p>
-        <h2 class="print:mt-5">Experience</h2>
+        <p class="mt-8 text-justify">{summary}</p>
+        <h2 class="mt-8">Experience</h2>
         <Hr noPadding />
         <div class="print:hidden">
           {
@@ -100,7 +100,7 @@ const numOfExperienceInFirstPage = 3;
         </div>
       </section>
     </section>
-    <section class="right-column hidden print:block">
+    <section class="right-column second-page hidden print:block">
       {
         experiences
           .slice(numOfExperienceInFirstPage)

@@ -48,6 +48,7 @@
   /* ===== scrollbar ===== */
   html {
     overflow-y: scroll;
+    font-family: "Roboto", sans-serif;
   }
 
   @page {
@@ -56,35 +57,12 @@
     -webkit-print-color-adjust: exact;
   }
 
-  main {
-    @apply m-auto flex flex-col sm:max-w-[1000px];
-    font-family: "Roboto", sans-serif;
-  }
-  #first-page {
-    @apply m-auto flex flex-col sm:max-w-[1000px] sm:flex-row print:m-0 print:w-full print:flex-row;
-  }
-  #left-column {
-    @apply w-full rounded-t-full bg-skin-card px-2 pb-5 sm:w-auto sm:pb-0 print:ml-2 print:h-screen print:max-w-[280px];
-  }
-
-  #profile-img {
-    @apply m-auto mt-2 rounded-full bg-skin-card-muted sm:w-60;
-  }
-
-  #contact {
-    @apply mt-4 min-w-[230px] px-4;
-  }
-
-  #contact svg {
+  #left-column svg {
     @apply w-[18px];
   }
 
   .right-column {
     @apply mt-5 w-full border-r-2 border-skin-line bg-skin-fill p-8 sm:w-auto print:border-0;
-  }
-
-  .right-column.second-page {
-    @apply px-12;
   }
 
   #action-buttons svg[astro-icon] {
@@ -95,14 +73,6 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-
-  .skill-title {
-    @apply box-shadow my-2 bg-skin-card-muted py-1 pl-4 text-lg font-semibold;
-  }
-
-  .skill-item {
-    @apply m-0 px-4 leading-normal;
   }
 
   h1 {

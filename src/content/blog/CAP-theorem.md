@@ -1,7 +1,7 @@
 ---
 title: CAP theorem
 pubDate: 2023-04-25
-tags: ["CAP", "Database"]
+tags: ["cap-theorem", "Database"]
 featured: true
 description: Intro to CAP theorem
 ogImage: /assets/blog/CAP-theorem/CAP-theorem.png

@@ -3,11 +3,11 @@ name: A.K.M. Ashrafuzzaman
 designation: Director of engineering
 company: Optimizely
 summary:
-  I consider myself a passionate polyglot programmer with more than 16 years of experience working with a variety of languages
-  and technologies, especially in the web stack. Working with microservice architecture, distributed systems, serverless,
-  scaling with cost reduction in mind, mentoring, and establishing engineering organizations with the culture aligned
-  with corporate objectives are some of the fields that attract me. I am a full-stack engineer
-  with devOps expertise.
+  With sixteen years of working as a full-stack software engineer, I took on various roles along the way. I played the role of an engineering manager,
+  software architect, a director. Even though my current designation is mostly managerial, I always am hands on and play the role of a software
+  architect. Over the period of time I worked with variety of languages and technologies, especially in the web stack.
+  Working with microservice architecture, distributed systems, serverless, scaling with cost reduction in mind, mentoring,
+  and establishing engineering organizations. I am a full-stack engineer with devOps expertise.
 contact:
   email: zmn.ashraf@gmail.com
   phone: "+8801755592433"
@@ -48,9 +48,9 @@ skills:
       - Microservice Architectures and patterns
       - Object Oriented Design patterns and Principles
       - Distributed System, Serverless
-      - MongoDb, MySql
+      - MongoDb, MySql, ELK stack
       - Apache Spark
-      - REST, Hateoas
+      - REST, Hateoas, OAuth
       - TDD, BDD
 
   - title: AWS
@@ -66,15 +66,18 @@ experiences:
     till: Present
     from: Dec, 2021
     responsibilities:
-      - Lead, mentor, and work with many teams of 35+ engineers
-      - Create an atmosphere that encourages growth
-      - Consult, design, guide teams to build scalable architecture
+      - Successfully led and managed 5 teams of 30+ engineers to deliver quality software with CI/CD
+      - Consult, review, hands on contribute and guide teams to build scalable architecture
       - Coach engineers on best practices for writing maintainable code and system design
-      - Make strategic decision to guide the organization to manage engineering department
+      - Lead and actively participate in driving architectural changes
       - Line manage a group of five talented engineers, staff engineers and engineering managers
-      - Manage year-end performance-based increments and establish and monitor engineering performance indicators
-      - Facilitate in-house growth through technical discussions and focused group coaching
-      - Responsible for the technical interview process for hiring the right kind of engineers
+    achievements:
+      - Split NodeJs and Python backend monolyth to microservice
+      - Stabilize injestion platform with data lake, so that the we can rebuild the db from the data lake
+      - Debug and improve full-stack performance with elastic APM and stackdriver trace
+      - Build publishable widget with analytics platform powered by serverless architect like cloudfront, Lambda and AWS Athena
+      - Build RESTful webservice with JSON API and HATEOAS
+      - Lead team to achieve quality delivery, error budget and set SLA's for services
 
   - title: Director Of Engineering
     company: Welcome
@@ -94,16 +97,6 @@ experiences:
     companyLink: https://www.linkedin.com/company/newscred/
     till: Apr 2015
     from: Oct 2014
-    brief:
-      In pursuit of career growth in Newscred, took the challenge of being an engineering manager to
-      lead and coach fellow engineers. In addition to being a software engineer also took the role of an architect.
-    responsibilities:
-      - Break monolithic application to modular single purposed micro-services with CI/CD pipeline
-      - Build features with high availablity that can scale with low infrastructure cost
-      - Build fast, failing fast or plan on evolution of the prototype to a robust system
-      - Closely work with DevOps and BI to improve system services, setting up automation, monitoring
-      - Actively collaborates with product owners to create product roadmaps
-      - Actively participates in technical interviews
 
   - title: Lead Software Engineer
     company: Tasawr
@@ -111,19 +104,13 @@ experiences:
     till: Oct 2014
     from: Apr 2012
     brief: In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
-    responsibilities:
-      - Learn and apply best practices for internal and client solutions
-      - Deliver high quality software with TDD, unit test and BDD testing
-      - Follow the agile software development processes to ship product in a pradictable manner
+
   - title: Sr. Technology Analyst
     company: Orbund, LLC
     till: Apr 2012
     from: Oct 2011
     brief: We build a student management system with J2EE and MySql.
-    responsibilities:
-      - Design and Develop software with unit test and best practices
-      - Collaborate with the remote clients and stakeholders
-      - Facilitate in-house training and knowledge development
+
   - title: Consultant
     company: Simple Signup, Sweden
     from: Oct 2009

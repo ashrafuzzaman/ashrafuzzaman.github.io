@@ -1,0 +1,152 @@
+---
+name: A.K.M. Ashrafuzzaman
+designation: Director of engineering
+company: Optimizely
+summary:
+  I consider myself to be an enthusiastic polyglot engineer with over 16 years of experience working with an array of programming languages
+  and technologies, especially in the web stack. I excel at working with microservice architecture, distributed systems, serverless architecture,
+  scaling with cost reduction in mind, coaching engineers, and establishing engineering organizations with a culture that aligns
+  with the organization's mission. \
+
+  \
+
+  I am looking for an organization with a meaningful mission and mission-driven talented individuals.
+
+contact:
+  email: zmn.ashraf@gmail.com
+  phone: "+8801755592433"
+  location: Dhaka, Bangladesh
+links:
+  site:
+    alt: ashrafuzzaman.github.io
+    url: https://ashrafuzzaman.github.io/
+  twitter:
+    alt: ashrafuzzaman
+    url: https://twitter.com/ashrafuzzaman
+  github:
+    alt: ashrafuzzaman
+    url: https://github.com/ashrafuzzaman/
+  blog:
+    alt: Blog
+    url: /blog
+  blogOnDistributedSystem:
+    alt: Blog on distributed system
+    url: http://distash.blogspot.com/
+  linkedIn:
+    alt: ashrafuzzaman-jitu
+    url: https://www.linkedin.com/in/ashrafuzzaman-jitu/
+skills:
+  - title: Language
+    items:
+      - Typescript, Javascript
+      - Python
+      - Ruby
+      - Java
+
+  - title: Tools / Technology
+    items:
+      - NodeJs, Express, NestJs
+      - React.js, Angular
+      - Flask, DRF
+      - Docker, Ansible
+      - Microservice Architectures and patterns
+      - Object Oriented Design patterns and Principles
+      - Distributed System, Serverless
+      - MongoDb, MySql
+      - Apache Spark
+      - REST, Hateoas
+      - TDD, BDD
+
+  - title: AWS
+    items:
+      - S3, RDS, Lambda,
+      - Kinesis, SQS,
+      - Athena, Redshift, CloudFront,
+      - CloudFormation Template
+
+experiences:
+  - title: Director Of Engineering
+    company: Optimizely
+    companyLink: https://www.optimizely.com/
+    till: Present
+    from: Dec, 2021
+    responsibilities:
+      - Lead and manage five teams of thirty or more engineers to produce quality software
+      - Consult, review, actively contribute and guide teams to build scalable architecture
+      - Coach engineers on best practices for writing maintainable code and system design
+      - Lead and actively participate in driving architectural changes
+      - Manage a group of five talented engineers, staff engineers and engineering managers
+      - Identify and hire the right kind of engineers
+      - Set and monitor quality metrics, error budget and SLA's for micro-services
+
+  - title: Director Of Engineering
+    company: Welcome
+    companyLink: https://www.linkedin.com/company/welcomesoftware/
+    till: Dec 2021
+    from: Aug 2020
+    brief: NewsCred changed the brand name to Welcome.
+
+  - title: Engineering Manager
+    company: Newscred
+    companyLink: https://www.linkedin.com/company/newscred/
+    from: Apr 2015
+    till: Sep 2018
+    responsibilities:
+      - Split NodeJs and Python monolyth in to micro-services
+      - Stabilize the ingestion platform with the data lake for disaster recovery
+      - Debug and improve full-stack application performance with elastic APM and stackdriver trace
+      - Build publishable widget with analytics platform powered by serverless architect
+      - Build RESTful webservices with JSON API and HATEOAS
+      - Manage a group of five talented engineers who became techleaders and managers over time
+
+  - title: Lead Software Engineer
+    company: Newscred
+    companyLink: https://www.linkedin.com/company/newscred/
+    till: Apr 2015
+    from: Oct 2014
+    brief:
+      In pursuit of career growth in Newscred, took the challenge of being an engineering manager to
+      lead and coach fellow engineers. In addition to being a software engineer also took the role of an architect.
+    responsibilities:
+      - Build software with high availablity that can scale with low infrastructure cost
+      - Build fast, failing fast or plan on evolution of the prototype to a robust system
+      - Closely work with DevOps and BI to improve system services, setting up automation and monitoring
+      - Actively collaborates with product owners to create product roadmaps
+      - Actively participates in technical interviews
+
+  - title: Lead Software Engineer
+    company: Tasawr
+    companyLink: https://www.linkedin.com/company/tasawr/
+    till: Oct 2014
+    from: Apr 2012
+    brief: In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
+    responsibilities:
+      - Learn and apply best practices for internal and client solutions
+      - Deliver high quality software with TDD, unit test and BDD testing
+      - Follow the agile software development processes to ship product in a pradictable manner
+  - title: Sr. Technology Analyst
+    company: Orbund, LLC
+    till: Apr 2012
+    from: Oct 2011
+    brief: We build a student management system with J2EE and MySql.
+    responsibilities:
+      - Design and Develop software with unit test and best practices
+      - Collaborate with the remote clients and stakeholders
+      - Facilitate in-house training and knowledge development
+  - title: Consultant
+    company: Simple Signup, Sweden
+    from: Oct 2009
+    till: Apr 2011
+    brief: We build an online event management system with Ruby on Rails and MySql. I worked as an part time software developer in Stockholm.
+  - title: Software Engineer
+    company: Code71
+    till: Aug 2009
+    from: May 2008
+    brief:
+      We build a SCRUM management tool with Ruby on Rails and MySql. We treated unit test as a part of code base and focused on internal
+      growth by facilitating in-house training and knowledge development
+  - title: Senior Software Developer
+    company: DSi
+    till: Feb 2008
+    from: Jan 2007
+    brief: We build a lot of client projects with J2EE, Struts, Spring, Hibernate, mostly for container and cargo management.

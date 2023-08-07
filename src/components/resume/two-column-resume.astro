@@ -5,6 +5,7 @@ import Experience from "@components/resume/experience.astro";
 import Skill from "@components/resume/skill.astro";
 import Hr from "@components/Hr.astro";
 import NameTitle from "@components/resume/name-title.astro";
+import Markdown from "@astrojs/markdown-component";
 
 const { profile } = Astro.props;
 const {
@@ -17,7 +18,29 @@ const {
   skills,
   experiences,
 } = profile;
-const numOfExperienceInFirstPage = 3;
+
+let firstPageExpLines = 0;
+const MAX_LINE_IN_FIRST_PAGE = 22;
+
+const numOfExperienceInFirstPage = experiences.reduce(
+  (expCount: number, experience: any) => {
+    const lines =
+      2 + // For Title
+      Math.ceil((experience.brief?.length || 0) / 80) +
+      (experience.responsibilities?.reduce(
+        (lineCount: number, curRes: string) => {
+          return lineCount + Math.ceil(curRes.length / 90);
+        },
+        0
+      ) || 0);
+    firstPageExpLines += lines;
+    if (firstPageExpLines < 22) {
+      return expCount + 1;
+    }
+    return expCount;
+  },
+  0
+);
 ---
 
 <ResumeLayout>
@@ -27,7 +50,7 @@ const numOfExperienceInFirstPage = 3;
     >
       <section
         id="left-column"
-        class="z-10 w-full rounded-t-full bg-skin-card px-2 pb-5 sm:w-auto sm:pb-0 print:ml-2 print:h-screen print:max-w-[280px]"
+        class="z-10 w-full rounded-t-full bg-skin-card px-2 pb-5 sm:w-auto sm:pb-0 print:ml-2 print:h-screen print:max-w-[250px]"
       >
         <img
           class="m-auto mt-2 rounded-full bg-skin-card-muted sm:w-60"
@@ -87,7 +110,9 @@ const numOfExperienceInFirstPage = 3;
         <div class="mt-5 hidden sm:block print:block">
           <NameTitle name={name} designation={designation} company={company} />
         </div>
-        <p class="mt-8 text-justify">{summary}</p>
+        <p class="mt-5">
+          <Markdown content={summary} />
+        </p>
         <h2 class="mt-8">Experience</h2>
         <Hr noPadding />
         <div class="print:hidden">

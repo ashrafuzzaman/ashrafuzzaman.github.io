@@ -92,7 +92,7 @@ experiences:
     from: Apr 2015
     till: Sep 2018
     responsibilities:
-      - Split NodeJs and Python monolyth in to micro-services.
+      - Split NodeJs and Python monolith into micro-services.
       - Stabilize the ingestion platform with the data lake for disaster recovery.
       - Debug and improve full-stack application performance with elastic APM and stackdriver trace.
       - Build publishable widget with analytics platform powered by serverless architect.

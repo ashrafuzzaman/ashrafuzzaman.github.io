@@ -95,8 +95,8 @@ experiences:
       - Split NodeJs and Python monolith into micro-services.
       - Stabilize the ingestion platform with the data lake for disaster recovery.
       - Debug and improve full-stack application performance with elastic APM and stackdriver trace.
-      - Build publishable widget with analytics platform powered by serverless architect.
-      - Build RESTful webservices with JSON API and HATEOAS.
+      - Built publishable widget with analytics platform powered by serverless architect.
+      - Built RESTful webservices with JSON API and HATEOAS.
       - Manage a group of five talented engineers who became tech-leads and managers over time.
 
   - title: Lead Software Engineer
@@ -108,8 +108,8 @@ experiences:
       In pursuit of career growth in Newscred, took the challenge of being an engineering manager to
       lead and coach fellow engineers. In addition to being a software engineer also took the role of an architect.
     responsibilities:
-      - Build software with high availablity that can scale with low infrastructure cost.
-      - Build fast, failing fast or plan on evolution of the prototype to a robust system.
+      - Built software with high availablity that can scale with low infrastructure cost.
+      - Built fast, failing fast or plan on evolution of the prototype to a robust system.
       - Closely work with DevOps and BI to improve system services, setting up automation and monitoring.
       - Actively collaborates with product owners to create product roadmaps.
       - Actively participates in technical interviews.
@@ -128,7 +128,7 @@ experiences:
     company: Orbund, LLC
     till: Apr 2012
     from: Oct 2011
-    brief: We build a student management system with J2EE and MySql.
+    brief: We built a student management system with J2EE and MySql.
     responsibilities:
       - Design and Develop software with unit test and best practices.
       - Collaborate with the remote clients and stakeholders.
@@ -143,10 +143,10 @@ experiences:
     till: Aug 2009
     from: May 2008
     brief:
-      We build a SCRUM management tool with Ruby on Rails and MySql. We treated unit test as a part of code base and focused on internal
+      We built a SCRUM management tool with Ruby on Rails and MySql. We treated unit test as a part of code base and focused on internal
       growth by facilitating in-house training and knowledge development.
   - title: Senior Software Developer
     company: DSi
     till: Feb 2008
     from: Jan 2007
-    brief: We build a lot of client projects with J2EE, Struts, Spring, Hibernate, mostly for container and cargo management.
+    brief: We built a lot of client projects with J2EE, Struts, Spring, Hibernate, mostly for container and cargo management.

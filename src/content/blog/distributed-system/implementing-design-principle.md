@@ -5,7 +5,7 @@ featured: true
 draft: false
 tags: ["distributed system"]
 description: Distributed system 101
-ogImage: /assets/blog/distributed-system/NTP-time-sync.gif
+ogImage: ./NTP-time-sync.gif
 ---
 
 The number of activities/transactions that modern applications have to handle has increased significantly in past few decades. The usage
@@ -18,7 +18,7 @@ In a distributed system it is hard to have a total order across all the events i
 We can use [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) to sync time between clocks in different location, right?
 Yes we can. But there would always be a difference even if that is 100ms.
 
-![Figure 1: Syncing time](/assets/blog/distributed-system/NTP-time-sync.gif)
+![Figure 1: Syncing time](./NTP-time-sync.gif)
 
 When a server requests an NTP server for the time. It does not know when the time was generated. It knows the round trip time.
 So it approximates the one way time by half of round trip time. But that is an assumption which is often not true. And there are hardware limitations,

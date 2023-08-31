@@ -4,7 +4,7 @@ pubDate: 2023-04-25
 tags: ["cap-theorem", "Database"]
 featured: true
 description: Intro to CAP theorem
-ogImage: /assets/blog/CAP-theorem/CAP-theorem.png
+ogImage: ./CAP-theorem.png
 ---
 
 The CAP theorem is a fundamental concept in distributed computing that states that it is impossible for a distributed system to simultaneously provide all three of the following guarantees: **C**onsistency, **A**vailability, and **P**artition tolerance.
@@ -23,7 +23,7 @@ Partition tolerance refers to the ability of the system to continue operating ev
 
 In practice, most distributed systems prioritize either availability or consistency, with partition tolerance being a non-negotiable requirement. For example, a system designed for high availability might sacrifice consistency by allowing nodes to return stale data, while a system designed for strong consistency might sacrifice availability by blocking requests until all nodes have been updated with the latest data.
 
-![CAP theorem](/assets/blog/CAP-theorem/CAP-theorem.png)
+![CAP theorem](./CAP-theorem.png)
 _CAP theorem_
 
 The CAP theorem has significant implications for the design and operation of large-scale distributed systems, including databases, messaging systems, and content delivery networks. It underscores the importance of understanding the trade-offs involved in building distributed systems and the need to carefully balance the requirements of different stakeholders.

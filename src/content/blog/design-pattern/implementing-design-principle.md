@@ -4,7 +4,7 @@ pubDate: 2023-07-25
 featured: true
 tags: ["encapsulation", "design principle", "design pattern"]
 description: The process of thinking in design pattern and principles
-ogImage: /assets/blog/design-patterns/afterburner.gif
+ogImage: ./afterburner/afterburner.gif
 ---
 
 When I first learned about design patterns, I was looking to forcefully implement patterns everywhere rather than the patterns to naturally
@@ -13,7 +13,7 @@ come as a solution. In this post, I am planning to go through the thought proces
 In my university there was a J2ME course where we needed to build a game. Back in 90s, I love to play a game named Afterburner. I thought, why not
 make this for the mobile. Here is a snapshot of what the game looked like,
 
-![Figure 1: The game](/assets/blog/design-patterns/afterburner.gif)
+![Figure 1: The game](./afterburner/afterburner.gif)
 
 Now brace your self, there would be a lot of code.
 
@@ -244,6 +244,6 @@ Let's re-write the requirements.
 - `Plane` and `Ammo` have `Coordinate`s
 
 The entities are classes, `has a` and `is a` represents relation, `composition` and `inheritance`.
-![Figure 2: Class diagram.](/assets/blog/design-patterns/afterburner-class-diagram.webp)
+![Figure 2: Class diagram.](./afterburner/afterburner-class-diagram.webp)
 
 In the actual school project, of course there were more requirements and I would continue that in a different post. This is already too long 😂.

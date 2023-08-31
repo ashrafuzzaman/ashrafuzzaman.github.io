@@ -4,7 +4,7 @@ pubDate: 2016-06-09
 tags: ["Kafka", "Broker"]
 featured: true
 description: A brief introduction to Kafka
-ogImage: /assets/blog/introducing-kafka/terminologies.png
+ogImage: ./img/terminologies.png
 ---
 
 ## What is Kafka
@@ -23,7 +23,7 @@ Before we get in details with Kafka lets get to know the common terminologies.
 - We'll call processes that subscribe to topics and process the feed of published messages **consumers**.
 - Kafka runs as a cluster comprised of one or more servers each of which is called a **broker**.
 
-![Figure 1: Basic terminologies](/assets/blog/introducing-kafka/terminologies.png)
+![Figure 1: Basic terminologies](./img/terminologies.png)
 
 ## Kafka Topic
 
@@ -31,7 +31,7 @@ The way Kafka scales the topic is by splitting into multiple partitions.
 In a partition each message has a incremental sequence number called **offset**.
 Each messages in a partition are ordered in the way they were pushed to Kafka.
 
-![Figure 2: Topics are distributed in partitions](/assets/blog/introducing-kafka/partitions.png)
+![Figure 2: Topics are distributed in partitions](./img/partitions.png)
 
 Each partitions then can be replicated in different nodes for HA and fault tolerance.
 For each partition different nodes are **leader**. Only a leader can write to the partition.
@@ -40,18 +40,18 @@ As there are multiple leaders in the cluster for different partitions
 there are different commit log which is being written at the same time. That is why it is called
 distributed commit log.
 
-![Figure 3: Partitions are replicated in the cluster](/assets/blog/introducing-kafka/write_to_partition.png)
+![Figure 3: Partitions are replicated in the cluster](./img/write_to_partition.png)
 
 ## Consumers and Consumer group
 
 One partition is consumed by one consumer in a **consumer group**.
 But in different consumer group same partition is consumed.
 
-![Figure 4: Consumer groups](/assets/blog/introducing-kafka/consumer_groups.png)
+![Figure 4: Consumer groups](./img/consumer_groups.png)
 
 ## Handling failure
 
-![Figure 5: Handling failure](/assets/blog/introducing-kafka/handling_failure.png)
+![Figure 5: Handling failure](./img/handling_failure.png)
 
 ## Reference
 

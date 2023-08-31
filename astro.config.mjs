@@ -51,7 +51,4 @@ export default defineConfig({
     },
     plugins: [yaml()],
   },
-  experimental: {
-    assets: true,
-  },
 });

@@ -1,0 +1,24 @@
+---
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkToc from "remark-toc";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+
+export interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+
+const parsedContent = await unified()
+  .use(remarkParse)
+  .use(remarkToc)
+  .use(remarkRehype)
+  .use(rehypeStringify)
+  .process(content);
+---
+
+<div>
+  {parsedContent}
+</div>

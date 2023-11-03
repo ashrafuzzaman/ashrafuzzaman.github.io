@@ -1,0 +1,58 @@
+---
+import Marpit from "@marp-team/marpit";
+import getPageNumbers from "@utils/getPageNumbers";
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const slides = await getCollection("slides");
+
+  const slideResult = slides.map(slide => ({
+    params: { slug: slide.slug },
+    props: { slide },
+  }));
+
+  const pagePaths = getPageNumbers(slides.length).map(pageNum => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...slideResult, ...pagePaths];
+}
+
+const { slug } = Astro.params;
+
+const marpit = new Marpit();
+const theme = `
+/* @theme example */
+
+section {
+  background-color: #369;
+  color: #fff;
+  font-size: 30px;
+  padding: 40px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: #8cf;
+}
+`;
+marpit.themeSet.default = marpit.themeSet.add(theme);
+const slideEntry = await getEntry("slides", slug);
+const { html, css } = marpit.render(slideEntry.body);
+---
+
+{
+  (
+    <html>
+      <body>
+        <style set:html={css} />
+        <div set:html={html} />
+      </body>
+    </html>
+  )
+}

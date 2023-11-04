@@ -1,5 +1,5 @@
 ---
-import RevealInitializer from "@components/slide/RevealInitializer.astro";
+import Marpit from "@marp-team/marpit";
 import getPageNumbers from "@utils/getPageNumbers";
 import { getCollection, getEntry } from "astro:content";
 
@@ -19,22 +19,39 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+
+const marpit = new Marpit();
+const theme = `
+/* @theme example */
+
+section {
+  background-color: #369;
+  color: #fff;
+  font-size: 30px;
+  padding: 40px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: #8cf;
+}
+`;
+marpit.themeSet.default = marpit.themeSet.add(theme);
 const slideEntry = await getEntry("slides", slug);
+const { html, css } = marpit.render(slideEntry.body);
 ---
 
 {
   (
     <html>
       <body>
-        <div class="reveal">
-          <div class="slides">
-            <section data-markdown data-separator="---">
-              <div data-template set:html={slideEntry.body} />
-            </section>
-          </div>
-        </div>
-
-        <RevealInitializer />
+        <style set:html={css} />
+        <div set:html={html} />
       </body>
     </html>
   )

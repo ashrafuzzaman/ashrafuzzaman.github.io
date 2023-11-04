@@ -19,12 +19,8 @@ export type BlogFrontmatter = z.infer<typeof blogSchema>;
 
 export const slideSchema = z
   .object({
-    marp: z.boolean(),
     title: z.string(),
-    theme: z.string(),
-    route: z.string(),
     draft: z.boolean().optional(),
-    paginate: z.boolean(),
   })
   .strict();
 

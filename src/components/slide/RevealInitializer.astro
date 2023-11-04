@@ -1,0 +1,17 @@
+---
+import "/node_modules/reveal.js/dist/reveal.css";
+import "/node_modules/reveal.js/dist/theme/solarized.css";
+import "/node_modules/reveal.js/plugin/highlight/monokai.css";
+---
+
+<script>
+  import Reveal from "reveal.js";
+  import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
+  import Markdown from "reveal.js/plugin/markdown/markdown.js";
+
+  console.log("RevealHighlight::", RevealHighlight);
+
+  Reveal.initialize({
+    plugins: [Markdown, RevealHighlight],
+  });
+</script>

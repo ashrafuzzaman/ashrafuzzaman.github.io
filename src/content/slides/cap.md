@@ -1,18 +1,23 @@
 ---
-title: slide1
+title: CAP theorem
 ---
 
-## Anything with Reveal.js
-
-The `anything` plugin allows to add anything inside a tagged HTML object using a user-given function to manipulate HTML ojects of a given class.
+## CAP theorem
 
 ---
 
-### Example: Interactive globe
+### Why distribute?
 
-<div class="anything">
-<!-- { "initialize": "function(container,options) {globe(container);}" } -->
-</div>
+- Scale storage / performance → Sharding
+- Node / Network failure / Fault → Tolerance / Availability
+- Tolerance → Replication (Storage)
+- Replication → Inconsistency
+- Consistency → Low performance
+
+---
+
+- Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
+- Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -134,9 +139,7 @@ If optional values are provided, e.g., by
 
 ```html
 Today's roll of a icosahedron is:
-<span class="randomnumber">
-  <!-- { "min": 1, "max": 20 } --> </span
->.
+<span class="randomnumber"> <!-- { "min": 1, "max": 20 } --> </span>.
 ```
 
 these values will be used when creating the output:

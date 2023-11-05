@@ -6,12 +6,16 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
 
 <script>
   import Reveal from "reveal.js";
+  import Appearance from "reveal.js-appearance";
   import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
   import Markdown from "reveal.js/plugin/markdown/markdown.js";
 
   console.log("RevealHighlight::", RevealHighlight);
 
   Reveal.initialize({
-    plugins: [Markdown, RevealHighlight],
+    plugins: [Markdown, RevealHighlight, Appearance],
+    markdown: {
+      smartypants: true,
+    },
   });
 </script>

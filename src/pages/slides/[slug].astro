@@ -29,7 +29,7 @@ const slideEntry = await getEntry("slides", slug);
         <div class="reveal">
           <div class="slides">
             <section data-markdown data-separator="---">
-              <div data-template set:html={slideEntry.body} />
+              <script type="text/template" set:html={slideEntry.body} />
             </section>
           </div>
         </div>

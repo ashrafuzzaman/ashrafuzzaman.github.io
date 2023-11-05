@@ -6,16 +6,19 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
 
 <script>
   import Reveal from "reveal.js";
-  import Appearance from "reveal.js-appearance";
+  import RevealMermaid from "reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js";
   import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
   import Markdown from "reveal.js/plugin/markdown/markdown.js";
 
-  console.log("RevealHighlight::", RevealHighlight);
-
   Reveal.initialize({
-    plugins: [Markdown, RevealHighlight, Appearance],
+    plugins: [Markdown, RevealHighlight, RevealMermaid],
     markdown: {
       smartypants: true,
     },
+    mermaid: {
+      theme: "default",
+    },
+    fragments: true,
+    backgroundTransition: "slide",
   });
 </script>

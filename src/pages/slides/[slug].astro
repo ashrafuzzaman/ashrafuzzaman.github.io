@@ -21,11 +21,19 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const slideEntry = await getEntry("slides", slug);
+const { title } = slideEntry.data;
 ---
 
 {
   slideEntry && (
     <html>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{title}</title>
+        <meta name="title" content={title} />
+      </head>
+
       <body>
         <div class="reveal">
           <div class="slides">

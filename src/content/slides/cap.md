@@ -6,7 +6,7 @@ title: CAP theorem
 
 ---
 
-## Why distribute?
+### Why distribute?
 
 - Scale storage/performance ➞ Sharding <!-- .element: class="fragment" -->
 - Failure(Fault) ➞ Tolerance/Availability <!-- .element: class="fragment" -->
@@ -16,7 +16,7 @@ title: CAP theorem
 
 ---
 
-## CAP theorem
+### CAP theorem
 
 - [Consistency](https://en.wikipedia.org/wiki/Consistency_model):
   Every read receives the most recent write or an error. Every client sees the same data at same time.
@@ -39,7 +39,7 @@ title: CAP theorem
 
 ---
 
-## Choose Two
+### Choose Two
 
 - **CP database** → A CP database delivers consistency and partition tolerance at the expense of availability, i.e. **MongoDb**
 
@@ -55,7 +55,7 @@ title: CAP theorem
 
 ---
 
-## Consistency?
+### Consistency?
 
 ```mermaid
 sequenceDiagram
@@ -71,12 +71,96 @@ sequenceDiagram
 
 ---
 
-## PACELC
+### PACELC
 
-```mermaid
-flowchart TD
-  B{Partition?} -->|Yes| C[Consistency]
-  B{Partition?} -->|Yes| A[Availability]
-  B{Partition?} -->|No| C[Consistency]
-  B{Partition?} -->|No| L[Latency]
-```
+![PACELC](/assets/cap/PACELC.svg)
+
+---
+
+### MySQL Replication
+
+![MySQL Replication](/assets/cap/MySQL-replication.svg)
+
+---
+
+### Mongo sharding
+
+![Mongo sharding](/assets/cap/Mongo-sharding.svg)
+
+---
+
+### Quorum read / write
+
+![Quorum read / write](/assets/cap/Quorum-read-write.svg)
+
+---
+
+Node / Network failure tolerance for Quorum read / write
+
+<!-- .element: class="fragment text-6xl" -->
+
+**N/2 - 1**
+
+<!-- .element: class="fragment text-7xl" -->
+
+---
+
+### Mongo read concern
+
+- “local”
+
+  - The query returns data from the instance with no guarantee that the data has been written to a majority of the replica set members (i.e. may be rolled back).
+  <!-- .element: class="text-2xl" -->
+
+- "majority"
+  - The query returns the data that has been acknowledged by a majority of the replica set members. The documents returned by the read operation are durable, even in the event of failure.
+  <!-- .element: class="text-2xl" -->
+
+---
+
+### Mongo read concern
+
+- “majority”
+  - Requests acknowledgment that write operations have been durably committed to the calculated majority of the data-bearing voting members
+
+<!-- .element: class="text-2xl" -->
+
+- \<number\>
+  - w: 1
+    - Requests acknowledgment that the write operation has propagated to the standalone mongod or the primary in a replica set. Data can be rolled back if the primary steps down before the write operations have replicated to any of the secondaries.
+
+<!-- .element: class="text-2xl" -->
+
+---
+
+## Lines are getting blurred
+
+---
+
+## Google Spanner
+
+- Relational database <!-- .element: class="fragment" -->
+- Scales horizontally, unlimited scale <!-- .element: class="fragment" -->
+- Strong-ACID with TrueTime ordering <!-- .element: class="fragment" -->
+- 99.999% availability <!-- .element: class="fragment" -->
+- Zero downtime and no maintenance window <!-- .element: class="fragment" -->
+
+---
+
+### Google Spanner: True time
+
+![Quorum read / write](/assets/cap/Atomic-Clock.svg)
+
+---
+
+### Google Spanner: Reliable failure detection
+
+![Quorum read / write](/assets/cap/world-wide-connection.svg)
+
+### Reference
+
+- [CAP theorem: consistency vs availability](https://ashrafuzzaman.github.io/posts/cap-theorem-consistency-vs-availability/)
+- [Cap theorem: IBM](https://www.ibm.com/topics/cap-theorem)
+- [You Can’t Sacrifice Partition Tolerance](https://codahale.com/you-cant-sacrifice-partition-tolerance/)
+- [Google's subsea fiber optics, explained](https://cloud.google.com/blog/topics/developers-practitioners/googles-subsea-fiber-optics-explained)
+- [Google spanner consistency](https://www.youtube.com/watch?v=sOtlaH-QlxM&t=3s&ab_channel=GoogleCloudTech)

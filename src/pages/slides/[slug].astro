@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const slideEntry = await getEntry("slides", slug);
-const { title } = slideEntry.data;
+const { title } = slideEntry ? slideEntry.data : { title: "" };
 ---
 
 {

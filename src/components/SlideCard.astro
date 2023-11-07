@@ -1,0 +1,18 @@
+---
+import Datetime from "./Datetime";
+
+const { title, slug, pubDate } = Astro.props;
+const href = `/slides/${slug}`;
+---
+
+<li class="my-6">
+  <a
+    href={href}
+    class="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+  >
+    <h3 class="text-lg font-medium decoration-dashed hover:underline">
+      {title}
+    </h3>
+  </a>
+  <Datetime datetime={pubDate} />
+</li>

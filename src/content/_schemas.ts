@@ -21,6 +21,7 @@ export const slideSchema = z
   .object({
     title: z.string(),
     draft: z.boolean().optional(),
+    pubDate: z.date(),
   })
   .strict();
 

@@ -1,5 +1,6 @@
 ---
 title: CAP theorem
+pubDate: 2023-11-07
 ---
 
 # CAP theorem

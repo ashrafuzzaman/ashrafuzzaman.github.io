@@ -1,5 +1,6 @@
 ---
 title: 101 of Distributed system
+pubDate: 2023-11-07
 ---
 
 # Distributed system

@@ -1,0 +1,18 @@
+---
+import { SITE } from "@config";
+import Slides from "@layouts/Slides.astro";
+import getPageNumbers from "@utils/getPageNumbers";
+import getSortedSlides from "@utils/getSortedSlides";
+
+import { getCollection } from "astro:content";
+
+const slides = await getCollection("slides");
+
+const sortedSlides = getSortedSlides(slides);
+
+const totalPages = getPageNumbers(sortedSlides.length);
+
+const paginatedPosts = sortedSlides.slice(0, SITE.postPerPage);
+---
+
+<Slides slides={paginatedPosts} pageNum={1} totalPages={totalPages.length} />

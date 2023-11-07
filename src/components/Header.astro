@@ -5,7 +5,7 @@ import ThemeSwitcher from "./theme-switcher.astro";
 import { Icon } from "astro-icon";
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav?: "posts" | "slides" | "tags" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -64,6 +64,11 @@ const { activeNav } = Astro.props;
           <li>
             <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
               Posts
+            </a>
+          </li>
+          <li>
+            <a href="/slides" class={activeNav === "slides" ? "active" : ""}>
+              Slides
             </a>
           </li>
           <li>

@@ -9,3 +9,13 @@
 .reveal pre code {
   max-height: 100%;
 }
+
+/* Mermaid styles */
+rect.actor {
+  rx: 10;
+  ry: 10;
+}
+
+rect.actor + text.actor tspan {
+  fill: #fff !important;
+}

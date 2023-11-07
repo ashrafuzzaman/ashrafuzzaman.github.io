@@ -59,14 +59,19 @@ title: CAP theorem
 
 ```mermaid
 sequenceDiagram
+  autonumber
+  actor Client 1
+  actor Client 2
+
   Client 1-->>Primary: Write 1
-  Primary->>Repl 1: Replicate
-  Primary->>Repl 2: Replicate
-  Client 2-->>Repl 1: Read
+  Primary->>Replica 1: Replicate
+  Primary->>Replica 2: Replicate
+  Client 2-->>Replica 1: Read
+
   Client 1-->>Primary: Write 2
-  Primary->>Repl 2: Replicate
-  Client 2-->>Repl 1: Read
-  Primary->>Repl 1: Replicate
+  Primary->>Replica 2: Replicate
+  Client 2-->>Replica 1: Read
+  Primary->>Replica 1: Replicate
 ```
 
 ---
@@ -156,6 +161,14 @@ Node / Network failure tolerance for Quorum read / write
 ### Google Spanner: Reliable failure detection
 
 ![Quorum read / write](/assets/cap/world-wide-connection.svg)
+
+---
+
+### Google Spanner: Consistency
+
+![Quorum read / write](/assets/cap/Google-Spanner-Consistency.svg)
+
+---
 
 ### Reference
 

@@ -16,7 +16,14 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
       smartypants: true,
     },
     mermaid: {
+      securityLevel: "loose",
       theme: "default",
+      mirrorActors: false,
+      actorFontWeight: 800,
+      themeVariables: {
+        actorBkg: "#2F7FC1",
+        actorBorder: "#2F7FC1",
+      },
     },
     fragments: true,
     backgroundTransition: "slide",

@@ -61,6 +61,9 @@ title: CAP theorem
 sequenceDiagram
   autonumber
   actor Client 1
+  participant Primary
+  participant Replica 1
+  participant Replica 2
   actor Client 2
 
   Client 1-->>Primary: Write 1

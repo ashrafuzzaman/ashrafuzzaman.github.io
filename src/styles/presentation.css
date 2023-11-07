@@ -11,6 +11,12 @@
 }
 
 /* Mermaid styles */
+
+.mermaid {
+  display: flex !important;
+  justify-content: center;
+}
+
 rect.actor {
   rx: 10;
   ry: 10;

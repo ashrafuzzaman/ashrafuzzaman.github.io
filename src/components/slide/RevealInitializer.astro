@@ -16,13 +16,21 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
       smartypants: true,
     },
     mermaid: {
-      securityLevel: "loose",
+      securityLevel: "sandbox",
       theme: "default",
-      mirrorActors: false,
-      actorFontWeight: 800,
+      themeCSS: `
+        rect.actor { rx: 10; ry: 10; }
+        rect.actor + text.actor tspan { fill: #fff !important; }
+        :has(body) { display: flex !important; justify-content: center; }
+      `,
       themeVariables: {
         actorBkg: "#2F7FC1",
         actorBorder: "#2F7FC1",
+      },
+      sequence: {
+        height: 55,
+        mirrorActors: false,
+        actorFontWeight: 800,
       },
     },
     fragments: true,

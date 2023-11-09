@@ -14,7 +14,7 @@ pubDate: 2023-11-07
 - Total order
 <!-- .element: class="fragment" -->
 - Failure detection
-  <!-- .element: class="fragment" -->
+<!-- .element: class="fragment" -->
 
 ---
 

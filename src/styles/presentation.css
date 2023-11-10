@@ -9,3 +9,7 @@
 .reveal pre code {
   max-height: 100%;
 }
+
+.mermaidContainer {
+  @apply flex justify-center;
+}

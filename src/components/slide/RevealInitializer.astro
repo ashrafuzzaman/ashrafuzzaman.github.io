@@ -5,8 +5,8 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
 ---
 
 <script>
+  import RevealMermaid from "@reveal-plugins/mermaid-plugin.js";
   import Reveal from "reveal.js";
-  import RevealMermaid from "reveal.js-mermaid-plugin/plugin/mermaid/mermaid.js";
   import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
   import Markdown from "reveal.js/plugin/markdown/markdown.js";
 
@@ -16,19 +16,19 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
       smartypants: true,
     },
     mermaid: {
-      securityLevel: "sandbox",
+      // securityLevel: "sandbox",
       theme: "default",
       themeCSS: `
         rect.actor { rx: 10; ry: 10; }
         rect.actor + text.actor tspan { fill: #fff !important; }
         :has(body) { display: flex !important; justify-content: center; }
+        .label foreignObject { overflow: visible; }
       `,
       themeVariables: {
         actorBkg: "#2F7FC1",
         actorBorder: "#2F7FC1",
       },
       sequence: {
-        height: 55,
         mirrorActors: false,
         actorFontWeight: 800,
       },

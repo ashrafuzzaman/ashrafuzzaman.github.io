@@ -14,13 +14,13 @@ draft: true
 
 ### Object Oriented programming (OOP)
 
-- Data encapsulation <!-- .element: class="fragment" -->
+- Encapsulation <!-- .element: class="fragment" -->
 - Inheritance <!-- .element: class="fragment" -->
 - Polymorphism <!-- .element: class="fragment" -->
 
 ---
 
-### Why: data encapsulation?
+### Why: encapsulation?
 
 ```mermaid
 classDiagram
@@ -31,7 +31,7 @@ classDiagram
   }
 ```
 
-```js [1|2]
+```js [1|2|3]
 car.engine.start(); ❌
 car.checkSafety();  ❌
 car.start();

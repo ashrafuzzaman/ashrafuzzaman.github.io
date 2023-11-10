@@ -77,9 +77,15 @@ sequenceDiagram
 
 ![M87 blackhole](/assets/distributed-system/M87.webp)
 
+<!-- .element: class="fragment" -->
+
 ---
 
+### Event Horizon Telescope
+
 ![Event Horizon Telescope](/assets/distributed-system/Event-Horizon-Telescope.svg)
+
+<!-- .element: class="fragment" -->
 
 ---
 

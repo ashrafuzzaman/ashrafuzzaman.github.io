@@ -9,9 +9,10 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
   import Reveal from "reveal.js";
   import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
   import Markdown from "reveal.js/plugin/markdown/markdown.js";
+  import RevealNotes from "reveal.js/plugin/notes/notes.js";
 
   Reveal.initialize({
-    plugins: [Markdown, RevealHighlight, RevealMermaid],
+    plugins: [Markdown, RevealHighlight, RevealMermaid, RevealNotes],
     markdown: {
       smartypants: true,
     },
@@ -35,5 +36,6 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
     },
     fragments: true,
     backgroundTransition: "slide",
+    showNotes: false,
   });
 </script>

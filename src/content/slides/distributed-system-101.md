@@ -27,8 +27,8 @@ sequenceDiagram
   Note over Server 1 : Event 1.1
   Note over Server 2 : Event 2.1
 
-  Note over Observer : Event 1.1
-  Note over Observer : Event 2.1
+  Note left of Observer : Event 1.1
+  Note left of Observer : Event 2.1
 ```
 
 ---
@@ -59,8 +59,8 @@ sequenceDiagram
   Server 1 -->> Server 2 : T=1
   Note over Server 2 : Event 2.2
 
-  Note over Observer : Event 2.1, Event 1.1
-  Note over Observer : Event 2.2
+  Note left of Observer : Event 2.1, Event 1.1
+  Note left of Observer : Event 2.2
 
 ```
 
@@ -75,11 +75,11 @@ sequenceDiagram
 
 ### M87 blackhole
 
-![M87 blackhole](https://www.science.org/do/10.5555/article.2476085/full/sf-M87blackhole-1644894886423.jpg)
+![M87 blackhole](/assets/distributed-system/M87.webp)
 
 ---
 
-![Event Horizon Telescope](https://public.nrao.edu/wp-content/uploads/2020/04/EHT_Telescopes_Graphic_2017Telescopes_2020QuasarUpdate-2048x1583.jpg)
+![Event Horizon Telescope](/assets/distributed-system/Event-Horizon-Telescope.svg)
 
 ---
 
@@ -95,13 +95,13 @@ sequenceDiagram
   participant Replica 2
   participant Master
 
-  Replica 1-->>Master: Ping
-  Master-->>Replica 1: Pong
+  Replica 1 -->> Master: Ping
+  Master -->> Replica 1: Pong
 
-  Replica 2-->>Master: Ping
+  Replica 2 -->> Master: Ping
 
   opt Network timeout
-    Master-->>Replica 2: ❌
+    Master -->> Replica 2: ❌
   end
 
 ```

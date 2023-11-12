@@ -5,6 +5,7 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
 ---
 
 <script>
+  import FragmentList from "@reveal-plugins/fragment-list.js";
   import RevealMermaid from "@reveal-plugins/mermaid-plugin.js";
   import Reveal from "reveal.js";
   import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
@@ -12,7 +13,13 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
   import RevealNotes from "reveal.js/plugin/notes/notes.js";
 
   Reveal.initialize({
-    plugins: [Markdown, RevealHighlight, RevealMermaid, RevealNotes],
+    plugins: [
+      Markdown,
+      RevealHighlight,
+      RevealMermaid,
+      RevealNotes,
+      FragmentList,
+    ],
     markdown: {
       smartypants: true,
     },

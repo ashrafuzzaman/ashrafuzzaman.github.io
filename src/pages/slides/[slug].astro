@@ -37,7 +37,7 @@ const { title } = slideEntry ? slideEntry.data : { title: "" };
       <body>
         <div class="reveal">
           <div class="slides">
-            <section data-markdown data-separator="---">
+            <section data-markdown>
               <script type="text/template" set:html={slideEntry.body} />
             </section>
           </div>

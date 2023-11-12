@@ -82,7 +82,20 @@ sequenceDiagram
 
 ### PACELC
 
-![PACELC](/assets/cap/PACELC.svg)
+```mermaid
+flowchart TB
+  P{Partition?}
+  subgraph Yes[Choose between]
+    direction LR
+    C1(Consistency) ~~~ A(Availability)
+  end
+  subgraph No[Choose between]
+    direction LR
+    C2(Consistency) ~~~ L(Latency)
+  end
+  P -- Yes --> Yes
+  P -- No --> No
+```
 
 ---
 

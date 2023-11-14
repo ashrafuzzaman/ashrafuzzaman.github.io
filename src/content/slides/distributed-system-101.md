@@ -12,9 +12,9 @@ pubDate: 2023-11-07
 ### Topic
 
 - Total order
-<!-- .element: class="fragment" -->
 - Failure detection
-<!-- .element: class="fragment" -->
+
+<!-- .element: class="fragmented-lists" -->
 
 ---
 
@@ -71,6 +71,8 @@ sequenceDiagram
 - Network is unreliable
 - NTP sync cannot be trusted
 
+<!-- .element: class="fragmented-lists" -->
+
 ---
 
 ### M87 blackhole
@@ -114,12 +116,14 @@ sequenceDiagram
 
 ---
 
-# Node failure types
+## Node failure types
 
 - Crash Stop
 - Omissions
 - Crash Recovery
 - Byzantine / Arbitrary
+
+<!-- .element: class="fragmented-lists" -->
 
 ---
 
@@ -128,6 +132,8 @@ sequenceDiagram
 - Node stop doing anything(sending/receiving/processing)
 - Once fail never recover
 
+<!-- .element: class="fragmented-lists" -->
+
 ---
 
 ### Crash Stop: Challenges
@@ -135,6 +141,8 @@ sequenceDiagram
 - Can lead to leader election
 - Initiate rebalancing/replication
 - Identification of latest checkpoint
+
+<!-- .element: class="fragmented-lists" -->
 
 ---
 
@@ -154,12 +162,16 @@ Omission is actually a **temporary** state which eventually turns to a **crash**
 - A node might crash
 - It recovers after crashing and initiates a recovery process
 
+<!-- .element: class="fragmented-lists" -->
+
 ---
 
 ### Crash Recovery: Challenges
 
 - Recovery process
 - Compensation
+
+<!-- .element: class="fragmented-lists" -->
 
 ---
 

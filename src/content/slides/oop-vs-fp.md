@@ -60,7 +60,7 @@ car.start();
 
 ### Data encapsulation in FP
 
-```js [1|2-4|6|7|1-7]
+```js [1-7|8-9|1-9]
 function buildCar(engine: Engine) {
   return {
     start: () => {

@@ -14,7 +14,7 @@ pubDate: 2023-11-07
 - Total order
 - Failure detection
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -71,7 +71,7 @@ sequenceDiagram
 - Network is unreliable
 - NTP sync cannot be trusted
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -123,7 +123,7 @@ sequenceDiagram
 - Crash Recovery
 - Byzantine / Arbitrary
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -132,7 +132,7 @@ sequenceDiagram
 - Node stop doing anything(sending/receiving/processing)
 - Once fail never recover
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -142,7 +142,7 @@ sequenceDiagram
 - Initiate rebalancing/replication
 - Identification of latest checkpoint
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -162,7 +162,7 @@ Omission is actually a **temporary** state which eventually turns to a **crash**
 - A node might crash
 - It recovers after crashing and initiates a recovery process
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -171,7 +171,7 @@ Omission is actually a **temporary** state which eventually turns to a **crash**
 - Recovery process
 - Compensation
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 

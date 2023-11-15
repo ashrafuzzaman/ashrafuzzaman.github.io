@@ -1,7 +1,7 @@
 /*!
  * reveal.js fragment-list plugin
 
-  <!-- .element: class="fragmented-lists" -->
+  <!-- .element: class="fragmented-list" -->
 
   - List 1
   - List 2
@@ -12,9 +12,7 @@ const Plugin = {
 
   init: function (reveal) {
     reveal.addEventListener("ready", function addFragmentToLists() {
-      for (const listItem of document.querySelectorAll(
-        ".fragmented-lists li"
-      )) {
+      for (const listItem of document.querySelectorAll(".fragmented-list li")) {
         listItem.classList.add("fragment");
       }
     });

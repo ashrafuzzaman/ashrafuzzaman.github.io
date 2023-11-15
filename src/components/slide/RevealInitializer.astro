@@ -10,6 +10,7 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
   import Reveal from "reveal.js";
   import RevealHighlight from "reveal.js/plugin/highlight/highlight.js";
   import Markdown from "reveal.js/plugin/markdown/markdown.js";
+  import RevealMath from "reveal.js/plugin/math/math.js";
   import RevealNotes from "reveal.js/plugin/notes/notes.js";
 
   Reveal.initialize({
@@ -19,6 +20,7 @@ import "/node_modules/reveal.js/plugin/highlight/monokai.css";
       RevealMermaid,
       RevealNotes,
       FragmentList,
+      RevealMath.KaTeX,
     ],
     markdown: {
       smartypants: true,

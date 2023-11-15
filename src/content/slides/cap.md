@@ -15,7 +15,7 @@ pubDate: 2023-11-07
 - Replication ➞ Inconsistency
 - Consistency ➞ Low performance
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -28,7 +28,7 @@ pubDate: 2023-11-07
 - [Partition tolerance](https://en.wikipedia.org/wiki/Network_partitioning):
   The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes
 
-<!-- .element: class="fragmented-lists" -->
+<!-- .element: class="fragmented-list" -->
 
 ---
 
@@ -42,7 +42,7 @@ pubDate: 2023-11-07
 - **AP database** → An AP database delivers availability and partition tolerance at the expense of consistency, i.e. **Cassandra, Apache CouchDB, ScyllaDB**
 - **CA database** → A CA database delivers consistency and availability across all nodes. It can’t do this if there is a partition between any two nodes in the system, however, and therefore can’t deliver fault tolerance i.e. **MySQL**
 
-<!-- .element: class="fragmented-lists text-3xl" -->
+<!-- .element: class="fragmented-list text-3xl" -->
 
 ---
 

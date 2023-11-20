@@ -248,7 +248,9 @@ it("should transfer the specified amount", () => {
 
 ### Test FP
 
-```ts [1-13|2-3|5-7|9-12|1-13]
+<!-- .element: id="current" -->
+
+```ts [1-11|2-3|5|7-10|1-11]
 it("should correctly transfer the specified amount", () => {
   const transferFromAccount = { accountId: 1, balance: 100 };
   const transferToAccount = { accountId: 2, balance: 50 };

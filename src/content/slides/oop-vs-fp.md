@@ -12,10 +12,21 @@ draft: true
 
 ---
 
+> **War** is what happens when language fails. - Margaret Atwood
+
+<center>
+
+![Margaret Atwood](https://cdn.britannica.com/88/207888-004-304166A2/Margaret-Atwood-2018.jpg?s=1500x700&q=85)
+
+</center>
+
+---
+
 ### Object Oriented programming (OOP)
 
 - Encapsulation
 - Inheritance
+- Abstraction
 - Polymorphism
 
 <!-- .element: class="fragmented-list" -->
@@ -82,6 +93,47 @@ car.start();
 
 ---
 
+<!-- .element: id="account-class-diagram" -->
+
+### Inheritance and Polymorphism
+
+```mermaid
+classDiagram
+
+class Account {
+  -number balance
+
+  +deposit(amount)
+  +withdraw(): number
+}
+
+class SavingsAccount {
+  +deposit(amount)
+  +withdraw(): number
+}
+
+class SalaryAccount {
+  +deposit(amount)
+  +withdraw(): number
+}
+
+Account <|-- SavingsAccount
+Account <|-- SalaryAccount
+
+```
+
+---
+
+```ts [1-5|5]
+account1 = new SavingsAccount(1000);
+account2 = new SalaryAccount(1000);
+
+// Unaware of the type of the account
+account1.deposit(account2.withdraw(100));
+```
+
+---
+
 ## What is an Object?
 
 ```mermaid
@@ -92,92 +144,33 @@ flowchart LR
 
 ---
 
-## Design pattern in OOP
+## State management
 
----
-
-```mermaid
-
-flowchart TD
-  DP("Design patterns")
-  DP --> C(Creational)
-  DP --> S(Structural)
-  DP --> B(Behavioral)
-
-  style DP fill:#2F7FC1,color:#FFF,stroke:#555
-  style C fill:#00BF63,color:#222,stroke:#555
-  style S fill:#00BF63,color:#222,stroke:#555
-  style B fill:#00BF63,color:#222,stroke:#555
-
-  C --> F(Factory)
-  F --- Bld(Builder)
-  Bld --- Sngl(Singleton)
-
-  S --> A(Adapter)
-  A --- Dec(Decorator)
-  Dec --- Fac(Facade)
-  Fac --- P(Proxy)
-
-  B --> Ob(Observer)
-  Ob --- Str(Strategy)
-  Str --- Cmd(Command)
-  Cmd --- St(State)
-  St --- Vis(Visitor)
-```
-
----
-
-### Strategy pattern
-
-```mermaid
-classDiagram
-
-class Context { }
-
-class Strategy {
-   <<interface>>
-  +execute()
-}
-
-Strategy <|-- ConcreteStrategyA
-Strategy <|-- ConcreteStrategyB
-Context o-- Strategy : has
-
-```
-
----
-
-### In FP it is just a function type
-
-```typescript[1|3-5|7-9]
-type StrategyType = () => void;
-
-const ConcreteStrategyA: StrategyType = () => {
-  return "ConcreteStrategyA";
-};
-
-const ConcreteStrategyB: StrategyType = () => {
-  return "ConcreteStrategyB";
-};
-```
-
----
-
-### Remember the gravitational force equation?
-
-`$$  F = \frac{G(m1*m2)}{R^2} $$`
-
-<!-- .element: class="fragment" -->
+| OOP                            | FP                                     |
+| ------------------------------ | -------------------------------------- |
+| State is coupled with behavior | State is managed by the message sender |
 
 ---
 
 ```ts
-class GForce {
-  G = 6.67 * 10 ** -11;
-  constructor(private m1: number, private r: number) {}
+class Account {
+  constructor(private balance: number) {}
+  getBalance() {
+    return this.balance;
+  }
+  deposit(amount: number) {
+    this.balance += amount;
+  }
+  withdraw(amount: number) {
+    this.balance -= amount;
+    return amount;
+  }
+}
 
-  calculateForce(m2: number) {
-    return (this.G * (this.m1 * m2)) / this.r ** 2;
+class Bank {
+  constructor(private accounts: Account[]) {}
+  transfer(transferFrom: Account, transferTo: Account, amount: number) {
+    transferTo.deposit(transferFrom.withdraw(amount));
   }
 }
 ```
@@ -185,55 +178,100 @@ class GForce {
 ---
 
 ```ts
-class EarthGForce extends GForce {
-  constructor() {
-    const EARTHS_WEIGHT = 6 * 10 ** 24;
-    const EARTHS_RADIUS = 6378;
-
-    super(EARTHS_WEIGHT, EARTHS_RADIUS);
-  }
-}
-
-const earthGForce = new EarthGForce();
-earthGForce.calculateForce(72);
+let account1 = new Account(1000);
+let account2 = new Account(1000);
+const bank = new Bank([account1, account2]);
+bank.transfer(account1, account2, 100);
 ```
 
 ---
 
-### How would it look in FP?
+## Let's see the code in FP
 
 ---
 
-```ts [1-16|3]
-function calculateGForce(m1, m2, r) {
-  const G = 6.67 * 10 ** -11;
-  return (G * (m1 * m2)) / r ** 2;
-}
+```ts
+let bank = [
+  { accountId: "account1", balance: 1000 },
+  { accountId: "account2", balance: 1000 },
+  { accountId: "account3", balance: 1000 },
+];
 
-function calculateEarthGForceFn() {
-  const EARTHS_WEIGHT = 6 * 10 ** 24;
-  const EARTHS_RADIUS = 6378;
-
-  return m2 => {
-    return calculateGForce(EARTHS_WEIGHT, m2, EARTHS_RADIUS);
+function transferBalance(transferFromAccount, transferToAccount, amount) {
+  const transferFromBalance = transferFromAccount.balance - amount;
+  const transferToBalance = transferToAccount.balance + amount;
+  return {
+    transferFrom: {
+      accountId: transferFromAccount.accountId,
+      newBalance: transferFromBalance,
+    },
+    transferTo: {
+      accountId: transferToAccount.accountId,
+      newBalance: transferToBalance,
+    },
   };
 }
-
-const calculateEarthGForce = calculateEarthGForceFn();
-calculateEarthGForce(72);
 ```
 
 ---
 
-### I have not been fair to OO.
+## How about testing?
 
 ---
 
-### The example are in favor of FP.
+## Test steps (AAA)
+
+- Arrange
+- Action
+- Assert
+
+<!-- .element: class="fragmented-list" -->
 
 ---
 
-## OO and FP are just different tools
+### Test OOP
+
+```ts [1-10|2-4|6|8-9|1-10]
+it("should transfer the specified amount", () => {
+  const transferFrom = new Account(100);
+  const transferTo = new Account(0);
+  const bank = new Bank([transferFrom, transferTo]);
+
+  bank.transfer(transferFrom, transferTo, 50);
+
+  expect(transferFrom.getBalance()).toBe(50);
+  expect(transferTo.getBalance()).toBe(50);
+});
+```
+
+---
+
+### Test FP
+
+```ts [1-13|2-3|5-7|9-12|1-13]
+it("should correctly transfer the specified amount", () => {
+  const transferFromAccount = { accountId: 1, balance: 100 };
+  const transferToAccount = { accountId: 2, balance: 50 };
+
+  const result = transferBalance(transferFromAccount, transferToAccount, 30);
+
+  expect(result.transferFrom.accountId).toBe({
+    transferFrom: { accountId: 1, newBalance: 70 },
+    transferTo: { accountId: 2, newBalance: 80 },
+  });
+});
+```
+
+---
+
+## In FP we did not need the bank object to be arranged
+
+---
+
+## Testing in FP
+
+- Simpler setup in real life
+- Simple test without mocking side-effects
 
 ---
 
@@ -243,46 +281,9 @@ calculateEarthGForce(72);
 
 <!-- .element: class="fragment" -->
 
----
-
-### Imperative programming
-
-### VS
-
-### declarative programming
-
----
-
-| Characteristic            | Imperative approach                                                  | Functional approach                                                |
-| ------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Programmer focus          | How to perform tasks (algorithms) and how to track changes in state. | What information is desired and what transformations are required. |
-| State changes             | Important.                                                           | Non-existent.                                                      |
-| Order of execution        | Important.                                                           | Low importance.                                                    |
-| Primary flow control      | Loops, conditionals, and function (method) calls.                    | Function calls, including recursion.                               |
-| Primary manipulation unit | Instances of structures or classes.                                  | Functions as first-class objects and data collections.             |
-
-<!-- .element: class="text-2xl" -->
-
----
-
-## Imperative approach
-
-### Defines how
+### OO and FP are just different tools
 
 <!-- .element: class="fragment" -->
-
----
-
-## Functional approach
-
-### Defines what
-
-<!-- .element: class="fragment" -->
-
----
-
-A programming paradigm/framework <span class="fragment highlight-blue">**limits**</span>
-ways to do <span class="fragment highlight-red">**mistake**</span>.
 
 ---
 
@@ -304,16 +305,18 @@ ways to do <span class="fragment highlight-red">**mistake**</span>.
 
 <div class="fragment">
 
-## Message passing to an object.
-
 ```mermaid
 flowchart LR
   Obj1(Object 1) -- message --> Obj2(Object 2)
 ```
 
+#### Message passing to an object.
+
 </div>
 
 ---
+
+### The main idea was polymorphism
 
 ```mermaid
 flowchart LR
@@ -327,8 +330,49 @@ flowchart LR
 
 - The object can send message to other objects
 - Object receiving the message can figure out how to handle the message
+- OOP helps explain the domain better that matches with real life
 
 <!-- .element: class="fragmented-list" -->
+
+---
+
+## Power of pure function is in distribution
+
+---
+
+## Attributes of pure function
+
+- For the same input the output is always the same
+- Function execution does not create side effect
+- Lazy evaluation
+- Immutable parameters
+
+---
+
+![Map reduce](https://www.mongodb.com/docs/manual/images/map-reduce.bakedsvg.svg)
+
+---
+
+```python
+rdd = spark.sparkContext.textFile("/tmp/test.txt")
+rdd2 = rdd.flatMap(lambda x: x.split(" "))
+rdd3 = rdd2.map(lambda x: (x,1))
+rdd4 = rdd3.reduceByKey(lambda a,b: a+b)
+rdd5 = rdd4.map(lambda x: (x[1],x[0])).sortByKey()
+print(rdd5.collect())
+```
+
+---
+
+### OOP is good when,
+
+- Defining relations with concepts in real life, where information and behavior needs to be encapsulated.
+
+---
+
+### FP is good when,
+
+- Transformation of data is more important than state management
 
 ---
 

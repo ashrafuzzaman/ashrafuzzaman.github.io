@@ -18,6 +18,22 @@ pubDate: 2023-11-07
 
 ---
 
+<!-- .slide: data-transition="fade-in" -->
+
+### Order between events
+
+```mermaid
+sequenceDiagram
+  actor Observer
+
+  Note over Server 1 : Event 1.1
+  Note over Server 2 : Event 2.1
+```
+
+---
+
+<!-- .slide: data-transition="fade-in" -->
+
 ### Order between events
 
 ```mermaid
@@ -46,6 +62,13 @@ sequenceDiagram
 
 ---
 
+### Challenge of timestamps 🕒
+
+- Syncing time on network is unreliable
+- Keeping the clock synced is expensive
+
+---
+
 ### Logical time
 
 ```mermaid
@@ -56,7 +79,7 @@ sequenceDiagram
 
   Note over Server 2 : Event 2.1
   Note over Server 1 : Event 1.1
-  Server 1 -->> Server 2 : T=1
+  Server 1-->>Server 2 : T=1
   Note over Server 2 : Event 2.2
 
   Note left of Observer : Event 2.1, Event 1.1

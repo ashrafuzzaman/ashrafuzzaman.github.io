@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   experience: any;
@@ -32,7 +32,7 @@ const {
   {
     responsibilities ? (
       <ul class="mt-3">
-        {responsibilities.map(responsibility => (
+        {responsibilities.map((responsibility) => (
           <li class="m-0 flex p-0">
             <span>
               <Icon class="w-[18px]" name="mdi:arrow-right-thin" />
@@ -50,7 +50,7 @@ const {
       <>
         <h4 class="mt-2 text-lg font-semibold">Achievements</h4>
         <ul>
-          {achievements.map(achievement => (
+          {achievements.map((achievement) => (
             <li class="m-0 flex p-0">
               <span>
                 <Icon class="w-[18px]" name="mdi:done" />

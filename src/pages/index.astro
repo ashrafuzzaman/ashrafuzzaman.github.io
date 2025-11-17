@@ -3,7 +3,7 @@ import profile from "@content/profile/jitu-architect.yaml";
 import ProfileLayout from "@layouts/ProfileLayout.astro";
 import ThemeSwitcher from "@components/theme-switcher.astro";
 import Skill from "@components/resume/skill.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 const { name, contact, designation, company, summary, links, skills } = profile;
 ---
@@ -88,7 +88,7 @@ const { name, contact, designation, company, summary, links, skills } = profile;
         </div>
         <p class="mt-2">{summary}</p>
         <div id="skills" class="grid grid-flow-row grid-cols-2">
-          {skills.map(skill => <Skill skill={skill} />)}
+          {skills.map((skill) => <Skill skill={skill} />)}
         </div>
       </div>
     </div>

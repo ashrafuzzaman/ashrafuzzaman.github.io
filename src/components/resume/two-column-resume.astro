@@ -1,6 +1,6 @@
 ---
 import ResumeLayout from "@layouts/ResumeLayout.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import Experience from "@components/resume/experience.astro";
 import Skill from "@components/resume/skill.astro";
 import Hr from "@components/Hr.astro";
@@ -31,7 +31,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
         (lineCount: number, curRes: string) => {
           return lineCount + Math.ceil(curRes.length / 90);
         },
-        0
+        0,
       ) || 0);
     firstPageExpLines += lines;
     if (firstPageExpLines < 22) {
@@ -39,7 +39,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
     }
     return expCount;
   },
-  0
+  0,
 );
 ---
 
@@ -104,7 +104,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
             </a>
           </li>
         </ul>
-        {skills.map(skill => <Skill skill={skill} />)}
+        {skills.map((skill) => <Skill skill={skill} />)}
       </section>
       <section class="right-column">
         <div class="mt-5 hidden sm:block print:block">
@@ -117,7 +117,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
         <Hr noPadding />
         <div class="print:hidden">
           {
-            experiences.map(experience => (
+            experiences.map((experience) => (
               <Experience experience={experience} />
             ))
           }
@@ -126,7 +126,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
           {
             experiences
               .slice(0, numOfExperienceInFirstPage)
-              .map(experience => <Experience experience={experience} />)
+              .map((experience) => <Experience experience={experience} />)
           }
         </div>
       </section>
@@ -135,7 +135,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
       {
         experiences
           .slice(numOfExperienceInFirstPage)
-          .map(experience => <Experience experience={experience} />)
+          .map((experience) => <Experience experience={experience} />)
       }
     </section>
   </main>

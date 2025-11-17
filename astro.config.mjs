@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config";
 import yaml from "@rollup/plugin-yaml";
 import mdx from "@astrojs/mdx";
+import icon from "astro-icon";
 
 import partytown from "@astrojs/partytown";
 
@@ -22,6 +23,7 @@ export default defineConfig({
     react(),
     sitemap(),
     mdx(),
+    icon(),
     partytown({
       // Adds dataLayer.push as a forwarding-event.
       config: {

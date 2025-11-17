@@ -3,7 +3,7 @@ name: AKM Ashrafuzzaman
 designation: Director of Engineering
 company: MoneyLion
 summary:
-  With over 15 years of experience building scalable, reliable, and high-performing software systems,
+  With over eighteen years of experience building scalable, reliable, and high-performing software systems,
   I am a passionate polyglot engineering leader skilled in developing and mentoring high-performing teams,
   driving architectural excellence, and aligning technology with business strategy.
   My expertise spans distributed systems, serverless architecture, and platform scalability — with a strong focus on cost optimization and delivery excellence.
@@ -42,7 +42,7 @@ skills:
       - Ruby
       - Java
 
-  - title: Frameworks & Technologies
+  - title: Technologies
     items:
       - Node.js, Express, NestJS
       - Rails, Flask, Django Rest Framework

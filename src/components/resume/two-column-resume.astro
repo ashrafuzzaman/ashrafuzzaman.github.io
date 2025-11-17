@@ -19,28 +19,7 @@ const {
   experiences,
 } = profile;
 
-let firstPageExpLines = 0;
-const MAX_LINE_IN_FIRST_PAGE = 22;
-
-const numOfExperienceInFirstPage = experiences.reduce(
-  (expCount: number, experience: any) => {
-    const lines =
-      2 + // For Title
-      Math.ceil((experience.brief?.length || 0) / 80) +
-      (experience.responsibilities?.reduce(
-        (lineCount: number, curRes: string) => {
-          return lineCount + Math.ceil(curRes.length / 90);
-        },
-        0,
-      ) || 0);
-    firstPageExpLines += lines;
-    if (firstPageExpLines < 22) {
-      return expCount + 1;
-    }
-    return expCount;
-  },
-  0,
-);
+const numOfExperienceInFirstPage = 2;
 ---
 
 <ResumeLayout>
@@ -113,7 +92,7 @@ const numOfExperienceInFirstPage = experiences.reduce(
         <p class="mt-5">
           <Markdown content={summary} />
         </p>
-        <h2 class="mt-8">Experience</h2>
+        <h2 class="mt-8 text-2xl">Experience</h2>
         <Hr noPadding />
         <div class="print:hidden">
           {

@@ -1,19 +1,20 @@
 ---
 export interface Props {
-  skill: any;
+  skill: {
+    title: string;
+    items: string[];
+  };
 }
 
 const { skill } = Astro.props;
 const { title, items } = skill;
 ---
 
-<div class="break-inside-avoid">
-  <h4
-    class="my-2 -mr-4 bg-skin-card-muted py-1 pl-4 text-lg font-bold shadow-md"
-  >
+<div class="break-inside-avoid p-1">
+  <h4 class="bg-skin-card-muted py-1 pl-4 text-lg font-bold shadow-md">
     {title}
   </h4>
   <ul>
-    {skill.items.map(item => <li class="m-0 px-4 leading-normal">{item}</li>)}
+    {items.map((item) => <li class="m-0 px-4 leading-normal">{item}</li>)}
   </ul>
 </div>

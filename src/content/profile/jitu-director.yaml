@@ -1,17 +1,19 @@
 ---
-name: A.K.M. Ashrafuzzaman
-designation: Director of engineering
-company: Optimizely
+name: AKM Ashrafuzzaman
+designation: Director of Engineering
+company: MoneyLion
 summary:
-  With more than 15 years of experience working with a variety of programming languages and technologies, particularly in the web stack,
-  I consider myself to be a passionate polyglot developer. I am particularly skilled in developing engineering groups with a culture that supports
-  the organization's objective and working with distributed systems, serverless architecture, and scaling with cost reduction in mind.
-  My more than 15 years of experience in product development have helped me to better understand client needs and meet deadlines.
+  With over 15 years of experience building scalable, reliable, and high-performing software systems,
+  I am a passionate polyglot engineering leader skilled in developing and mentoring high-performing teams,
+  driving architectural excellence, and aligning technology with business strategy.
+  My expertise spans distributed systems, serverless architecture, and platform scalability — with a strong focus on cost optimization and delivery excellence.
+  Throughout my career, I’ve led engineering organizations to successfully ship products that meet critical business goals and client needs on time.
 
 contact:
   email: zmn.ashraf@gmail.com
-  phone: "+8801755592433"
-  location: Dhaka, Bangladesh
+  phone: "+601133032936"
+  location: Kuala Lumpur, Malaysia
+
 links:
   site:
     alt: ashrafuzzaman.github.io
@@ -26,123 +28,133 @@ links:
     alt: Blog
     url: /blog
   blogOnDistributedSystem:
-    alt: Blog on distributed system
+    alt: Blog on Distributed Systems
     url: http://distash.blogspot.com/
   linkedIn:
     alt: ashrafuzzaman-jitu
     url: https://www.linkedin.com/in/ashrafuzzaman-jitu/
+
 skills:
-  - title: Language
+  - title: Languages
     items:
-      - Typescript, Javascript
+      - TypeScript, JavaScript
       - Python
       - Ruby
       - Java
 
-  - title: Tools / Technology
+  - title: Frameworks & Technologies
     items:
-      - NodeJs, Express, NestJs
-      - Rails, Flask, DRF
-      - MongoDb, MySql
+      - Node.js, Express, NestJS
+      - Rails, Flask, Django Rest Framework
       - React.js, Angular
-      - Docker, Ansible
-      - Microservice patterns
-      - Object Oriented Design patterns and Principles
-      - Distributed System, Serverless
-      - Apache Spark
-      - REST, Hateoas
+      - MongoDB, MySQL
+      - Docker, Ansible, CI/CD
+      - Microservice & Event-driven Architectures
+      - Object-Oriented & Functional Design Principles
+      - Distributed Systems, Serverless Architectures
+      - Apache Spark, REST, HATEOAS
       - TDD, BDD
 
   - title: AWS
     items:
-      - S3, RDS, Lambda,
-      - Kinesis, SQS,
-      - Athena, Redshift, CloudFront,
-      - CloudFormation Template
+      - S3, RDS, Lambda
+      - Kinesis, SQS
+      - Athena, Redshift, CloudFront
+      - CloudFormation
 
 experiences:
-  - title: Director Of Engineering
+  - title: Director of Engineering
+    company: MoneyLion
+    companyLink: https://www.moneylion.com/
+    from: Jan 2024
+    till: Present
+    responsibilities:
+      - Lead platform teams across Backend, Authentication & Authorization, and Fraud domains.
+      - Define and drive the backend technology strategy, fostering best practices and engineering excellence.
+      - Partner with product and design leadership to shape the product roadmap and execution strategy.
+      - Collaborate with other engineering leaders to evolve company-wide architecture and engineering processes.
+      - Oversee backend hiring, ensuring high standards in technical quality and culture fit.
+      - Conduct architecture review sessions to improve design decisions and mentor engineers across teams.
+
+  - title: Director of Engineering
     company: Optimizely
     companyLink: https://www.optimizely.com/
-    till: Present
-    from: Dec, 2021
+    from: Dec 2021
+    till: Dec 2023
     responsibilities:
-      - Lead and manage four teams of thirty engineers to produce quality software.
-      - Consult, review, actively contribute and guide teams to build scalable architecture.
-      - Coach engineers on best practices for writing maintainable code and system design.
-      - Lead and actively participate in driving architectural changes.
-      - Manage a group of five talented engineers, staff engineers and engineering managers.
-      - Identify and hire the right kind of engineers.
-      - Set and monitor quality metrics, error budget and SLA's for micro-services.
+      - Led four engineering teams (30+ engineers) to deliver high-quality, scalable software platforms.
+      - Championed architecture modernization initiatives and guided technical strategy for platform evolution.
+      - Mentored engineers and managers on scalable system design and sustainable development practices.
+      - Hired and developed top engineering talent, building strong technical and leadership pipelines.
+      - Established quality metrics, SLAs, and error budgets to maintain service reliability.
+      - Collaborated with cross-functional stakeholders to ensure technical initiatives aligned with product goals.
 
-  - title: Director Of Engineering
+  - title: Director of Engineering
     company: Welcome
     companyLink: https://www.linkedin.com/company/welcomesoftware/
-    till: Dec 2021
     from: Aug 2020
-    brief: NewsCred changed the brand name to Welcome.
+    till: Dec 2021
+    brief: Continued leadership role following NewsCred’s rebranding to Welcome.
 
   - title: Engineering Manager
-    company: Newscred
+    company: NewsCred
     companyLink: https://www.linkedin.com/company/newscred/
     from: Apr 2015
     till: Sep 2018
     responsibilities:
-      - Split NodeJs and Python monolith into micro-services.
-      - Stabilize the ingestion platform with the data lake for disaster recovery.
-      - Debug and improve full-stack application performance with elastic APM and stackdriver trace.
-      - Built publishable widget with analytics platform powered by serverless architect.
-      - Built RESTful webservices with JSON API and HATEOAS.
-      - Manage a group of five talented engineers who became tech-leads and managers over time.
+      - Spearheaded the transition from monolithic Node.js/Python architecture to microservices.
+      - Enhanced ingestion platform stability and implemented data lake disaster recovery.
+      - Improved application performance using Elastic APM and Stackdriver trace.
+      - Delivered serverless analytics solutions and embeddable publishing widgets.
+      - Built RESTful APIs with JSON:API and HATEOAS compliance.
+      - Managed and mentored engineers who later advanced into lead and managerial roles.
 
   - title: Lead Software Engineer
-    company: Newscred
+    company: NewsCred
     companyLink: https://www.linkedin.com/company/newscred/
-    till: Apr 2015
     from: Oct 2014
-    brief:
-      In pursuit of career growth in Newscred, took the challenge of being an engineering manager to
-      lead and coach fellow engineers. In addition to being a software engineer also took the role of an architect.
+    till: Apr 2015
     responsibilities:
-      - Built software with high availablity that can scale with low infrastructure cost.
-      - Built fast, failing fast or plan on evolution of the prototype to a robust system.
-      - Closely work with DevOps and BI to improve system services, setting up automation and monitoring.
-      - Actively collaborates with product owners to create product roadmaps.
-      - Actively participates in technical interviews.
+      - Designed and developed high-availability systems optimized for performance and cost.
+      - Partnered with DevOps and BI teams to enhance system automation and observability.
+      - Collaborated closely with product management to define and deliver on technical roadmaps.
+      - Participated actively in architectural reviews and technical hiring processes.
 
   - title: Lead Software Engineer
     company: Tasawr
     companyLink: https://www.linkedin.com/company/tasawr/
-    till: Oct 2014
     from: Apr 2012
-    brief: In Tasawr we used Ruby on Rails with MySql to build a hotel management software.
+    till: Oct 2014
+    brief: Built a hotel management platform using Ruby on Rails and MySQL.
     responsibilities:
-      - Learn and apply best practices for internal and client solutions.
-      - Deliver high quality software with TDD, unit test and BDD testing.
-      - Follow the agile software development processes to ship product in a pradictable manner.
+      - Delivered high-quality software following TDD and BDD practices.
+      - Drove Agile delivery processes for predictable, iterative releases.
+      - Implemented design and testing best practices for internal and client-facing projects.
+
   - title: Sr. Technology Analyst
     company: Orbund, LLC
-    till: Apr 2012
     from: Oct 2011
-    brief: We built a student management system with J2EE and MySql.
+    till: Apr 2012
+    brief: Developed a student management system using J2EE and MySQL.
     responsibilities:
-      - Design and Develop software with unit test and best practices.
-      - Collaborate with the remote clients and stakeholders.
-      - Facilitate in-house training and knowledge development.
+      - Designed and implemented scalable modules following industry best practices.
+      - Collaborated with remote clients and stakeholders to ensure delivery success.
+      - Conducted in-house technical training and knowledge-sharing sessions.
+
   - title: Consultant
     company: Simple Signup, Sweden
     from: Oct 2009
     till: Apr 2011
-    brief: We built an online event management system with Ruby on Rails and MySql. I worked as an part-time software developer in Stockholm.
+    brief: Developed an online event management system with Ruby on Rails and MySQL as a part-time remote consultant from Stockholm.
+
   - title: Software Engineer
     company: Code71
-    till: Aug 2009
     from: May 2008
-    brief:
-      We built a SCRUM management tool with Ruby on Rails and MySql. We treated unit test as a part of code base and focused on internal
-      growth by facilitating in-house training and knowledge development.
+    till: Aug 2009
+    brief: Built a Scrum management platform with Ruby on Rails and MySQL, emphasizing unit testing and continuous learning culture.
+
   - title: Senior Software Developer
     company: DSi
-    till: Feb 2008
     from: Jan 2007
-    brief: We built a lot of client projects with J2EE, Struts, Spring, Hibernate, mostly for container and cargo management.
+    till: Feb 2008
+    brief: Delivered enterprise systems for cargo and container management using J2EE, Struts, Spring, and Hibernate.

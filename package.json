@@ -22,7 +22,7 @@
     "@iconify-json/carbon": "^1.2.14",
     "@iconify-json/mdi": "^1.2.3",
     "@resvg/resvg-js": "^2.6.2",
-    "astro": "^5.15.8",
+    "astro": "^5.15.9",
     "astro-icon": "^1.1.5",
     "fuse.js": "^7.1.0",
     "github-slugger": "^2.0.0",

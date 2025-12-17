@@ -44,15 +44,15 @@ skills:
 
   - title: Technologies
     items:
+      - MongoDB, PostgreSQL, MySQL
       - Node.js, Express, NestJS
       - Rails, Flask, Django Rest Framework
       - React.js, Angular
-      - MongoDB, MySQL
       - Docker, Ansible, CI/CD
       - Microservice & Event-driven Architectures
       - Object-Oriented & Functional Design Principles
       - Distributed Systems, Serverless Architectures
-      - Apache Spark, REST, HATEOAS
+      - Kafka, Apache Spark, REST, HATEOAS
       - TDD, BDD
 
   - title: AWS

@@ -39,17 +39,18 @@ skills:
     items:
       - TypeScript, JavaScript
       - Python
-      - Ruby
       - Java
+      - Ruby
 
   - title: Technologies
     items:
       - MongoDB, PostgreSQL, MySQL
-      - Node.js, Express, NestJS
-      - Rails, Flask, Django Rest Framework
+      - Node.js
+      - Flask, Django Rest Framework, FastAPI, Rails
       - React.js, Angular
       - Docker, Ansible, CI/CD
       - Microservice & Event-driven Architectures
+      - PydanticAI, AgentSkills, Evals
       - Object-Oriented & Functional Design Principles
       - Distributed Systems, Serverless Architectures
       - Kafka, Apache Spark, REST, HATEOAS
@@ -59,7 +60,7 @@ skills:
     items:
       - S3, RDS, Lambda
       - Kinesis, SQS
-      - Athena, Redshift, CloudFront
+      - DynamoDB, Athena, Redshift, CloudFront
       - CloudFormation
 
 experiences:
@@ -69,7 +70,7 @@ experiences:
     from: Jan 2024
     till: Present
     responsibilities:
-      - Lead platform teams across Backend, Authentication & Authorization, and Fraud domains.
+      - Lead 3 platform teams (14 engineers) across Backend, Authentication & Authorization, and Fraud domains.
       - Define and drive the backend technology strategy, fostering best practices and engineering excellence.
       - Partner with product and design leadership to shape the product roadmap and execution strategy.
       - Collaborate with other engineering leaders to evolve company-wide architecture and engineering processes.
@@ -92,7 +93,7 @@ experiences:
   - title: Director of Engineering
     company: Welcome
     companyLink: https://www.linkedin.com/company/welcomesoftware/
-    from: Aug 2020
+    from: Sep 2018
     till: Dec 2021
     brief: Continued leadership role following NewsCred’s rebranding to Welcome.
 

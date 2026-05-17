@@ -1,11 +1,11 @@
 ---
+import Hr from "@components/Hr.astro";
+import Markdown from "@components/Markdown.astro";
+import Experience from "@components/resume/experience.astro";
+import NameTitle from "@components/resume/name-title.astro";
+import Skill from "@components/resume/skill.astro";
 import ResumeLayout from "@layouts/ResumeLayout.astro";
 import { Icon } from "astro-icon/components";
-import Experience from "@components/resume/experience.astro";
-import Skill from "@components/resume/skill.astro";
-import Hr from "@components/Hr.astro";
-import NameTitle from "@components/resume/name-title.astro";
-import Markdown from "@components/Markdown.astro";
 
 const { profile } = Astro.props;
 const {
@@ -19,7 +19,7 @@ const {
   experiences,
 } = profile;
 
-const numOfExperienceInFirstPage = 2;
+const numOfExperienceInFirstPage = 1;
 ---
 
 <ResumeLayout>

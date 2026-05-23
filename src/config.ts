@@ -2,9 +2,9 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://ashrafuzzaman.github.io/",
-  author: "A.K.M. Ashrafuzzaman",
+  author: "AKM Ashrafuzzaman",
   desc: "Technical blog for developers",
-  title: "Personal site of A.K.M. Ashrafuzzaman",
+  title: "Personal site of AKM Ashrafuzzaman",
   ogImage: "/assets/profile-pic.webp",
   lightAndDarkMode: true,
   postPerPage: 3,

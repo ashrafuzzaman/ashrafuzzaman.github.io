@@ -1,6 +1,6 @@
 # My site and blog
 
-Hi I am A.K.M. Ashrafuzzaman this is a blog template with a resume and profile page. Feel free to clone this project. I wanted to keep all the data in yaml files so that anyone can change the data to repurpose this site. I used the following technologies,
+Hi I am AKM Ashrafuzzaman this is a blog template with a resume and profile page. Feel free to clone this project. I wanted to keep all the data in yaml files so that anyone can change the data to repurpose this site. I used the following technologies,
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)

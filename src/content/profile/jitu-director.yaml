@@ -40,7 +40,7 @@ links:
 skills:
   - title: Languages
     items:
-      - TypeScript, JavaScript
+      - TypeScript
       - Python
       - Java
       - Ruby
@@ -74,12 +74,13 @@ experiences:
     responsibilities:
       - Lead 3 platform teams (14 engineers) owning Backend Platform, Authentication & Authorization, and Fraud for a consumer fintech serving millions of users.
       - Set backend technology strategy, engineering standards, and architecture governance across platform domains.
+      - Build AI knowledge base and AI agents to supercharge engineers and improve developer productivity.
+      - Operate an Evals platform that measures AI agents and skills effectiveness and drives iterative improvements.
       - Partner with Product and Design leadership to translate roadmap priorities into executable technical plans and quarterly commitments.
       - Collaborate with peer engineering directors on company-wide architecture, platform investments, and delivery practices.
       - Own the backend hiring loop end to end — bar raising, interview design, and culture-aligned selection.
       - Drive architecture reviews and mentor senior engineers on system design, tradeoffs, and operational excellence.
-      - Architected and led the platform scaling effort to absorb 5M signups per minute (35× normal traffic) for the Mr. Beast Challenge through capacity planning, load testing, and targeted hardening.
-      - Ship production AI capabilities with evals and observability that enable safe, measurable iteration on model improvements.
+      - Lead capacity-planning, load-testing, and hardening that absorbed 5M signups per minute (35× normal traffic) during the Mr. Beast Challenge.
 
   - title: Director of Engineering
     company: Optimizely (After merger with Welcome)
@@ -88,7 +89,7 @@ experiences:
     till: Dec 2023
     responsibilities:
       - Directed 4 engineering teams (30+ engineers) delivering experimentation and digital experience platforms at enterprise scale.
-      - Drove a multi-year platform modernization — defined target architectures, sequenced migrations, and retired legacy systems.
+      - Drove platform modernization — defined target architectures, sequenced migrations, and retired legacy systems.
       - Built technical and leadership pipelines through hiring, coaching, and the promotion of ICs and managers.
       - Aligned platform engineering investments with product and go-to-market priorities through cross-functional partnership.
       - Mentored engineers and engineering managers on distributed system design and sustainable delivery practices.
